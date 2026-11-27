@@ -1,98 +1,102 @@
 # Pet Tank 🛞🤖
 
-Xe tăng 6 bánh kiểu thiết giáp, nhân bản từ con **claude-pet**: trên mặt nghiêng có cái màn hiển thị mặt pet và trạng thái phiên Claude Code. Turret gắn 2 sonar quay lưng vào nhau để dò đường.
+**English** · [Tiếng Việt](README.vi.md)
 
-- **Thân xe:** case `robot-tank` v1 do cadsmith vẽ, người dùng đã in xong. Thêm cụm stack v5 và các gá dán/kẹp.
-- **Mạch:** carrier 62×60 mm, 2 lớp.
-- **Bộ điều khiển:** ESP32 DevKit + PCA9685 điều 7 servo: 6 servo 360° kéo bánh, 1 SG90 xoay turret.
-- **Pin:** 2 cell 18650 mắc song song (1S), qua bộ bảo vệ pin và 2 module nâng áp 5 V.
+A 6-wheel armored-car-style tank cloned from **claude-pet**. A screen on the sloped front face shows the pet face and the status of Claude Code sessions. A turret carries two sonars mounted back to back for finding a path.
 
-> **Trạng thái:** thiết kế đã qua kiểm tra của team (board, firmware, case, tích hợp). **Chưa thử phần cứng.** Chưa flash firmware. Chưa in các gá mới. Chưa đặt mạch. Kích thước module ghi trong tài liệu là **GIẢ ĐỊNH**: đo module thật trước khi in hoặc hàn.
+- **Body:** the `robot-tank` v1 case designed in cadsmith, already printed by the owner, plus the v5 board stack and glue-on/clip-on holders.
+- **Board:** 62×60 mm two-layer carrier.
+- **Control:** ESP32 DevKit + PCA9685 driving 7 servos: six 360° wheel servos and one SG90 turret servo.
+- **Power:** two 18650 cells in parallel (1S) through a pack protector and two 5 V boost modules.
 
-## Có gì trong repo
+> **Status:** the design passed the team's board, firmware, case and integration checks. **Hardware is untested.** The firmware has not been flashed, the new holders have not been printed, and no board has been ordered. Module dimensions in the docs are **ASSUMPTIONS**: measure the real modules before printing or soldering.
 
-| Thư mục | Nội dung |
+## What's in the repo
+
+| Folder | Contents |
 |---|---|
-| `design/` | Dự án KiCad: schematic, PCB, thư viện, model 3D linh kiện |
-| `engineering/` | Nguồn ([POWER_SYSTEM.md](engineering/POWER_SYSTEM.md)), nối dây stack ([STACK_WIRING.md](engineering/STACK_WIRING.md)), lắp ráp, bring-up, pinout, các phép tính |
-| `parts.json`, `product.json`, `manufacturing.json` | BOM (mã LCSC), mô tả board, cấu hình gia công |
-| `case/` | Script CadQuery cho các gá ([build.py](case/build.py), `holders.py`, `stack.py`, `power_b.py`). `case/ref/v1`, `case/ref/v5` là STEP gốc của robot-tank đã in, giữ nguyên |
-| `firmware/` | Firmware ESP32 (`firmware/tank/`), [hướng dẫn nối dây](firmware/WIRING.md), [giao thức host](firmware/PROTOCOL.md), test chạy trên máy (`firmware/tests/`), host bridge (`firmware/host/`) |
-| `tools/` | Script kiểm/xuất của từng team (board, case, firmware) |
-| `contract/` | Hợp đồng team đã niêm phong và release notes (lời người dùng giữ nguyên văn + cách lead diễn giải) |
-| `prompts/`, `references/` | Yêu cầu gốc, lịch sử yêu cầu, ảnh tham khảo. STEP/STL trong `prompts/assets` không commit: hash nằm trong các file `SHA256SUMS` |
+| `design/` | KiCad project: schematic, PCB, libraries, component 3D models |
+| `engineering/` | Power ([POWER_SYSTEM.md](engineering/POWER_SYSTEM.md)), stack wiring ([STACK_WIRING.md](engineering/STACK_WIRING.md)), assembly, bring-up, pinout, calculations |
+| `parts.json`, `product.json`, `manufacturing.json` | BOM (LCSC part numbers), board description, fabrication settings |
+| `case/` | CadQuery scripts for the holders ([build.py](case/build.py), `holders.py`, `stack.py`, `power_b.py`, `logic_b.py`). `case/ref/v1` and `case/ref/v5` hold the original STEP files of the printed robot-tank, unchanged |
+| `firmware/` | ESP32 firmware (`firmware/tank/`), [wiring guide](firmware/WIRING.md), [host protocol](firmware/PROTOCOL.md), host-side tests (`firmware/tests/`), host bridge (`firmware/host/`) |
+| `tools/` | Check and export scripts for each team (board, case, firmware) |
+| `contract/` | The sealed team contract and release notes (the owner's words verbatim, plus how the lead interpreted them) |
+| `prompts/`, `references/` | Original request, request history, reference images. STEP/STL files under `prompts/assets` are not committed; their hashes are in the `SHA256SUMS` files |
 
-Những thứ không commit, vì `./build.sh` sinh lại được: STL/STEP/3MF, gerber, zip, ảnh render, `build/`, `boards/`, `case/out/`, `case/print/`, binary firmware. Datasheet không commit: link nằm ở `engineering/sources/manifest.json`.
+Not committed, because `./build.sh` regenerates them: STL/STEP/3MF, Gerbers, zips, renders, `build/`, `boards/`, `case/out/`, `case/print/`, firmware binaries. Datasheets are not committed either; their links are in `engineering/sources/manifest.json`.
+
+Most docs inside the subfolders are written in Vietnamese.
 
 ## Build
 
 ```sh
 ./build.sh              # board -> case -> firmware
-./build.sh firmware     # chỉ một stage
+./build.sh firmware     # a single stage
 ./build.sh board case
 ```
 
-Yêu cầu, không tự cài gì qua mạng:
+Requirements (nothing is installed from the network):
 
-- `KICAD_HARNESS_PYTHON` (Python có `kicadpy`) và `KICAD_CASE_PYTHON` (Python có CadQuery + `kicadpy`). Harness cấp sẵn cả hai.
-- KiCad 9 `kicad-cli`. Script tự tìm ở `/Applications/KiCad/KiCad.app`, hoặc set `KICAD_CLI`.
-- Bambu Studio ở `/Applications/BambuStudio.app`, dùng để slice `case/print/*.3mf`. Không job in nào được gửi.
-- `arduino-cli` với core `esp32:esp32@2.0.14` đã cài sẵn. Nếu core nằm ngoài thư mục mặc định thì set `ARDUINO_DIRECTORIES_DATA` trỏ tới đó (Harness để ở `~/.cache/autonomous-circuit/firmware/arduino`).
+- `KICAD_HARNESS_PYTHON` (Python with `kicadpy`) and `KICAD_CASE_PYTHON` (Python with CadQuery + `kicadpy`). Harness provides both.
+- KiCad 9 `kicad-cli`. The script looks in `/Applications/KiCad/KiCad.app`, or set `KICAD_CLI`.
+- Bambu Studio at `/Applications/BambuStudio.app`, used to slice `case/print/*.3mf`. No print job is ever sent.
+- `arduino-cli` with core `esp32:esp32@2.0.14` already installed. If the core is outside the default location, point `ARDUINO_DIRECTORIES_DATA` at it (Harness keeps it in `~/.cache/autonomous-circuit/firmware/arduino`).
 
-Build sinh lại vài file đang commit: hash STEP của board trong `case/ref/board/SHA256SUMS`, `engineering/step-handoff.json` và `case/firmware-limits.json`. Thấy chúng đổi sau khi build là bình thường.
+A build rewrites a few committed files: the board STEP hashes in `case/ref/board/SHA256SUMS`, `engineering/step-handoff.json` and `case/firmware-limits.json`. Seeing them change after a build is expected.
 
-Từng stage sinh ra:
+What each stage does:
 
-- **board:** chạy kiểm tra chính thức của board (ERC/DRC, netlist, gate) và sinh gói gia công vào `boards/`. Xuất STEP mạch có linh kiện ra `build/board/main-contract.step`, rồi giao cho case (`case/ref/board/`, hash được tính lại).
-- **case:** chạy `case/build.py` xuất STEP/STL vào `case/out/`. Chạy 3 bài kiểm của case: in được và va chạm, v5 so với v1, góc xoay turret. Sau đó sinh plate in `case/print/production.3mf` + `test-only.3mf`, file `case/overview.html`, và chạy `kicadpy.case check-print` (kiểm in: bề mặt in được, vừa bàn in).
-- **firmware:** chạy test host, gồm mock và ASan/UBSan, rồi compile ESP32 ra `build/firmware/esp32/tank.ino.bin`. **Không flash.**
+- **board:** runs the official board checks (ERC/DRC, netlist, gate) and writes the manufacturing packet to `boards/`. Exports the populated board STEP to `build/board/main-contract.step` and hands it to the case (`case/ref/board/`, hashes recomputed).
+- **case:** runs `case/build.py`, which writes STEP/STL to `case/out/`. Then runs the three case checks: printability and collisions, v5 against v1, and turret sweep. Then generates the print plates `case/print/production.3mf` + `test-only.3mf` and `case/overview.html`, and runs `kicadpy.case check-print` (printable surfaces, bed fit).
+- **firmware:** runs the host tests, including mocks and ASan/UBSan, then compiles the ESP32 build to `build/firmware/esp32/tank.ino.bin`. **Nothing is flashed.**
 
-Stage nào đọc output của stage trước thì `build.sh` tự chạy luôn stage đó nếu output còn thiếu. Case cần STEP của board. Firmware cần `case/reports/turret_yaw.json` để biết góc xoay turret.
+When a requested stage reads another stage's output and that output is missing, `build.sh` runs that stage too. The case needs the board STEP. The firmware needs `case/reports/turret_yaw.json` for the turret limits.
 
-## Firmware làm được gì
+## What the firmware does
 
-- Giữ mặt pet và trạng thái phiên Claude Code của claude-pet, giờ trên màn ST7789 1.54" 240×240.
-- Nói chuyện với máy tính qua USB (UART0 115200).
-- **Điều khiển bằng điện thoại**, làm theo UI của con cua crab-robot-v17g:
-  - Xe tự phát WiFi mở tên `XeTang-XXXX`. Trên màn hiện tên mạng, địa chỉ và mã QR.
-  - Vào WiFi đó rồi mở `http://192.168.4.1/`. Nhiều máy tự bật trang lên luôn.
-  - Trang **Lái**: pad 8 hướng, giữ nút để chạy, thả là dừng. Có 3 mức tốc độ 0.4 / 0.65 / 1. Xe không cho tiến/lùi khi sonar hướng đó báo vật cản gần hơn 350 mm, hoặc chưa có số đo mới (cũ hơn 250 ms). Nút đèn hiện "chưa nối" vì đèn chưa có chân điều khiển.
-  - Trang **Ráp**: chỉnh tâm, biên và chiều quay cho từng bánh, chỉnh tâm turret (giới hạn ±70°), rồi Lưu. Chưa hiệu chuẩn xong thì xe không cho lái.
-  - Trang **Wi-Fi** (tuỳ chọn): nối vào WiFi nhà, mật khẩu lưu trong NVS.
-  - Cái gì đòi dừng thì dừng: thả nút, quá 500 ms không có lệnh, mất kết nối phone, nút STOP, lỗi I2C, watchdog.
-  - Mấy hằng số (500 ms, 5 s, 60 % xung ở tốc độ 1) **chưa thử** trên xe và phone thật.
-- Board có thêm module nâng áp logic `M_LOGIC` (Pololu U3V16F5) cấp USB cho DevKit từ pin. Nhờ vậy xe chạy được mà không cần cắm máy tính.
-- Điều khiển 6 bánh (PCA CH0–5) với hiệu chuẩn từng bánh, và turret (CH6).
-- Chế độ dò đường kiểu chạy–dừng bằng 2 sonar HC-SR04P. `AUTO SCAN` đang bị khoá cho đến khi đo góc turret thật trên xe.
-- Bật lên luôn ở trạng thái dừng. Mất link, hết heartbeat hoặc bấm nút STOP (GPIO27) là cắt servo.
+- Keeps claude-pet's pet face and Claude Code session status, now on a 1.54" 240×240 ST7789 screen.
+- Talks to a computer over USB (UART0, 115200).
+- **Phone control**, modelled on the UI of the owner's crab-robot-v17g:
+  - The tank starts its own open Wi-Fi network named `XeTang-XXXX`. The screen shows the network name, the address and a QR code.
+  - Join that network and open `http://192.168.4.1/`. Many phones open the page on their own.
+  - **Drive** page: an 8-direction pad. Hold a button to drive, release to stop. Three speeds: 0.4 / 0.65 / 1. Forward or reverse is blocked when the sonar facing that way sees an obstacle closer than 350 mm, or has no fresh reading (older than 250 ms). The light button shows "not connected" because the lights have no control pin yet.
+  - **Assembly** page: set the centre, limits and direction for each wheel, centre the turret (limited to ±70°), then Save. Driving is refused until calibration is done.
+  - **Wi-Fi** page (optional): join a home network. The password is stored in NVS.
+  - Every stop source wins: releasing the button, no command for 500 ms, losing the phone connection, the STOP button, an I2C error, the watchdog.
+  - The constants (500 ms, 5 s, 60 % pulse at speed 1) are **untested** on the real tank and a real phone.
+- The board adds a logic boost module, `M_LOGIC` (Pololu U3V16F5), that powers the DevKit over USB from the battery. The tank can run without a computer attached.
+- Drives the six wheels (PCA CH0–5) with per-wheel calibration, and the turret (CH6).
+- A stop-and-go path-finding mode using the two HC-SR04P sonars. `AUTO SCAN` stays locked until the real turret angles are measured on the tank.
+- Always boots stopped. Losing the link, a missed heartbeat, or the STOP button (GPIO27) cuts servo power.
 
-Chân GPIO: xem [firmware/README.md](firmware/README.md) và [engineering/esp32-pinmap.json](engineering/esp32-pinmap.json).
+GPIO map: see [firmware/README.md](firmware/README.md) and [engineering/esp32-pinmap.json](engineering/esp32-pinmap.json).
 
-## Case: in gì, lắp ra sao
+## Case: what to print and how to assemble
 
-Đọc [case/README.md](case/README.md). Tóm tắt:
+See [case/README.md](case/README.md). In short:
 
-- **Không in lại** phần robot-tank v1 đã in: chassis, hull, lid, turret, giá đèn, 6 tay đòn, 6 bánh.
-- In mới các gá dán/kẹp và cụm **stack v5**: đế, tầng PCA9685 + quạt, tầng ESP32, nắp có ô servo turret và mặt vát 45° cho màn.
-- **Phương án B** là phương án đang chọn: bỏ lid, stack đứng trên bàn kê phía trên 2 cell. Tổng cao **214,8 mm**, so với 118,3 mm của v1. Chỉ có B chứa vừa carrier 62×60 cùng các module.
-- In plate **TEST ONLY** trước, thử với module thật, rồi mới in bản chính.
+- **Do not reprint** the robot-tank v1 parts that are already printed: chassis, hull, lid, turret, light bracket, six arms, six wheels.
+- Print the new glue-on/clip-on holders and the **v5 stack**: base, PCA9685 + fan tier, ESP32 tier, and a cap with a turret-servo pocket and a 45° face for the screen.
+- **Layout B** is the chosen layout: the lid is removed and the stack stands on a bridge plate above the two cells. Total height is **214.8 mm**, against 118.3 mm for v1. Only layout B fits the 62×60 carrier with all the modules.
+- Print the **TEST ONLY** plate first and try it with the real modules before printing the production plates.
 
-## Những chỗ có thể phải tự sửa tay
+## Things you may need to fix by hand
 
-Các tester ghi lại những điểm dưới đây. Mục 1–8 có từ lần chạy `r006`, có thể đã được sửa một phần. Mục 9–11 có từ lần chạy mới nhất `r007`. Cả 2 lần chạy đều không có `lead-document-findings.json`. Chưa điểm nào được đo trên phần cứng.
+The testers recorded the points below. Items 1–8 come from run `r006` and may be partly fixed. Items 9–11 come from the latest run, `r007`. Neither run produced a `lead-document-findings.json`. None of these have been measured on hardware.
 
-1. **Bộ nâng áp servo sát giới hạn.** Dòng đỉnh ước tính khi lấy từ pin là ~8,9 A, cao hơn mức 8 A điển hình của Pololu U3V70F5. Đo dòng thật khi 6 bánh cùng kẹt hoặc khởi động, cân nhắc giới hạn tốc độ hoặc tách tải.
-2. **Tài liệu nguồn còn sót bản cũ.** Vài dòng trong `product.json`, `engineering/POWER_SYSTEM.md`, `parts.json` vẫn mô tả chuỗi nguồn cũ (TPS61287, LILYGO, carrier 100×70, dây 12 AWG / 30 A). Bản đang dùng là: 2 module Pololu U3V70F5, ESP32 DevKit, carrier 62×60. Dây pin chính cần đầu nối chịu ≥15 A, khớp với cầu chì `F_PACK`.
-3. **ACT_EN lúc ESP32 khởi động.** Chân ENABLE của bộ nâng áp thứ hai nối vào ACT_EN qua dây Dupont, có kéo lên VIN (≤4,2 V) qua 100 kΩ. Đo kiểm trên bàn rằng ACT_EN ở mức thấp trong lúc ESP32 boot và reset, để servo không giật.
-4. **Chiều header 2×6 trong `firmware/WIRING.md`** chưa khớp layout 62×60 mới. Lấy [engineering/pinout.md](engineering/pinout.md) làm chuẩn khi bấm dây `J_CTRL` / `J_PCA`.
-5. **Dây pin chưa qua cầu chì dài ~35 mm**, vượt giới hạn ≤25 mm. Dời giá `fuse_holder_pack` lại gần pin, hoặc gắn `F_PACK` ngay trong cụm pin.
-6. **Không có chỗ cho mạch sạc trên xe.** Muốn sạc thì rút phích RUN ra, sạc trên bàn.
-7. **Kích thước module là giả định:** ESP32 51,5×28,3, PCA9685 62,2×25,4, quạt 30×30×10, màn 32×38×4. Đo đồ thật và in coupon TEST ONLY trước.
-8. **Phương án B làm xe cao gần gấp đôi** và phải bỏ lid. Nếu muốn giữ lid như v1 thì phải nhờ team thiết kế lại.
-9. **Sơ đồ nguồn chưa cập nhật `M_LOGIC`.** Vài chỗ trong `engineering/POWER_SYSTEM.md` vẫn ghi DevKit lấy 5 V từ USB riêng, có dòng còn nhắc LILYGO. `case/logic_b.py` và `firmware/reports/integration.json` cũng còn nhắc "chuỗi optional" cũ. Thứ tự cấp nguồn bring-up trong `firmware/WIRING.md` (cấp logic trước, rồi mới cấp 2 đảo A/B) không khớp sơ đồ, vì trên sơ đồ cả 3 module nâng áp nối song song ngay ở dây RUN.
-10. **Chỗ đặt DevKit:** đường dây `M_LOGIC` ghi DevKit nằm ở "tier 3", trong khi `STACK_WIRING.md` và `parts.json` ghi tier 2. Lấy tier 2.
-11. **Cấp nguồn DevKit qua cổng USB thôi**, đừng nối thêm vào chân VIN song song với USB.
+1. **The servo boost converters are near their limit.** The estimated peak current drawn from the battery is ~8.9 A, above the 8 A typical rating of the Pololu U3V70F5. Measure the real current with all six wheels stalled or starting, and consider limiting speed or splitting the load.
+2. **The power docs still contain old text.** Some lines in `product.json`, `engineering/POWER_SYSTEM.md` and `parts.json` still describe the old power chain (TPS61287, LILYGO, 100×70 carrier, 12 AWG / 30 A wiring). The current design uses two Pololu U3V70F5 modules, an ESP32 DevKit and a 62×60 carrier. The main battery lead needs connectors rated ≥15 A to match the `F_PACK` fuse.
+3. **ACT_EN while the ESP32 boots.** The second boost module's ENABLE pin is tied to ACT_EN through a Dupont lead and pulled up to VIN (≤4.2 V) through 100 kΩ. Check on the bench that ACT_EN stays low while the ESP32 boots and resets, so the servos don't twitch.
+4. **The 2×6 header orientation in `firmware/WIRING.md`** does not match the new 62×60 layout. Use [engineering/pinout.md](engineering/pinout.md) when crimping the `J_CTRL` / `J_PCA` leads.
+5. **The unfused battery lead is ~35 mm long**, over the ≤25 mm limit. Move the `fuse_holder_pack` holder closer to the cells, or fit `F_PACK` inside the battery pack.
+6. **There is no place for the charger on the tank.** To charge, unplug the RUN connector and charge on the bench.
+7. **Module dimensions are assumed:** ESP32 51.5×28.3, PCA9685 62.2×25.4, fan 30×30×10, screen 32×38×4 mm. Measure the real parts and print the TEST ONLY coupons first.
+8. **Layout B makes the tank almost twice as tall** and drops the lid. Keeping the v1 lid needs a redesign by the team.
+9. **The power diagrams don't show `M_LOGIC` yet.** Parts of `engineering/POWER_SYSTEM.md` still say the DevKit takes 5 V from its own USB supply, and one line still mentions the LILYGO. `case/logic_b.py` and the firmware integration report still refer to the old "optional chain". The bring-up order in `firmware/WIRING.md` (logic first, then islands A/B) does not match the diagram, where all three boost modules are wired in parallel at the RUN lead.
+10. **Where the DevKit sits:** the `M_LOGIC` wire route says the DevKit is on "tier 3", while `STACK_WIRING.md` and `parts.json` put it on tier 2. Tier 2 is correct.
+11. **Power the DevKit through its USB port only.** Do not also feed its VIN pin in parallel with USB.
 
-## An toàn
+## Safety
 
-Pin Li-ion 1S cho dòng lớn. Phải có bộ bảo vệ và cầu chì như trong [engineering/POWER_SYSTEM.md](engineering/POWER_SYSTEM.md). Không nối song song đầu ra hai bộ nâng áp. Không cấp servo qua chân 5V của DevKit hay qua USB máy tính.
+A 1S Li-ion pack delivers high current. Fit the protector and fuses described in [engineering/POWER_SYSTEM.md](engineering/POWER_SYSTEM.md). Never connect the outputs of the two boost modules in parallel. Never power the servos from the DevKit's 5V pin or from a computer's USB port.
