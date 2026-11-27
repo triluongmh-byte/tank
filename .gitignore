@@ -1,0 +1,38 @@
+# Generated outputs: rebuild with ./build.sh
+build/
+boards/
+.harness/
+.kicadpy/
+.circuit/
+case/out/
+case/print/
+case/reports/
+case/overview.html
+case/ref/board/main-contract.step
+firmware/reports/
+/PILOT_CONTRACT.json
+*.stl
+*.STL
+*.3mf
+*.gbr
+*.drl
+*.zip
+*.glb
+*.bin
+*.elf
+*.map
+*.step
+*.STEP
+*.stp
+# Authored CAD inputs: the printed robot-tank v1/v5 parts the case builds on
+!case/ref/v1/*.step
+!case/ref/v5/*.step
+# Vendor datasheets are linked from engineering/sources/manifest.json, not committed
+engineering/sources/*.pdf
+__pycache__/
+*.pyc
+*.kicad_prl
+~*.lck
+fp-info-cache
+.DS_Store
+!design/Tank.3dshapes/*.step

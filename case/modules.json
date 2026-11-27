@@ -1,0 +1,510 @@
+{
+ "schema": 1,
+ "frame": "contract: +X right, +Y tail, +Z up, ground Z=0 under the turret axis",
+ "source": "case/out/parts.json bboxes",
+ "carrier": "Board carrier 62 x 60 x 1.6 (build/board/main-contract.step, sha in case/ref/board/SHA256SUMS). Buildable mount = layout B: on stack_carrier_deck, board corner at contract (-31, 12.5), underside Z 77.9, board top Z 79.5, M3 x 8 self-tap into 4 deck posts at H1..H4; next tier floor Z 109.5 (30 mm over the board top for vertical servo plugs). Layout A (lid on) cannot hold the carrier together with the DevKit, PCA9685 and chargers (case/DEVIATIONS.md 8); the 100 x 70 contract carrier fits nowhere.",
+ "freeBoxes": [
+  {
+   "name": "layout A only: under the ESP32, between its posts",
+   "positionMm": [
+    11.0,
+    -32.4,
+    45.0
+   ],
+   "sizeMm": [
+    12.0,
+    37.3,
+    7.5
+   ],
+   "note": "X 11..23, Y -32.4..4.9, Z 45..52.5; clear of the hull bosses, trays, the mid wire slot and ESP32 pins"
+  }
+ ],
+ "modules": [
+  {
+   "id": "MCU",
+   "part": "ref_esp32_devkit",
+   "positionMm": [
+    7.3,
+    -39.5,
+    53.0
+   ],
+   "sizeMm": [
+    28.3,
+    51.5,
+    13.5
+   ],
+   "interface": "ESP32 DevKit 30-pin (GIẢ ĐỊNH 51.5 x 28.3), components up, USB end faces the tail (+Y). PCB bottom Z=61.5 on 2 posts + foam tape. Below the PCB 18.5 mm to the floor: pins 8.5 mm, then 90-degree dupont / soldered leads or a small carrier with female headers. Straight dupont does not fit (hull 27 mm tall)."
+  },
+  {
+   "id": "PCA9685_MODULE",
+   "part": "ref_pca9685",
+   "positionMm": [
+    -31.1,
+    -67.2,
+    44.0
+   ],
+   "sizeMm": [
+    62.2,
+    25.4,
+    20.6
+   ],
+   "interface": "PCA9685 62.2 x 25.4, long side across the hull (X), servo headers on the tail-side long edge, PCB bottom Z=46 on 4 peg posts. Logic end headers: 90-degree plug (straight hits the glacis). Address 0x40 unchanged."
+  },
+  {
+   "id": "POWER_1S_BOOST_A",
+   "part": "ref_power_module_a",
+   "positionMm": [
+    -30.6,
+    -13.5,
+    44.6
+   ],
+   "sizeMm": [
+    21.0,
+    26.0,
+    7.0
+   ],
+   "interface": "1S charge/boost 5V 2A Type-C module (GIẢ ĐỊNH 26 x 21 x 7) on tray A. Type-C reachable only with the lid off."
+  },
+  {
+   "id": "POWER_1S_BOOST_B",
+   "part": "ref_power_module_b",
+   "positionMm": [
+    -18.5,
+    -37.0,
+    44.6
+   ],
+   "sizeMm": [
+    26.0,
+    21.0,
+    7.0
+   ],
+   "interface": "second module (separate servo / logic branch), tray B, turned 90 deg."
+  },
+  {
+   "id": "CELL_1",
+   "part": "ref_cell_1",
+   "positionMm": [
+    -19.0,
+    14.4,
+    44.4
+   ],
+   "sizeMm": [
+    18.6,
+    65.2,
+    18.6
+   ],
+   "interface": "18650 on the cradle (GIẢ ĐỊNH Ø18.6 x 65.2), parallel pack, leads exit at the -Y (front) end."
+  },
+  {
+   "id": "CELL_2",
+   "part": "ref_cell_2",
+   "positionMm": [
+    0.4,
+    14.4,
+    44.4
+   ],
+   "sizeMm": [
+    18.6,
+    65.2,
+    18.6
+   ],
+   "interface": "18650 on the cradle."
+  },
+  {
+   "id": "FAN_30",
+   "part": "ref_fan_3010",
+   "positionMm": [
+    -15.0,
+    29.0,
+    75.5
+   ],
+   "sizeMm": [
+    30.0,
+    30.0,
+    10.0
+   ],
+   "interface": "30 x 30 fan (thickness GIẢ ĐỊNH 10) on the lid behind the turret, blowing into the battery window."
+  },
+  {
+   "id": "DISPLAY_ST7789_154",
+   "part": "ref_screen_module",
+   "positionMm": [
+    -19.0,
+    -76.89,
+    43.45
+   ],
+   "sizeMm": [
+    38.0,
+    25.45,
+    25.45
+   ],
+   "interface": "1.54\" ST7789 240x240 module behind the 29 mm glacis window (GIẢ ĐỊNH 32 x 38 x 4), normal (0,-0.707,0.707)."
+  },
+  {
+   "id": "SERVO_TURRET",
+   "part": "ref_servo_turret",
+   "positionMm": [
+    -6.1,
+    -21.6,
+    57.1
+   ],
+   "sizeMm": [
+    12.2,
+    32.2,
+    29.9
+   ],
+   "interface": "SG90 180, PCA CH6, axis X=Y=0."
+  },
+  {
+   "id": "SERVO_FRONT_LEFT",
+   "part": "ref_servo_front_left",
+   "positionMm": [
+    -35.2,
+    -73.6,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  },
+  {
+   "id": "SERVO_MID_LEFT",
+   "part": "ref_servo_mid_left",
+   "positionMm": [
+    -35.2,
+    -21.6,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  },
+  {
+   "id": "SERVO_REAR_LEFT",
+   "part": "ref_servo_rear_left",
+   "positionMm": [
+    -35.2,
+    30.4,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  },
+  {
+   "id": "SERVO_FRONT_RIGHT",
+   "part": "ref_servo_front_right",
+   "positionMm": [
+    5.3,
+    -73.6,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  },
+  {
+   "id": "SERVO_MID_RIGHT",
+   "part": "ref_servo_mid_right",
+   "positionMm": [
+    5.3,
+    -21.6,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  },
+  {
+   "id": "SERVO_REAR_RIGHT",
+   "part": "ref_servo_rear_right",
+   "positionMm": [
+    5.3,
+    30.4,
+    14.9
+   ],
+   "sizeMm": [
+    29.9,
+    32.2,
+    12.2
+   ],
+   "interface": "SG90-360 (FS90R class) at rest on its v1 arm; moves with the suspension"
+  }
+ ],
+ "layoutB": {
+  "note": "Option (b), release note 9: lid off, v5 stack standing on stack_bridge over the cells. BUILDABLE layout. Positions ON THE CAR (parts.json draws this group shifted +130 mm in X). Order: bridge, carrier deck (carrier), tier 1 PCA9685, tier 2 ESP32, cap. Extra tiers add 26 mm each in Z. Power chain (pack protector, F_PACK, 2 x U3V70F5, F_ISLAND_B, XT60 RUN plug) in the hull front bay; M_CHARGE (Adafruit 6091) stays off the car on the bench: unplug RUN, mate the pack XT60 with the charger lead (case/DEVIATIONS.md 9).",
+  "modules": [
+   {
+    "id": "CARRIER",
+    "part": "ref_carrier_B",
+    "positionMm": [
+     -31.0,
+     12.5,
+     76.04
+    ],
+    "sizeMm": [
+     62.0,
+     60.0,
+     19.5
+    ],
+    "interface": "board 62x60 carrier on the deck (servo power switch, OE pull-up, U1, Echo shifters); servo headers J_S0..2 at X -27, J_S3..5 at X +27, J_S6 at X +21"
+   },
+   {
+    "id": "FAN_30_B",
+    "part": "ref_fan_B",
+    "positionMm": [
+     -15.0,
+     27.5,
+     99.5
+    ],
+    "sizeMm": [
+     30.0,
+     30.0,
+     9.99
+    ],
+    "interface": "30x30 5 V fan (GIẢ ĐỊNH 10 thick) zip-tied under stack_tier_1 through its 4 zip slots, blowing down on the carrier; lead to J_FAN ~60 mm"
+   },
+   {
+    "id": "STACK_CARRIER_DECK",
+    "part": "stack_carrier_deck",
+    "positionMm": [
+     -32.0,
+     5.5,
+     66.4
+    ],
+    "sizeMm": [
+     64.0,
+     74.0,
+     46.1
+    ],
+    "interface": "NEW deck tier: sockets on the bridge pegs, 4 M3 posts for the carrier, 4 columns with pegs for the PCA tier"
+   },
+   {
+    "id": "STACK_BRIDGE",
+    "part": "stack_bridge_plate",
+    "positionMm": [
+     -29.5,
+     5.5,
+     63.4
+    ],
+    "sizeMm": [
+     59.0,
+     74.0,
+     6.0
+    ],
+    "interface": "glue-on table over the cell bay (plate + 4 legs), carries the tiers on 4 pegs"
+   },
+   {
+    "id": "STACK_TIER_1",
+    "part": "stack_tier_1",
+    "positionMm": [
+     -21.5,
+     5.5,
+     109.5
+    ],
+    "sizeMm": [
+     43.0,
+     74.0,
+     29.0
+    ],
+    "interface": "v5 tier 74x43, pitch 26: PCA9685 on 4 M2.5 standoffs 55.9 x 19.05; window 46 x 26 for leads"
+   },
+   {
+    "id": "PCA9685_MODULE_B",
+    "part": "ref_pca9685_B",
+    "positionMm": [
+     -12.7,
+     11.4,
+     117.0
+    ],
+    "sizeMm": [
+     25.4,
+     62.2,
+     10.1
+    ],
+    "interface": "PCA9685 on tier 1 (v5 model, GIẢ ĐỊNH 62.2 x 25.4); servo headers on the right (+X) long edge"
+   },
+   {
+    "id": "STACK_TIER_2",
+    "part": "stack_tier_2",
+    "positionMm": [
+     -21.5,
+     5.5,
+     135.5
+    ],
+    "sizeMm": [
+     43.0,
+     74.0,
+     29.0
+    ],
+    "interface": "v5 tier: ESP32 DevKit in 2 rails; pins hang down through the window"
+   },
+   {
+    "id": "MCU_B",
+    "part": "ref_esp32_B",
+    "positionMm": [
+     -14.15,
+     16.75,
+     135.0
+    ],
+    "sizeMm": [
+     28.3,
+     51.5,
+     12.8
+    ],
+    "interface": "ESP32 DevKit 30-pin on tier 2 (GIẢ ĐỊNH 51.5 x 28.3), USB end toward the nose (-Y)"
+   },
+   {
+    "id": "STACK_CAP",
+    "part": "stack_turret_mount",
+    "positionMm": [
+     -21.5,
+     -29.86,
+     134.14
+    ],
+    "sizeMm": [
+     43.0,
+     109.36,
+     35.36
+    ],
+    "interface": "v5 cap: SG90 turret pocket + 45-degree face with the 29 x 29 screen window"
+   },
+   {
+    "id": "DISPLAY_B",
+    "part": "ref_screen_stack_B",
+    "positionMm": [
+     -19.0,
+     -21.72,
+     135.91
+    ],
+    "sizeMm": [
+     38.0,
+     25.45,
+     25.46
+    ],
+    "interface": "1.54\" ST7789 behind the stack face window"
+   },
+   {
+    "id": "SERVO_TURRET_B",
+    "part": "ref_servo_turret_stack_B",
+    "positionMm": [
+     -6.1,
+     20.9,
+     153.6
+    ],
+    "sizeMm": [
+     12.2,
+     32.2,
+     29.9
+    ],
+    "interface": "SG90 180 in the cap, axis X=0, Y=42.5"
+   },
+   {
+    "id": "TURRET_HEAD_B",
+    "part": "ref_turret_head_B",
+    "positionMm": [
+     -23.5,
+     27.5,
+     183.8
+    ],
+    "sizeMm": [
+     47.0,
+     30.0,
+     31.0
+    ],
+    "interface": "printed v1 turret head + 2 HC-SR04P on the stack servo"
+   },
+   {
+    "id": "M_SERVO_BOOST",
+    "part": "ref_conv_a_B",
+    "positionMm": [
+     -20.3,
+     -27.8,
+     44.5
+    ],
+    "sizeMm": [
+     40.6,
+     4.6,
+     15.2
+    ],
+    "interface": "Pololu U3V70F5 #1 (island A) on edge in conv_holder_a (GIẢ ĐỊNH 40.6 x 15.2 x 4.6); VIN end -Y_v1 = +X contract right side, VOUT -> J_PWR 18 AWG"
+   },
+   {
+    "id": "M_SERVO_BOOST_B",
+    "part": "ref_conv_b_B",
+    "positionMm": [
+     -20.3,
+     -35.6,
+     44.5
+    ],
+    "sizeMm": [
+     40.6,
+     4.6,
+     15.2
+    ],
+    "interface": "Pololu U3V70F5 #2 (island B) on edge in conv_holder_b; VOUT -> F_ISLAND_B -> CH3-5 red wires; ENABLE <- ACT_EN tap, 4.7 k to GND"
+   },
+   {
+    "id": "FH_PACK",
+    "part": "ref_fuse_pack_B",
+    "positionMm": [
+     -19.5,
+     -17.9,
+     44.5
+    ],
+    "sizeMm": [
+     39.0,
+     12.0,
+     22.0
+    ],
+    "interface": "F_PACK 0287015.U in 0FHA0002XP inline holder (GIẢ ĐỊNH 39 x 22 x 12) on edge in fuse_holder_pack, in front of the cells"
+   },
+   {
+    "id": "M_PROTECT",
+    "part": "ref_protector_B",
+    "positionMm": [
+     -22.5,
+     3.05,
+     43.02
+    ],
+    "sizeMm": [
+     45.0,
+     4.5,
+     19.98
+    ],
+    "interface": "PCB-Li-1S15A (GIẢ ĐỊNH <= 45 x 20 x 4.5 with pads) standing in protector_holder against the cell ends, under the bridge plate"
+   },
+   {
+    "id": "F_ISLAND_B",
+    "part": "ref_fuse_b_B",
+    "positionMm": [
+     26.99,
+     -34.7,
+     53.01
+    ],
+    "sizeMm": [
+     16.97,
+     32.0,
+     16.97
+    ],
+    "interface": "5 A ATOF fuse 0287005.U in an inline holder (GIẢ ĐỊNH 32 x 14 x 10) in fuse_clip_b on the right 45 deg side wall"
+   }
+  ]
+ },
+ "layoutA_note": "modules[] above are option (a): lid on, devices on glue-on holders inside the hull (release note 8). NOT buildable with the board carrier (DEVIATIONS 8); kept as the record of the printed-hull fit."
+}

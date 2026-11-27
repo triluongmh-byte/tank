@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "tank")(type "KiCad")(uri "${KIPRJMOD}/tank.kicad_sym")(options "")(descr "written by kicadpy.author"))
+)

@@ -1,0 +1,2825 @@
+[
+  {
+    "ref": "C1",
+    "value": "1000u",
+    "lib": "Tank:CP_Radial_D10.0mm_P5.00mm",
+    "x": 16.5,
+    "y": 35.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 16.5,
+        "y": 35.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 21.5,
+        "y": 35.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "TP2",
+    "value": "LOGIC_3V3",
+    "lib": "Tank:TestPoint_Pad_D2.0mm",
+    "x": 12.5,
+    "y": 27.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 12.5,
+        "y": 27.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S6",
+    "value": "S6",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 52.0,
+    "y": 3.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 52.0,
+        "y": 3.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 52.0,
+        "y": 5.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_TURRET",
+        "x": 52.0,
+        "y": 8.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "Q2",
+    "value": "AO4409",
+    "lib": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+    "x": 34.0,
+    "y": 51.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 31.525,
+        "y": 49.095,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "LOAD_5V",
+        "x": 31.525,
+        "y": 50.365,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "LOAD_5V",
+        "x": 31.525,
+        "y": 51.635,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "SW_GATE",
+        "x": 31.525,
+        "y": 52.905,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "SERVO_5V",
+        "x": 36.475,
+        "y": 52.905,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "6",
+        "net": "SERVO_5V",
+        "x": 36.475,
+        "y": 51.635,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "7",
+        "net": "SERVO_5V",
+        "x": 36.475,
+        "y": 50.365,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "8",
+        "net": "SERVO_5V",
+        "x": 36.475,
+        "y": 49.095,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S4",
+    "value": "S4",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 58.0,
+    "y": 14.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 58.0,
+        "y": 14.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 58.0,
+        "y": 16.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_RM",
+        "x": 58.0,
+        "y": 19.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "U2",
+    "value": "MCP1700-3302E/TT",
+    "lib": "Tank:SOT-23",
+    "x": 39.0,
+    "y": 41.0,
+    "rotationDeg": 180.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 39.9375,
+        "y": 41.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SERVO_3V3",
+        "x": 39.9375,
+        "y": 40.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "SERVO_5V",
+        "x": 38.0625,
+        "y": 41.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_PCA",
+    "value": "PCA",
+    "lib": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+    "x": 30.0,
+    "y": 5.2,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 30.0,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 30.0,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "I2C_SDA",
+        "x": 32.54,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "4",
+        "net": "I2C_SCL",
+        "x": 32.54,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "5",
+        "net": "PCA_OE_N",
+        "x": 35.08,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "6",
+        "net": "PWM_LF_RAW",
+        "x": 35.08,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "7",
+        "net": "PWM_LM_RAW",
+        "x": 37.62,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "8",
+        "net": "PWM_LR_RAW",
+        "x": 37.62,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "9",
+        "net": "PWM_RF_RAW",
+        "x": 40.16,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "10",
+        "net": "PWM_RM_RAW",
+        "x": 40.16,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "11",
+        "net": "PWM_RR_RAW",
+        "x": 42.7,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "12",
+        "net": "PWM_TURRET_RAW",
+        "x": 42.7,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "J_S3",
+    "value": "S3",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 58.0,
+    "y": 3.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 58.0,
+        "y": 3.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 58.0,
+        "y": 5.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_RF",
+        "x": 58.0,
+        "y": 8.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "H2",
+    "value": "M3 / 3.2mm",
+    "lib": "Tank:MountingHole_3.2mm_M3",
+    "x": 59.0,
+    "y": 26.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "",
+        "net": "",
+        "x": 59.0,
+        "y": 26.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "H3",
+    "value": "M3 / 3.2mm",
+    "lib": "Tank:MountingHole_3.2mm_M3",
+    "x": 59.0,
+    "y": 52.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "",
+        "net": "",
+        "x": 59.0,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R40",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 21.0,
+    "y": 15.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SONAR_F_TRIG_3V3",
+        "x": 20.0875,
+        "y": 15.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 21.9125,
+        "y": 15.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R23",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 36.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RF",
+        "x": 44.2875,
+        "y": 36.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 36.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C5",
+    "value": "100n",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 40.4,
+    "y": 30.0,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_3V3",
+        "x": 40.4,
+        "y": 30.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 40.4,
+        "y": 29.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C11",
+    "value": "100n",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 28.6,
+    "y": 21.0,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 28.6,
+        "y": 21.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 28.6,
+        "y": 20.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R1",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 28.0,
+    "y": 47.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "ACT_EN",
+        "x": 27.0875,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SW_BASE",
+        "x": 28.9125,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C12",
+    "value": "100n",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 40.6,
+    "y": 15.0,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 40.6,
+        "y": 15.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 40.6,
+        "y": 14.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S2",
+    "value": "S2",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 4.0,
+    "y": 37.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 4.0,
+        "y": 37.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 4.0,
+        "y": 39.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_LR",
+        "x": 4.0,
+        "y": 42.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "R43",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 34.0,
+    "y": 19.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SONAR_R_ECHO_5V",
+        "x": 33.0875,
+        "y": 19.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 34.9125,
+        "y": 19.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_FAN",
+    "value": "FAN_5V",
+    "lib": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "x": 45.5,
+    "y": 52.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 45.5,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 50.58,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "TP5",
+    "value": "SERVO_3V3",
+    "lib": "Tank:TestPoint_Pad_D2.0mm",
+    "x": 52.0,
+    "y": 40.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_3V3",
+        "x": 52.0,
+        "y": 40.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R11",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 30.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LM_RAW",
+        "x": 25.0875,
+        "y": 30.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 30.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R3",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 38.0,
+    "y": 47.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 37.0875,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SW_GATE",
+        "x": 38.9125,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C10",
+    "value": "100n",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 28.6,
+    "y": 15.0,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 28.6,
+        "y": 15.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 28.6,
+        "y": 14.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R41",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 21.0,
+    "y": 23.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SONAR_F_ECHO_5V",
+        "x": 20.0875,
+        "y": 23.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 21.9125,
+        "y": 23.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_SONAR_R",
+    "value": "SONAR_R",
+    "lib": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+    "x": 17.0,
+    "y": 13.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 17.0,
+        "y": 13.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SONAR_R_TRIG_5V",
+        "x": 17.0,
+        "y": 15.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "SONAR_R_ECHO_5V",
+        "x": 17.0,
+        "y": 18.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "4",
+        "net": "GND",
+        "x": 17.0,
+        "y": 20.62,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "R6",
+    "value": "220",
+    "lib": "Tank:R_2512_6332Metric",
+    "x": 34.5,
+    "y": 57.2,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_5V",
+        "x": 31.5375,
+        "y": 57.2,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 37.4625,
+        "y": 57.2,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C4",
+    "value": "1u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 42.2,
+    "y": 40.2,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_3V3",
+        "x": 42.2,
+        "y": 41.15,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 42.2,
+        "y": 39.25,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R44",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 22.0,
+    "y": 11.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "STOP_N",
+        "x": 21.0875,
+        "y": 11.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "LOGIC_3V3",
+        "x": 22.9125,
+        "y": 11.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R7",
+    "value": "1k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 31.0,
+    "y": 39.2,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_3V3",
+        "x": 30.0875,
+        "y": 39.2,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 31.9125,
+        "y": 39.2,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "Q1",
+    "value": "AO4409",
+    "lib": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+    "x": 24.0,
+    "y": 52.0,
+    "rotationDeg": 180.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 26.475,
+        "y": 53.905,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "LOAD_5V",
+        "x": 26.475,
+        "y": 52.635,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "LOAD_5V",
+        "x": 26.475,
+        "y": 51.365,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "GND",
+        "x": 26.475,
+        "y": 50.095,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "FUSED_5V",
+        "x": 21.525,
+        "y": 50.095,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "6",
+        "net": "FUSED_5V",
+        "x": 21.525,
+        "y": 51.365,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "7",
+        "net": "FUSED_5V",
+        "x": 21.525,
+        "y": 52.635,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "8",
+        "net": "FUSED_5V",
+        "x": 21.525,
+        "y": 53.905,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R22",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 33.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LR",
+        "x": 44.2875,
+        "y": 33.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 33.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "TP4",
+    "value": "SERVO_5V",
+    "lib": "Tank:TestPoint_Pad_D2.0mm",
+    "x": 52.0,
+    "y": 36.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_5V",
+        "x": 52.0,
+        "y": 36.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R10",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 27.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LF_RAW",
+        "x": 25.0875,
+        "y": 27.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 27.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "TP1",
+    "value": "GND",
+    "lib": "Tank:TestPoint_Pad_D2.0mm",
+    "x": 8.5,
+    "y": 28.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 8.5,
+        "y": 28.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R16",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 45.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_TURRET_RAW",
+        "x": 25.0875,
+        "y": 45.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 45.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S1",
+    "value": "S1",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 4.0,
+    "y": 14.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 4.0,
+        "y": 14.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 4.0,
+        "y": 16.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_LM",
+        "x": 4.0,
+        "y": 19.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "C7",
+    "value": "1u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 34.4,
+    "y": 41.0,
+    "rotationDeg": 180.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_5V",
+        "x": 35.35,
+        "y": 41.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 33.45,
+        "y": 41.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "H4",
+    "value": "M3 / 3.2mm",
+    "lib": "Tank:MountingHole_3.2mm_M3",
+    "x": 3.0,
+    "y": 52.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "",
+        "net": "",
+        "x": 3.0,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_PWR",
+    "value": "PWR",
+    "lib": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+    "x": 10.0,
+    "y": 47.5,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "EXT_5V_IN",
+        "x": 10.0,
+        "y": 47.5,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 15.08,
+        "y": 47.5,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "F1",
+    "value": "7A",
+    "lib": "Tank:Fuse_2512_6332Metric",
+    "x": 16.5,
+    "y": 57.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "EXT_5V_IN",
+        "x": 13.6,
+        "y": 57.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "FUSED_5V",
+        "x": 19.4,
+        "y": 57.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "TP3",
+    "value": "LOAD_5V",
+    "lib": "Tank:TestPoint_Pad_D2.0mm",
+    "x": 22.0,
+    "y": 43.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 22.0,
+        "y": 43.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "U5",
+    "value": "SN74AHCT1G125",
+    "lib": "Tank:SOT-23-5",
+    "x": 37.0,
+    "y": 16.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 35.8625,
+        "y": 15.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SONAR_R_TRIG_3V3",
+        "x": 35.8625,
+        "y": 16.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "GND",
+        "x": 35.8625,
+        "y": 16.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "SONAR_R_TRIG_5V",
+        "x": 38.1375,
+        "y": 16.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "LOAD_5V",
+        "x": 38.1375,
+        "y": 15.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S5",
+    "value": "S5",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 58.0,
+    "y": 32.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 58.0,
+        "y": 32.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 58.0,
+        "y": 34.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_RR",
+        "x": 58.0,
+        "y": 37.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "C8",
+    "value": "1u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 35.0,
+    "y": 44.6,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_3V3",
+        "x": 34.05,
+        "y": 44.6,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 35.95,
+        "y": 44.6,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_SONAR_F",
+    "value": "SONAR_F",
+    "lib": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+    "x": 11.0,
+    "y": 13.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 11.0,
+        "y": 13.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SONAR_F_TRIG_5V",
+        "x": 11.0,
+        "y": 15.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "SONAR_F_ECHO_5V",
+        "x": 11.0,
+        "y": 18.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "4",
+        "net": "GND",
+        "x": 11.0,
+        "y": 20.62,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "R13",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 36.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RF_RAW",
+        "x": 25.0875,
+        "y": 36.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 36.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R42",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 34.0,
+    "y": 13.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SONAR_R_TRIG_3V3",
+        "x": 33.0875,
+        "y": 13.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 34.9125,
+        "y": 13.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C13",
+    "value": "100n",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 40.6,
+    "y": 21.0,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 40.6,
+        "y": 21.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 40.6,
+        "y": 20.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R4",
+    "value": "1k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 22.0,
+    "y": 46.5,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "ACT_EN",
+        "x": 21.0875,
+        "y": 46.5,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 22.9125,
+        "y": 46.5,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R12",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 33.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LR_RAW",
+        "x": 25.0875,
+        "y": 33.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 33.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R26",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 45.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_TURRET",
+        "x": 44.2875,
+        "y": 45.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 45.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R20",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 27.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LF",
+        "x": 44.2875,
+        "y": 27.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 27.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "Q3",
+    "value": "MMBT3904",
+    "lib": "Tank:SOT-23",
+    "x": 30.0,
+    "y": 43.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SW_BASE",
+        "x": 29.0625,
+        "y": 42.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 29.0625,
+        "y": 43.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "SW_GATE",
+        "x": 30.9375,
+        "y": 43.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R14",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 39.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RM_RAW",
+        "x": 25.0875,
+        "y": 39.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 39.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R21",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 30.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_LM",
+        "x": 44.2875,
+        "y": 30.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 30.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_S0",
+    "value": "S0",
+    "lib": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+    "x": 4.0,
+    "y": 3.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 4.0,
+        "y": 3.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "SERVO_5V",
+        "x": 4.0,
+        "y": 5.54,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "PWM_LF",
+        "x": 4.0,
+        "y": 8.08,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "U1",
+    "value": "SN74LVC244APW",
+    "lib": "Tank:TSSOP-20_4.4x6.5mm_P0.65mm",
+    "x": 35.0,
+    "y": 34.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PCA_OE_N",
+        "x": 32.1375,
+        "y": 31.075,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "PWM_LF_RAW",
+        "x": 32.1375,
+        "y": 31.725,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "unconnected-(U1-2Y0-Pad3)",
+        "x": 32.1375,
+        "y": 32.375,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "PWM_LM_RAW",
+        "x": 32.1375,
+        "y": 33.025,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "PWM_TURRET",
+        "x": 32.1375,
+        "y": 33.675,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "6",
+        "net": "PWM_LR_RAW",
+        "x": 32.1375,
+        "y": 34.325,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "7",
+        "net": "PWM_RR",
+        "x": 32.1375,
+        "y": 34.975,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "8",
+        "net": "PWM_RF_RAW",
+        "x": 32.1375,
+        "y": 35.625,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "9",
+        "net": "PWM_RM",
+        "x": 32.1375,
+        "y": 36.275,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "10",
+        "net": "GND",
+        "x": 32.1375,
+        "y": 36.925,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "11",
+        "net": "PWM_RM_RAW",
+        "x": 37.8625,
+        "y": 36.925,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "12",
+        "net": "PWM_RF",
+        "x": 37.8625,
+        "y": 36.275,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "13",
+        "net": "PWM_RR_RAW",
+        "x": 37.8625,
+        "y": 35.625,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "14",
+        "net": "PWM_LR",
+        "x": 37.8625,
+        "y": 34.975,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "15",
+        "net": "PWM_TURRET_RAW",
+        "x": 37.8625,
+        "y": 34.325,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "16",
+        "net": "PWM_LM",
+        "x": 37.8625,
+        "y": 33.675,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "17",
+        "net": "GND",
+        "x": 37.8625,
+        "y": 33.025,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "18",
+        "net": "PWM_LF",
+        "x": 37.8625,
+        "y": 32.375,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "19",
+        "net": "PCA_OE_N",
+        "x": 37.8625,
+        "y": 31.725,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "20",
+        "net": "SERVO_3V3",
+        "x": 37.8625,
+        "y": 31.075,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C2",
+    "value": "10u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 40.4,
+    "y": 54.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_5V",
+        "x": 39.45,
+        "y": 54.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 41.35,
+        "y": 54.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R24",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 39.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RM",
+        "x": 44.2875,
+        "y": 39.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 39.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C3",
+    "value": "10u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 40.4,
+    "y": 57.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SERVO_5V",
+        "x": 39.45,
+        "y": 57.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 41.35,
+        "y": 57.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "C6",
+    "value": "1u",
+    "lib": "Tank:C_0805_2012Metric",
+    "x": 30.0,
+    "y": 28.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 29.05,
+        "y": 28.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 30.95,
+        "y": 28.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "U4",
+    "value": "SN74LVC1G17",
+    "lib": "Tank:SOT-23-5",
+    "x": 25.0,
+    "y": 22.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "unconnected-(U4-NC-Pad1)",
+        "x": 23.8625,
+        "y": 21.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SONAR_F_ECHO_5V",
+        "x": 23.8625,
+        "y": 22.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "GND",
+        "x": 23.8625,
+        "y": 22.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "SONAR_F_ECHO_3V3",
+        "x": 26.1375,
+        "y": 22.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "LOGIC_3V3",
+        "x": 26.1375,
+        "y": 21.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "U3",
+    "value": "SN74AHCT1G125",
+    "lib": "Tank:SOT-23-5",
+    "x": 25.0,
+    "y": 16.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 23.8625,
+        "y": 15.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SONAR_F_TRIG_3V3",
+        "x": 23.8625,
+        "y": 16.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "GND",
+        "x": 23.8625,
+        "y": 16.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "SONAR_F_TRIG_5V",
+        "x": 26.1375,
+        "y": 16.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "LOAD_5V",
+        "x": 26.1375,
+        "y": 15.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "J_CTRL",
+    "value": "CTRL",
+    "lib": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+    "x": 10.0,
+    "y": 5.2,
+    "rotationDeg": 90.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "GND",
+        "x": 10.0,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "LOGIC_3V3",
+        "x": 10.0,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "3",
+        "net": "I2C_SDA",
+        "x": 12.54,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "4",
+        "net": "I2C_SCL",
+        "x": 12.54,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "5",
+        "net": "PCA_OE_N",
+        "x": 15.08,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "6",
+        "net": "ACT_EN",
+        "x": 15.08,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "7",
+        "net": "SONAR_F_TRIG_3V3",
+        "x": 17.62,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "8",
+        "net": "SONAR_F_ECHO_3V3",
+        "x": 17.62,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "9",
+        "net": "SONAR_R_TRIG_3V3",
+        "x": 20.16,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "10",
+        "net": "SONAR_R_ECHO_3V3",
+        "x": 20.16,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "11",
+        "net": "GND",
+        "x": 22.7,
+        "y": 5.2,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "12",
+        "net": "STOP_N",
+        "x": 22.7,
+        "y": 2.66,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ]
+  },
+  {
+    "ref": "R5",
+    "value": "1k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 33.0,
+    "y": 25.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "LOGIC_3V3",
+        "x": 32.0875,
+        "y": 25.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "PCA_OE_N",
+        "x": 33.9125,
+        "y": 25.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "H1",
+    "value": "M3 / 3.2mm",
+    "lib": "Tank:MountingHole_3.2mm_M3",
+    "x": 3.0,
+    "y": 26.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "",
+        "net": "",
+        "x": 3.0,
+        "y": 26.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R2",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 32.0,
+    "y": 47.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "SW_BASE",
+        "x": 31.0875,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 32.9125,
+        "y": 47.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R15",
+    "value": "47k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 26.0,
+    "y": 42.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RR_RAW",
+        "x": 25.0875,
+        "y": 42.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 26.9125,
+        "y": 42.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "U6",
+    "value": "SN74LVC1G17",
+    "lib": "Tank:SOT-23-5",
+    "x": 37.0,
+    "y": 22.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "unconnected-(U6-NC-Pad1)",
+        "x": 35.8625,
+        "y": 21.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "SONAR_R_ECHO_5V",
+        "x": 35.8625,
+        "y": 22.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "3",
+        "net": "GND",
+        "x": 35.8625,
+        "y": 22.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "4",
+        "net": "SONAR_R_ECHO_3V3",
+        "x": 38.1375,
+        "y": 22.95,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "5",
+        "net": "LOGIC_3V3",
+        "x": 38.1375,
+        "y": 21.05,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  },
+  {
+    "ref": "R25",
+    "value": "10k",
+    "lib": "Tank:R_0805_2012Metric",
+    "x": 45.2,
+    "y": 42.0,
+    "rotationDeg": 0.0,
+    "pads": [
+      {
+        "number": "1",
+        "net": "PWM_RR",
+        "x": 44.2875,
+        "y": 42.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 46.1125,
+        "y": 42.0,
+        "layers": [
+          "F.Cu"
+        ],
+        "through": false
+      }
+    ]
+  }
+]

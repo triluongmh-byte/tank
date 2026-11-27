@@ -1,0 +1,5 @@
+"""Normalize the native STEP into the sealed case coordinate frame; no new part geometry."""
+import cadquery as cq,pathlib,json,hashlib
+src=pathlib.Path('build/board/main-native.step');out=pathlib.Path('build/board/main-contract.step');m=cq.importers.importStep(str(src));m=m.mirror('XZ',union=False).translate((0,0,.08));cq.exporters.export(m,str(out));bb=m.val().BoundingBox()
+d={'schema':1,'pcbSha256':hashlib.sha256(pathlib.Path('design/main.kicad_pcb').read_bytes()).hexdigest(),'nativeStep':str(src),'nativeStepSha256':hashlib.sha256(src.read_bytes()).hexdigest(),'contractStep':str(out),'contractStepSha256':hashlib.sha256(out.read_bytes()).hexdigest(),'transform4x4':[[1,0,0,0],[0,-1,0,0],[0,0,1,.08],[0,0,0,1]],'description':'Native STEP Y reflection and Z+0.08mm to center the explicit70um copper/10um mask stackup about nominal board Z0..1.6. KiCad visual mask adds5um each side: exported skin Z-0.005..1.605. Includes populated component bodies and tails.','assemblyBoundsMm':[bb.xmin,bb.ymin,bb.zmin,bb.xmax,bb.ymax,bb.zmax],'hardwareTested':False}
+pathlib.Path('engineering/step-handoff.json').write_text(json.dumps(d,indent=2));print(json.dumps(d))

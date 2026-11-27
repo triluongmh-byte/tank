@@ -1,0 +1,33 @@
+# Firmware handoff — 2026-11-27 (note 8: ESP32 DevKit + SPI ST7789 240×240)
+- Contract: a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810; notes 1,2,8 applied (tip 52b5a7b4…). Note 8 retargeted MCU/display/pins; see DEVIATIONS.md last section.
+- Scope: firmware/, tools/firmware/, build/firmware/ only. No hardware, flash, commits or delegation performed.
+- Fast full checks: `python3 firmware/check.py`; compile: `python3 firmware/build.py` (both incremental/all-core).
+- Real target (esp32:esp32:esp32): build/firmware/esp32/tank.ino.bin + .elf + bootloader/partitions; recipe firmware/flash.json.
+- Build uses existing shared Arduino ESP32 core 2.0.14. Keep provided cache env; no new libraries needed.
+- tank/tank.ino: USB/protocol dispatch feed() 46–67, safe setup() 68–84, bounded loop()/buttons/deadman 85–115; target compile.
+- tank/pins.h: DevKit GPIOs = board engineering/esp32-pinmap.json (OE25 ACT26 TRIG32/33 ECHO34/35 STOP27 SDA21 SCL22), PCA address/prescale and timing constants; `check.py interfaces`.
+- tank/controller.h: calibration/types 9–32; cut/start/sonar guards 39–78; sample/tick/center acquisition/auto/scan 85–138; command() 140–205; MotionParser::feed() 211–221; `check.py core scan`.
+- tank/esp_hardware.h: guard() 16–22, I2cBus 23–33, EspHardware gate/power/initialize 37–51, NVS save/load 54–58, EchoIO 60–70; `check.py guard` + target compile.
+- tank/echo_capture.cpp: IRAM EchoIO::edge() 3–9; target compile. Kept out of inline class to avoid Xtensa literal relocation failure.
+- tank/pca9685.h: initialize() 11–23, ticks/frame() 24–35, healthy() 37–41; `check.py core`.
+- tank/calibration_store.h: encode/decode + CRC 5–18, fixed versioned 48-byte record; `check.py core`.
+- tank/sonar.h: Sonars::tick() 12–24, alternating triggers >=60ms apart, capture timeout; `check.py core`.
+- tank/display.h: Display::begin() SPI ST7789 init, start()/step() stream 20-row bands, busy(); tank.ino loop() calls show() while busy, renders only when idle; half-height static framebuffer, Canvas window y0/h (face.h), start()/step() band streaming; loop() renders top then bottom half. Panel init/inversion untested on real 1.54" module.
+- tank/mechanical_limits.h: CASE_YAW -70..+70 imported from case/firmware-limits.json (reconcile.py verifies hash-bound file). `check.py interfaces scan`.
+- Reference logic headers: pet_logic, text_protocol, activity, fun, usage_logic, session_list; `check.py pet`.
+- Reference rendering headers: face, font_rasters, personality, led_colors (no LED hardware), usage_face, session_face, status_bar; `check.py pet`.
+- reference/manifest.json records exact original header hashes and the user-named allowed source path; SOURCES.md explains reuse and manufacturer evidence.
+- host/tank_transport.py: authorize/handshake, TankMotion and MotionForwarder implement new tank identity/ARM/heartbeat with reference transport API; `check.py host`.
+- tests/core_test.cpp: parser/fuzz, stop/timeout/enable, channel map, PCA register broadcast behavior, CRC and sonar mocks.
+- tests/guard_test.cpp + tests/mock/{Arduino.h,Wire.h,Preferences.h,esp_timer.h}: actual production HAL timer/latch/held-button tests.
+- tests/pet_test.cpp: reference parsers + framebuffer states under ASan/UBSan; tests/scan_test.cpp: stationary scan with generated mock case range (does not unlock production).
+- tests/test_transport.py, test_interfaces.py: host adapter and native PCB parser, no devices; `check.py host`.
+- build.py/check.py: incremental target build/parallel host tests; reconcile.py measure() 20–31 reads KiCad 9/10; compare_board() 33–61 checks U1 paths/isolated NC/fan; main() 63–99 checks contract/GPIO/case; `check.py interfaces` or `python3 firmware/reconcile.py --require-board`.
+- README.md/WIRING.md/PROTOCOL.md: operation/build/wire protocol; WIRING 2×6 order, "Chuỗi nguồn đã chốt" section = board deviation 8 two-island power (A via J_PWR, B direct to CH3-5 red wires, ACT_EN tap, fuses). Wiring-only repair, no firmware rebuild. INTEGRATION.md: board/case interchange. DEVIATIONS.md: safe V0/board deviations; inspect links and `check.py interfaces`.
+- reports/integration.json: actual PCB electrical interfaces/U1/J_FAN pass, case pending. reports/validation.json: hashes, 4 cached sanitizer suites + 14 Python tests pass. Binary/target sources unchanged; no rebuild or device access.
+- Pending integration: reconcile.py compares pins to esp32-pinmap.json (passes); case v1 gives no yaw limits; case/firmware-limits.json absent; board geometry deviation item 3 needs lead/case reconciliation. Run reconcile.py --require-board --require-case after merge; rebuild only if target source changes.
+- Turret sweeps within ±70 (case-checked); AUTO SCAN sweeps -70..+70 stationary (angles still unverified on hardware). No autonomous blind pivot/reverse; AUTO forward stops and cuts power at blocked/unknown/stale echo.
+- All 6 wheel calibration flags default false; DRIVE/CUE/AUTO require calibration; TEST deliberately permits one lifted wheel. No on-device verified receipt supplied.
+- Open bench assumptions: 30-pin DevKit identity, ST7789 offset/invert/BL polarity, Echo level on input-only 34/35, exact LILYGO/PCA/servo/sonar clones, signed yaw, every neutral/direction, current/pulse/frequency, stopping distance, reset/OE bias/backfeed, 140g parallel-18650 pack protection/current/capacity, wire clearance and fit.
+- HardwareTested=false. Local checks/binary do not establish teamReady or native board readiness.
+- tools/firmware/publish_proofs.py: after build+check+reconcile, rewrites build-proof.json and reports/validation.json from current hashes.

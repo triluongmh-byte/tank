@@ -1,0 +1,1962 @@
+{
+ "schema": 1,
+ "frame": "contract (X=-Y_v1, Y=-X_v1, Z=Z_v1)",
+ "printer": {
+  "bedMm": [
+   256,
+   256,
+   256
+  ],
+  "nozzleMm": 0.4
+ },
+ "joints": [
+  {
+   "name": "suspension_front_left",
+   "originMm": [
+    -0.0,
+    -35.4,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -10,
+    25
+   ],
+   "moves": [
+    "arm_front_left",
+    "wheel_front_left",
+    "ref_servo_front_left"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_mid_left",
+    "wheel_rear_left",
+    "led_bracket",
+    "ref_led_bar"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "suspension_front_right",
+   "originMm": [
+    -0.0,
+    -35.4,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -10,
+    25
+   ],
+   "moves": [
+    "arm_front_right",
+    "wheel_front_right",
+    "ref_servo_front_right"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_mid_right",
+    "wheel_rear_right",
+    "led_bracket",
+    "ref_led_bar"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "suspension_mid_left",
+   "originMm": [
+    -0.0,
+    16.6,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -14,
+    25
+   ],
+   "moves": [
+    "arm_mid_left",
+    "wheel_mid_left",
+    "ref_servo_mid_left"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_front_left",
+    "wheel_rear_left"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "suspension_mid_right",
+   "originMm": [
+    -0.0,
+    16.6,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -14,
+    25
+   ],
+   "moves": [
+    "arm_mid_right",
+    "wheel_mid_right",
+    "ref_servo_mid_right"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_front_right",
+    "wheel_rear_right"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "suspension_rear_left",
+   "originMm": [
+    -0.0,
+    68.6,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -14,
+    25
+   ],
+   "moves": [
+    "arm_rear_left",
+    "wheel_rear_left",
+    "ref_servo_rear_left"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_front_left",
+    "wheel_mid_left"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "suspension_rear_right",
+   "originMm": [
+    -0.0,
+    68.6,
+    28.0
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "rangeDeg": [
+    -14,
+    25
+   ],
+   "moves": [
+    "arm_rear_right",
+    "wheel_rear_right",
+    "ref_servo_rear_right"
+   ],
+   "clearOf": [
+    "chassis",
+    "hull",
+    "wheel_front_right",
+    "wheel_mid_right"
+   ],
+   "minClearanceMm": 0.25,
+   "note": "v1 printed lever arm on an M3 pivot (lug gap 0.4 mm by design). Negative = wheel up. Up-travel measured clear to -10 deg (front, LED bracket) / -14 deg (mid, rear); down-travel is held by the rubber band, 25 deg sampled. Not a new part."
+  },
+  {
+   "name": "turret",
+   "originMm": [
+    0,
+    0,
+    73.0
+   ],
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "rangeDeg": [
+    -90,
+    90
+   ],
+   "moves": [
+    "turret_head",
+    "ref_horn_turret",
+    "ref_sonar_front",
+    "ref_sonar_rear"
+   ],
+   "clearOf": [
+    "lid",
+    "fan_plate",
+    "ref_fan_3010",
+    "ref_servo_turret"
+   ],
+   "allowContact": [
+    [
+     "ref_horn_turret",
+     "ref_servo_turret"
+    ]
+   ],
+   "minClearanceMm": 0.25,
+   "note": "SG90 180 deg sweep of the v1 turret head (head gap 0.3 mm over the servo by v1 design)."
+  },
+  {
+   "name": "turret_on_stack (layout B)",
+   "originMm": [
+    130.0,
+    42.5,
+    183.5
+   ],
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "rangeDeg": [
+    -90,
+    90
+   ],
+   "moves": [
+    "ref_turret_head_B",
+    "ref_horn_turret_stack_B",
+    "ref_sonar_front_B",
+    "ref_sonar_rear_B"
+   ],
+   "clearOf": [
+    "stack_turret_mount",
+    "stack_tier_2",
+    "ref_servo_turret_stack_B",
+    "ref_screen_stack_B"
+   ],
+   "allowContact": [
+    [
+     "ref_horn_turret_stack_B",
+     "ref_servo_turret_stack_B"
+    ]
+   ],
+   "minClearanceMm": 0.25,
+   "note": "option (b): the printed v1 turret head on the SG90 in the v5 stack_turret_mount (on the carrier deck)"
+  }
+ ],
+ "wires": [
+  {
+   "name": "servo front left -> carrier J_S0",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       -46.0,
+       21.0
+      ],
+      [
+       130.0,
+       -46.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       94.0,
+       2.0,
+       65.5
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       15.5,
+       92.5
+      ],
+      [
+       103.0,
+       15.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       -46.0,
+       21.0
+      ],
+      [
+       130.0,
+       -46.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       110.0,
+       -10.0,
+       74.0
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       15.5,
+       92.5
+      ],
+      [
+       103.0,
+       15.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "servo front right -> carrier J_S3",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       -46.0,
+       21.0
+      ],
+      [
+       130.0,
+       -46.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       166.0,
+       2.0,
+       65.5
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       15.5,
+       92.5
+      ],
+      [
+       157.0,
+       15.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       -46.0,
+       21.0
+      ],
+      [
+       130.0,
+       -46.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       150.0,
+       -10.0,
+       74.0
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       15.5,
+       92.5
+      ],
+      [
+       157.0,
+       15.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "servo mid left -> carrier J_S1",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       6.0,
+       21.0
+      ],
+      [
+       130.0,
+       6.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       94.0,
+       2.0,
+       65.5
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       26.5,
+       92.5
+      ],
+      [
+       103.0,
+       26.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       6.0,
+       21.0
+      ],
+      [
+       130.0,
+       6.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       110.0,
+       -10.0,
+       74.0
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       26.5,
+       92.5
+      ],
+      [
+       103.0,
+       26.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "servo mid right -> carrier J_S4",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       6.0,
+       21.0
+      ],
+      [
+       130.0,
+       6.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       166.0,
+       2.0,
+       65.5
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       26.5,
+       92.5
+      ],
+      [
+       157.0,
+       26.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       6.0,
+       21.0
+      ],
+      [
+       130.0,
+       6.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       150.0,
+       -10.0,
+       74.0
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       26.5,
+       92.5
+      ],
+      [
+       157.0,
+       26.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "servo rear left -> carrier J_S2",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       58.0,
+       21.0
+      ],
+      [
+       130.0,
+       58.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       94.0,
+       2.0,
+       65.5
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       49.5,
+       92.5
+      ],
+      [
+       103.0,
+       49.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       127.2,
+       58.0,
+       21.0
+      ],
+      [
+       130.0,
+       58.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       110.0,
+       -10.0,
+       74.0
+      ],
+      [
+       88.0,
+       15.0,
+       77.5
+      ],
+      [
+       88.0,
+       49.5,
+       92.5
+      ],
+      [
+       103.0,
+       49.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "servo rear right -> carrier J_S5",
+   "clearDiameterMm": 3.6,
+   "note": "flat lead; plug threaded edge-on through the 8x5 slot / 3.8 mm strip, then up the open hull",
+   "routes": [
+    {
+     "name": "right mid slot, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       58.0,
+       21.0
+      ],
+      [
+       130.0,
+       58.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       34.0
+      ],
+      [
+       138.3,
+       0.0,
+       47.0
+      ],
+      [
+       138.3,
+       0.0,
+       65.5
+      ],
+      [
+       166.0,
+       2.0,
+       65.5
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       44.5,
+       92.5
+      ],
+      [
+       157.0,
+       44.5,
+       92.5
+      ]
+     ]
+    },
+    {
+     "name": "front window strip, up the open hull",
+     "pointsMm": [
+      [
+       132.8,
+       58.0,
+       21.0
+      ],
+      [
+       130.0,
+       58.0,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       34.0
+      ],
+      [
+       130.0,
+       -39.9,
+       72.0
+      ],
+      [
+       150.0,
+       -10.0,
+       74.0
+      ],
+      [
+       172.0,
+       15.0,
+       77.5
+      ],
+      [
+       172.0,
+       44.5,
+       92.5
+      ],
+      [
+       157.0,
+       44.5,
+       92.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "turret SG90 -> carrier J_S6",
+   "clearDiameterMm": 3.6,
+   "note": "slack loop for the yaw range",
+   "routes": [
+    {
+     "name": "right side, outside the tiers",
+     "pointsMm": [
+      [
+       151.0,
+       15.5,
+       92.5
+      ],
+      [
+       172.0,
+       15.0,
+       97.5
+      ],
+      [
+       172.0,
+       30.0,
+       162.5
+      ],
+      [
+       155.0,
+       40.0,
+       162.5
+      ]
+     ]
+    },
+    {
+     "name": "front, then right side",
+     "pointsMm": [
+      [
+       151.0,
+       15.5,
+       92.5
+      ],
+      [
+       158.0,
+       2.0,
+       97.5
+      ],
+      [
+       158.0,
+       2.0,
+       127.5
+      ],
+      [
+       160.0,
+       2.0,
+       142.5
+      ],
+      [
+       160.0,
+       40.0,
+       162.5
+      ],
+      [
+       155.0,
+       40.0,
+       162.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "sonars F/R -> carrier J_SONAR_F/R",
+   "clearDiameterMm": 4.0,
+   "note": "2 x 4-wire, slack loop for the yaw range",
+   "routes": [
+    {
+     "name": "left side of the stack",
+     "pointsMm": [
+      [
+       100.0,
+       42.5,
+       188.5
+      ],
+      [
+       96.0,
+       29.0,
+       162.5
+      ],
+      [
+       96.0,
+       29.0,
+       102.5
+      ],
+      [
+       113.0,
+       29.0,
+       95.0
+      ]
+     ]
+    },
+    {
+     "name": "right side, over the carrier front (clear of the fan)",
+     "pointsMm": [
+      [
+       160.0,
+       42.5,
+       188.5
+      ],
+      [
+       164.0,
+       29.0,
+       162.5
+      ],
+      [
+       164.0,
+       22.0,
+       99.5
+      ],
+      [
+       110.0,
+       22.0,
+       97.0
+      ],
+      [
+       113.0,
+       29.0,
+       95.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "carrier J_CTRL -> ESP32 DevKit (tier 3)",
+   "clearDiameterMm": 3.6,
+   "note": "GPIO per engineering/esp32-pinmap.json",
+   "routes": [
+    {
+     "name": "front of the stack, inside the posts",
+     "pointsMm": [
+      [
+       115.4,
+       16.5,
+       94.5
+      ],
+      [
+       122.0,
+       16.0,
+       97.5
+      ],
+      [
+       122.0,
+       3.0,
+       102.5
+      ],
+      [
+       122.0,
+       3.0,
+       132.5
+      ],
+      [
+       122.0,
+       22.0,
+       132.5
+      ]
+     ]
+    },
+    {
+     "name": "left of the stack",
+     "pointsMm": [
+      [
+       115.4,
+       16.5,
+       94.5
+      ],
+      [
+       103.0,
+       16.5,
+       97.5
+      ],
+      [
+       103.0,
+       3.0,
+       102.5
+      ],
+      [
+       103.0,
+       3.0,
+       132.5
+      ],
+      [
+       103.0,
+       25.0,
+       132.5
+      ],
+      [
+       121.0,
+       25.0,
+       132.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "carrier J_PCA -> PCA9685 (tier 2)",
+   "clearDiameterMm": 3.6,
+   "routes": [
+    {
+     "name": "front, centre",
+     "pointsMm": [
+      [
+       135.0,
+       16.5,
+       94.5
+      ],
+      [
+       135.0,
+       3.0,
+       102.5
+      ],
+      [
+       135.0,
+       3.0,
+       120.5
+      ],
+      [
+       135.0,
+       9.0,
+       120.5
+      ]
+     ]
+    },
+    {
+     "name": "front, right of centre",
+     "pointsMm": [
+      [
+       135.0,
+       16.5,
+       94.5
+      ],
+      [
+       139.0,
+       3.0,
+       102.5
+      ],
+      [
+       139.0,
+       3.0,
+       120.5
+      ],
+      [
+       137.0,
+       9.0,
+       120.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "fan 5 V -> carrier J_FAN",
+   "clearDiameterMm": 3.0,
+   "note": "2 x 26 AWG fan lead, ~60 mm",
+   "routes": [
+    {
+     "name": "straight down behind the fan",
+     "pointsMm": [
+      [
+       144.0,
+       59.5,
+       102.0
+      ],
+      [
+       144.5,
+       64.5,
+       96.5
+      ],
+      [
+       144.5,
+       64.5,
+       95.5
+      ]
+     ]
+    },
+    {
+     "name": "round the left of the fan",
+     "pointsMm": [
+      [
+       116.0,
+       59.5,
+       102.0
+      ],
+      [
+       125.0,
+       66.0,
+       97.5
+      ],
+      [
+       144.5,
+       66.0,
+       96.5
+      ],
+      [
+       144.5,
+       64.5,
+       95.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ESP32 USB host cable (tier 3, front end)",
+   "clearDiameterMm": 4.0,
+   "routes": [
+    {
+     "name": "out to the left under the screen face",
+     "pointsMm": [
+      [
+       130.0,
+       15.0,
+       146.2
+      ],
+      [
+       130.0,
+       2.0,
+       146.2
+      ],
+      [
+       90.0,
+       2.0,
+       146.2
+      ]
+     ]
+    },
+    {
+     "name": "out to the right under the screen face",
+     "pointsMm": [
+      [
+       130.0,
+       15.0,
+       146.2
+      ],
+      [
+       130.0,
+       2.0,
+       146.2
+      ],
+      [
+       170.0,
+       2.0,
+       146.2
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ESP32 (tier 3) -> screen on the stack face",
+   "clearDiameterMm": 3.6,
+   "routes": [
+    {
+     "name": "left pin row",
+     "pointsMm": [
+      [
+       121.0,
+       22.0,
+       132.5
+      ],
+      [
+       121.0,
+       4.0,
+       133.5
+      ],
+      [
+       125.0,
+       -3.0,
+       141.5
+      ]
+     ]
+    },
+    {
+     "name": "right pin row",
+     "pointsMm": [
+      [
+       139.0,
+       22.0,
+       132.5
+      ],
+      [
+       139.0,
+       4.0,
+       133.5
+      ],
+      [
+       135.0,
+       -3.0,
+       141.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cell bus + -> F_PACK holder (12 AWG, pack maker)",
+   "clearDiameterMm": 3.6,
+   "note": "unfused length about 35 mm here (POWER_SYSTEM.md asks <=25 mm: pack maker keeps it shorter) - GIẢ ĐỊNH",
+   "routes": [
+    {
+     "name": "round the left end of the protector, high",
+     "pointsMm": [
+      [
+       115.0,
+       12.4,
+       52.0
+      ],
+      [
+       102.5,
+       12.4,
+       50.0
+      ],
+      [
+       102.5,
+       -3.0,
+       50.0
+      ],
+      [
+       106.5,
+       -11.9,
+       55.0
+      ]
+     ]
+    },
+    {
+     "name": "round the left end of the protector, low",
+     "pointsMm": [
+      [
+       115.0,
+       12.4,
+       52.0
+      ],
+      [
+       102.5,
+       12.4,
+       46.0
+      ],
+      [
+       102.5,
+       -3.0,
+       46.0
+      ],
+      [
+       106.5,
+       -11.9,
+       50.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "F_PACK holder -> protector B+ (12 AWG, pack maker)",
+   "clearDiameterMm": 3.6,
+   "routes": [
+    {
+     "name": "round the right end of the protector",
+     "pointsMm": [
+      [
+       153.5,
+       -11.9,
+       55.0
+      ],
+      [
+       157.5,
+       -3.0,
+       50.0
+      ],
+      [
+       146.0,
+       1.2,
+       52.0
+      ]
+     ]
+    },
+    {
+     "name": "right end, low",
+     "pointsMm": [
+      [
+       153.5,
+       -11.9,
+       50.0
+      ],
+      [
+       157.5,
+       -3.0,
+       46.0
+      ],
+      [
+       146.0,
+       1.2,
+       47.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "protector P+/P- -> XT60 RUN plug (14 AWG pair)",
+   "clearDiameterMm": 6.2,
+   "routes": [
+    {
+     "name": "over the converters",
+     "pointsMm": [
+      [
+       118.0,
+       -1.5,
+       57.0
+      ],
+      [
+       118.0,
+       -2.5,
+       71.0
+      ],
+      [
+       150.0,
+       -40.0,
+       71.0
+      ],
+      [
+       150.0,
+       -44.5,
+       52.0
+      ]
+     ]
+    },
+    {
+     "name": "over the converters, nearer the nose",
+     "pointsMm": [
+      [
+       118.0,
+       -1.5,
+       57.0
+      ],
+      [
+       125.0,
+       -2.5,
+       71.0
+      ],
+      [
+       135.0,
+       -30.0,
+       71.0
+      ],
+      [
+       144.0,
+       -44.0,
+       66.0
+      ],
+      [
+       150.0,
+       -44.5,
+       52.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "XT60 -> U3V70F5 A and B VIN (14 AWG Y harness, inputs in parallel)",
+   "clearDiameterMm": 6.2,
+   "routes": [
+    {
+     "name": "along the floor at the input ends",
+     "pointsMm": [
+      [
+       150.0,
+       -44.5,
+       52.0
+      ],
+      [
+       155.0,
+       -38.5,
+       50.0
+      ],
+      [
+       155.0,
+       -25.5,
+       50.0
+      ]
+     ]
+    },
+    {
+     "name": "over the input ends",
+     "pointsMm": [
+      [
+       150.0,
+       -44.5,
+       52.0
+      ],
+      [
+       150.0,
+       -44.5,
+       64.0
+      ],
+      [
+       154.0,
+       -25.5,
+       64.0
+      ],
+      [
+       154.0,
+       -25.5,
+       56.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "U3V70F5 A VOUT -> carrier J_PWR (18 AWG pair, island A)",
+   "clearDiameterMm": 4.5,
+   "routes": [
+    {
+     "name": "left side",
+     "pointsMm": [
+      [
+       106.5,
+       -25.5,
+       52.0
+      ],
+      [
+       106.5,
+       -25.5,
+       66.0
+      ],
+      [
+       94.0,
+       -0.0,
+       72.0
+      ],
+      [
+       92.0,
+       55.0,
+       82.5
+      ],
+      [
+       92.0,
+       60.0,
+       100.5
+      ],
+      [
+       111.5,
+       60.0,
+       100.5
+      ],
+      [
+       111.5,
+       60.0,
+       98.5
+      ]
+     ]
+    },
+    {
+     "name": "right side, over the carrier",
+     "pointsMm": [
+      [
+       106.5,
+       -25.5,
+       52.0
+      ],
+      [
+       106.5,
+       -25.5,
+       66.0
+      ],
+      [
+       130.0,
+       -10.0,
+       72.0
+      ],
+      [
+       166.0,
+       -0.0,
+       72.0
+      ],
+      [
+       168.0,
+       55.0,
+       82.5
+      ],
+      [
+       168.0,
+       68.0,
+       97.5
+      ],
+      [
+       111.5,
+       68.0,
+       97.5
+      ],
+      [
+       111.5,
+       60.0,
+       98.5
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "U3V70F5 B VOUT -> 5 A fuse F_ISLAND_B (18 AWG, island B)",
+   "clearDiameterMm": 4.5,
+   "routes": [
+    {
+     "name": "across the nose",
+     "pointsMm": [
+      [
+       106.5,
+       -33.3,
+       52.0
+      ],
+      [
+       106.5,
+       -33.3,
+       66.0
+      ],
+      [
+       135.0,
+       -37.5,
+       70.0
+      ],
+      [
+       163.0,
+       -37.5,
+       62.0
+      ]
+     ]
+    },
+    {
+     "name": "across the nose, high",
+     "pointsMm": [
+      [
+       106.5,
+       -33.3,
+       52.0
+      ],
+      [
+       106.5,
+       -33.3,
+       72.0
+      ],
+      [
+       150.0,
+       -38.0,
+       72.0
+      ],
+      [
+       163.0,
+       -37.5,
+       62.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "F_ISLAND_B -> red-wire splice of servos CH3-5 (18 AWG)",
+   "clearDiameterMm": 4.5,
+   "note": "pull the V+ pin out of the J_S3..J_S5 plug housings, join the three red wires here; carrier V+ pins stay empty",
+   "routes": [
+    {
+     "name": "up the right side wall",
+     "pointsMm": [
+      [
+       164.0,
+       -0.5,
+       62.0
+      ],
+      [
+       170.0,
+       2.0,
+       70.0
+      ],
+      [
+       174.0,
+       15.0,
+       80.0
+      ],
+      [
+       166.0,
+       30.0,
+       95.0
+      ]
+     ]
+    },
+    {
+     "name": "up the right side, inside",
+     "pointsMm": [
+      [
+       164.0,
+       -0.5,
+       62.0
+      ],
+      [
+       166.0,
+       2.0,
+       72.0
+      ],
+      [
+       168.0,
+       12.0,
+       84.0
+      ],
+      [
+       166.0,
+       30.0,
+       95.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ACT_EN tap J_CTRL.6 -> U3V70F5 B ENABLE (4.7 k to GND at the converter)",
+   "clearDiameterMm": 3.0,
+   "routes": [
+    {
+     "name": "over the right converter",
+     "pointsMm": [
+      [
+       115.4,
+       16.5,
+       94.5
+      ],
+      [
+       122.0,
+       16.0,
+       97.5
+      ],
+      [
+       122.0,
+       3.0,
+       102.5
+      ],
+      [
+       122.0,
+       -10.0,
+       80.0
+      ],
+      [
+       142.0,
+       -40.0,
+       72.0
+      ],
+      [
+       153.5,
+       -38.5,
+       60.0
+      ],
+      [
+       153.5,
+       -33.3,
+       57.0
+      ]
+     ]
+    },
+    {
+     "name": "down the left, then across",
+     "pointsMm": [
+      [
+       115.4,
+       16.5,
+       94.5
+      ],
+      [
+       122.0,
+       16.0,
+       97.5
+      ],
+      [
+       122.0,
+       3.0,
+       102.5
+      ],
+      [
+       100.0,
+       -20.0,
+       72.0
+      ],
+      [
+       153.5,
+       -38.5,
+       62.0
+      ],
+      [
+       153.5,
+       -33.3,
+       57.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "charge: XT60 pack plug lifted out to the bench charger (M_CHARGE off the car, RUN unplugged)",
+   "clearDiameterMm": 16.0,
+   "routes": [
+    {
+     "name": "straight up, right front corner",
+     "pointsMm": [
+      [
+       150.0,
+       -44.5,
+       52.0
+      ],
+      [
+       150.0,
+       -44.5,
+       95.0
+      ]
+     ]
+    },
+    {
+     "name": "up over the nose",
+     "pointsMm": [
+      [
+       150.0,
+       -44.5,
+       52.0
+      ],
+      [
+       136.0,
+       -44.5,
+       62.0
+      ],
+      [
+       136.0,
+       -44.5,
+       95.0
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "fits": [
+  {
+   "name": "ESP32 DevKit on the post ledges (foam tape) and end stops",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 1: post top with stop"
+  },
+  {
+   "name": "PCA9685 holes over the 2.0 mm pegs",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 2: one peg post"
+  },
+  {
+   "name": "power module between the tray lips + zip ties",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 3: tray end with lips and slots"
+  },
+  {
+   "name": "30 x 30 fan screws through the 24 mm hole pattern",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 4: plate corner with two holes"
+  },
+  {
+   "name": "18650 cells in the cradle saddles",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 5: one saddle"
+  },
+  {
+   "name": "screen clip lip over the screen back edge",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "coupon piece 6: one clip"
+  },
+  {
+   "name": "holders glued to the chassis floor / lid / glacis with 502",
+   "testPart": "coupon_fit_TEST_ONLY",
+   "note": "every coupon piece keeps its real glue face"
+  },
+  {
+   "name": "stack tier 1 on the stack_bridge pegs (4.4 peg / 5.0 socket)",
+   "testPart": "coupon_stack_TEST_ONLY",
+   "note": "bridge peg corner + tier post socket"
+  },
+  {
+   "name": "tier on tier (same peg/socket)",
+   "testPart": "coupon_stack_TEST_ONLY",
+   "note": "same pair"
+  },
+  {
+   "name": "PCA9685 on the tier M2.5 standoffs, ESP32 DevKit in the tier rails",
+   "testPart": "coupon_stack_TEST_ONLY",
+   "note": "tier slice with one standoff and a rail end"
+  },
+  {
+   "name": "stack_bridge legs glued to the chassis floor beside the cells",
+   "testPart": "coupon_stack_TEST_ONLY",
+   "note": "flat leg feet; glue with the tiers fitted as the jig"
+  },
+  {
+   "name": "carrier deck sockets over the bridge pegs",
+   "testPart": "coupon_deck_TEST_ONLY",
+   "note": "deck corner with one 5.0 socket"
+  },
+  {
+   "name": "carrier 62x60 on the deck M3 posts (M3x8 self-tap through H1..H4)",
+   "testPart": "coupon_deck_TEST_ONLY",
+   "note": "one post with its 2.6 pilot"
+  },
+  {
+   "name": "PCA tier (stack_tier_1) on the deck column pegs",
+   "testPart": "coupon_deck_TEST_ONLY",
+   "note": "column head with its 4.4 peg"
+  },
+  {
+   "name": "30x30 fan zip-tied under stack_tier_1 through its 4 zip slots",
+   "testPart": "coupon_stack_TEST_ONLY",
+   "note": "the tier slice in the coupon carries one real zip slot"
+  },
+  {
+   "name": "U3V70F5 on edge in conv_holder_a/b (5.0 slot for 4.6 GIẢ ĐỊNH, foam tape)",
+   "testPart": "coupon_power_TEST_ONLY",
+   "note": "coupon piece 1: converter slot end"
+  },
+  {
+   "name": "0FHA0002XP fuse holder on edge in fuse_holder_pack (12.4 slot)",
+   "testPart": "coupon_power_TEST_ONLY",
+   "note": "coupon piece 2: pack-fuse slot end"
+  },
+  {
+   "name": "PCB-Li-1S15A between the protector_holder lips, foam tape on the wall",
+   "testPart": "coupon_power_TEST_ONLY",
+   "note": "coupon piece 3: wall end with one lip"
+  },
+  {
+   "name": "5 A inline fuse holder between the fuse_clip_b lips (14.4 between lips)",
+   "testPart": "coupon_power_TEST_ONLY",
+   "note": "coupon piece 4: clip slice, glue face on the bed"
+  },
+  {
+   "name": "power holders glued with 502: floor holders on the hull floor, fuse_clip_b flat on the 45 deg right side wall",
+   "testPart": "coupon_power_TEST_ONLY",
+   "note": "every piece keeps its real glue face"
+  }
+ ],
+ "skins": [
+  {
+   "part": "stack_turret_mount",
+   "centerMm": [
+    115.0,
+    -29.9,
+    134.2
+   ],
+   "radiusMm": 9.0,
+   "reason": "v5 design: the 45-degree face panel ends in a knife edge at its lower lip (imported unchanged)"
+  },
+  {
+   "part": "stack_turret_mount",
+   "centerMm": [
+    130.0,
+    -29.9,
+    134.2
+   ],
+   "radiusMm": 9.0,
+   "reason": "v5 design: the 45-degree face panel ends in a knife edge at its lower lip (imported unchanged)"
+  },
+  {
+   "part": "stack_turret_mount",
+   "centerMm": [
+    145.0,
+    -29.9,
+    134.2
+   ],
+   "radiusMm": 9.0,
+   "reason": "v5 design: the 45-degree face panel ends in a knife edge at its lower lip (imported unchanged)"
+  }
+ ]
+}

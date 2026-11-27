@@ -1,0 +1,1739 @@
+{
+  "title": "PET TANK \u2014 protected servo carrier",
+  "rev": "V0.4",
+  "date": "2026-11-20",
+  "company": "Circuit pilot / board builder",
+  "lib": "tank",
+  "stem": "main",
+  "paper": "A1",
+  "libraries": [
+    "Device",
+    "Connector_Generic",
+    "power",
+    "74xx",
+    "74xGxx",
+    "Regulator_Linear",
+    "Transistor_BJT",
+    "Mechanical",
+    "Connector",
+    "design/devices.kicad_sym"
+  ],
+  "parts": [
+    {
+      "ref": "J_CTRL",
+      "value": "CTRL",
+      "symbol": "Conn_02x06_Odd_Even",
+      "footprint": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+      "at": [
+        55.88,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_PCA",
+      "value": "PCA",
+      "symbol": "Conn_02x06_Odd_Even",
+      "footprint": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+      "at": [
+        132.08,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_SONAR_F",
+      "value": "SONAR_F",
+      "symbol": "Conn_01x04",
+      "footprint": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+      "at": [
+        208.28,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_SONAR_R",
+      "value": "SONAR_R",
+      "symbol": "Conn_01x04",
+      "footprint": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+      "at": [
+        284.48,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_PWR",
+      "value": "PWR",
+      "symbol": "Conn_01x02",
+      "footprint": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "at": [
+        360.68,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S0",
+      "value": "S0",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        436.88,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S1",
+      "value": "S1",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        513.08,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S2",
+      "value": "S2",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        55.88,
+        88.9
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S3",
+      "value": "S3",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        132.08,
+        88.9
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S4",
+      "value": "S4",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        208.28,
+        88.9
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S5",
+      "value": "S5",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        284.48,
+        88.9
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "J_S6",
+      "value": "S6",
+      "symbol": "Conn_01x03",
+      "footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+      "at": [
+        360.68,
+        88.9
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "H1",
+      "value": "M3 / 3.2mm",
+      "symbol": "MountingHole",
+      "footprint": "Tank:MountingHole_3.2mm_M3",
+      "at": [
+        436.88,
+        88.9
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "H2",
+      "value": "M3 / 3.2mm",
+      "symbol": "MountingHole",
+      "footprint": "Tank:MountingHole_3.2mm_M3",
+      "at": [
+        513.08,
+        88.9
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "H3",
+      "value": "M3 / 3.2mm",
+      "symbol": "MountingHole",
+      "footprint": "Tank:MountingHole_3.2mm_M3",
+      "at": [
+        55.88,
+        132.07999999999998
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "H4",
+      "value": "M3 / 3.2mm",
+      "symbol": "MountingHole",
+      "footprint": "Tank:MountingHole_3.2mm_M3",
+      "at": [
+        132.08,
+        132.07999999999998
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "F1",
+      "value": "7A",
+      "symbol": "Fuse",
+      "footprint": "Tank:Fuse_2512_6332Metric",
+      "at": [
+        208.28,
+        132.07999999999998
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "Q1",
+      "value": "AO4409",
+      "symbol": "AO4409",
+      "footprint": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+      "at": [
+        284.48,
+        132.07999999999998
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "Q2",
+      "value": "AO4409",
+      "symbol": "AO4409",
+      "footprint": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+      "at": [
+        360.68,
+        132.07999999999998
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "Q3",
+      "value": "MMBT3904",
+      "symbol": "MMBT3904",
+      "footprint": "Tank:SOT-23",
+      "at": [
+        436.88,
+        132.07999999999998
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R1",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        513.08,
+        132.07999999999998
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R2",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        55.88,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R3",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        132.08,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R4",
+      "value": "1k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        208.28,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R5",
+      "value": "1k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        284.48,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R6",
+      "value": "220",
+      "symbol": "R",
+      "footprint": "Tank:R_2512_6332Metric",
+      "at": [
+        360.68,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C1",
+      "value": "1000u",
+      "symbol": "C_Polarized",
+      "footprint": "Tank:CP_Radial_D10.0mm_P5.00mm",
+      "at": [
+        436.88,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C2",
+      "value": "10u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        513.08,
+        175.26
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C3",
+      "value": "10u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        55.88,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U2",
+      "value": "MCP1700-3302E/TT",
+      "symbol": "MCP1700x-330xxTT",
+      "footprint": "Tank:SOT-23",
+      "at": [
+        132.08,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C4",
+      "value": "1u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        208.28,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R7",
+      "value": "1k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        284.48,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U1",
+      "value": "SN74LVC244APW",
+      "symbol": "74HC244",
+      "footprint": "Tank:TSSOP-20_4.4x6.5mm_P0.65mm",
+      "at": [
+        360.68,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C5",
+      "value": "100n",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        436.88,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C6",
+      "value": "1u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        513.08,
+        218.44
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R10",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        55.88,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R20",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        132.08,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R11",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        208.28,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R21",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        284.48,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R12",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        360.68,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R22",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        436.88,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R13",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        513.08,
+        261.62
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R23",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        55.88,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R14",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        132.08,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R24",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        208.28,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R15",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        284.48,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R25",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        360.68,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R16",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        436.88,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R26",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        513.08,
+        304.79999999999995
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U3",
+      "value": "SN74AHCT1G125",
+      "symbol": "74AHCT1G125",
+      "footprint": "Tank:SOT-23-5",
+      "at": [
+        55.88,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U4",
+      "value": "SN74LVC1G17",
+      "symbol": "74LVC1G17",
+      "footprint": "Tank:SOT-23-5",
+      "at": [
+        132.08,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C10",
+      "value": "100n",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        208.28,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C11",
+      "value": "100n",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        284.48,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R40",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        360.68,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R41",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        436.88,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U5",
+      "value": "SN74AHCT1G125",
+      "symbol": "74AHCT1G125",
+      "footprint": "Tank:SOT-23-5",
+      "at": [
+        513.08,
+        347.98
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "U6",
+      "value": "SN74LVC1G17",
+      "symbol": "74LVC1G17",
+      "footprint": "Tank:SOT-23-5",
+      "at": [
+        55.88,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C12",
+      "value": "100n",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        132.08,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C13",
+      "value": "100n",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        208.28,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R42",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        284.48,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R43",
+      "value": "47k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        360.68,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C7",
+      "value": "1u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        436.88,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "C8",
+      "value": "1u",
+      "symbol": "C",
+      "footprint": "Tank:C_0805_2012Metric",
+      "at": [
+        513.08,
+        391.15999999999997
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "#FLG01",
+      "value": "PWR_FLAG",
+      "symbol": "PWR_FLAG",
+      "footprint": "",
+      "at": [
+        55.88,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "#FLG02",
+      "value": "PWR_FLAG",
+      "symbol": "PWR_FLAG",
+      "footprint": "",
+      "at": [
+        132.08,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "#FLG03",
+      "value": "PWR_FLAG",
+      "symbol": "PWR_FLAG",
+      "footprint": "",
+      "at": [
+        208.28,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "#FLG04",
+      "value": "PWR_FLAG",
+      "symbol": "PWR_FLAG",
+      "footprint": "",
+      "at": [
+        284.48,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "#FLG05",
+      "value": "PWR_FLAG",
+      "symbol": "PWR_FLAG",
+      "footprint": "",
+      "at": [
+        360.68,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "TP1",
+      "value": "GND",
+      "symbol": "TestPoint",
+      "footprint": "Tank:TestPoint_Pad_D2.0mm",
+      "at": [
+        436.88,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "TP2",
+      "value": "LOGIC_3V3",
+      "symbol": "TestPoint",
+      "footprint": "Tank:TestPoint_Pad_D2.0mm",
+      "at": [
+        513.08,
+        434.34000000000003
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "TP3",
+      "value": "LOAD_5V",
+      "symbol": "TestPoint",
+      "footprint": "Tank:TestPoint_Pad_D2.0mm",
+      "at": [
+        55.88,
+        477.52
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "TP4",
+      "value": "SERVO_5V",
+      "symbol": "TestPoint",
+      "footprint": "Tank:TestPoint_Pad_D2.0mm",
+      "at": [
+        132.08,
+        477.52
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "TP5",
+      "value": "SERVO_3V3",
+      "symbol": "TestPoint",
+      "footprint": "Tank:TestPoint_Pad_D2.0mm",
+      "at": [
+        208.28,
+        477.52
+      ],
+      "in_bom": false
+    },
+    {
+      "ref": "J_FAN",
+      "value": "FAN_5V",
+      "symbol": "Conn_01x02",
+      "footprint": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "at": [
+        589.28,
+        45.72
+      ],
+      "in_bom": true
+    },
+    {
+      "ref": "R44",
+      "value": "10k",
+      "symbol": "R",
+      "footprint": "Tank:R_0805_2012Metric",
+      "at": [
+        589.28,
+        88.9
+      ],
+      "in_bom": true
+    }
+  ],
+  "nets": {
+    "GND": [
+      [
+        "J_CTRL",
+        "1"
+      ],
+      [
+        "J_CTRL",
+        "11"
+      ],
+      [
+        "J_PCA",
+        "2"
+      ],
+      [
+        "J_SONAR_F",
+        "4"
+      ],
+      [
+        "J_SONAR_R",
+        "4"
+      ],
+      [
+        "J_PWR",
+        "2"
+      ],
+      [
+        "J_S0",
+        "1"
+      ],
+      [
+        "J_S1",
+        "1"
+      ],
+      [
+        "J_S2",
+        "1"
+      ],
+      [
+        "J_S3",
+        "1"
+      ],
+      [
+        "J_S4",
+        "1"
+      ],
+      [
+        "J_S5",
+        "1"
+      ],
+      [
+        "J_S6",
+        "1"
+      ],
+      [
+        "Q1",
+        "4"
+      ],
+      [
+        "Q3",
+        "2"
+      ],
+      [
+        "R2",
+        "2"
+      ],
+      [
+        "R4",
+        "2"
+      ],
+      [
+        "R6",
+        "2"
+      ],
+      [
+        "C1",
+        "2"
+      ],
+      [
+        "C2",
+        "2"
+      ],
+      [
+        "C3",
+        "2"
+      ],
+      [
+        "U2",
+        "1"
+      ],
+      [
+        "C4",
+        "2"
+      ],
+      [
+        "R7",
+        "2"
+      ],
+      [
+        "U1",
+        "10"
+      ],
+      [
+        "U1",
+        "17"
+      ],
+      [
+        "C5",
+        "2"
+      ],
+      [
+        "C6",
+        "2"
+      ],
+      [
+        "R10",
+        "2"
+      ],
+      [
+        "R20",
+        "2"
+      ],
+      [
+        "R11",
+        "2"
+      ],
+      [
+        "R21",
+        "2"
+      ],
+      [
+        "R12",
+        "2"
+      ],
+      [
+        "R22",
+        "2"
+      ],
+      [
+        "R13",
+        "2"
+      ],
+      [
+        "R23",
+        "2"
+      ],
+      [
+        "R14",
+        "2"
+      ],
+      [
+        "R24",
+        "2"
+      ],
+      [
+        "R15",
+        "2"
+      ],
+      [
+        "R25",
+        "2"
+      ],
+      [
+        "R16",
+        "2"
+      ],
+      [
+        "R26",
+        "2"
+      ],
+      [
+        "U3",
+        "1"
+      ],
+      [
+        "U3",
+        "3"
+      ],
+      [
+        "U4",
+        "3"
+      ],
+      [
+        "C10",
+        "2"
+      ],
+      [
+        "C11",
+        "2"
+      ],
+      [
+        "R40",
+        "2"
+      ],
+      [
+        "R41",
+        "2"
+      ],
+      [
+        "U5",
+        "1"
+      ],
+      [
+        "U5",
+        "3"
+      ],
+      [
+        "U6",
+        "3"
+      ],
+      [
+        "C12",
+        "2"
+      ],
+      [
+        "C13",
+        "2"
+      ],
+      [
+        "R42",
+        "2"
+      ],
+      [
+        "R43",
+        "2"
+      ],
+      [
+        "C7",
+        "2"
+      ],
+      [
+        "C8",
+        "2"
+      ],
+      [
+        "#FLG01",
+        "1"
+      ],
+      [
+        "TP1",
+        "1"
+      ],
+      [
+        "J_FAN",
+        "2"
+      ]
+    ],
+    "LOGIC_3V3": [
+      [
+        "J_CTRL",
+        "2"
+      ],
+      [
+        "J_PCA",
+        "1"
+      ],
+      [
+        "R5",
+        "1"
+      ],
+      [
+        "C6",
+        "1"
+      ],
+      [
+        "U4",
+        "5"
+      ],
+      [
+        "C11",
+        "1"
+      ],
+      [
+        "U6",
+        "5"
+      ],
+      [
+        "C13",
+        "1"
+      ],
+      [
+        "#FLG02",
+        "1"
+      ],
+      [
+        "TP2",
+        "1"
+      ],
+      [
+        "R44",
+        "2"
+      ]
+    ],
+    "I2C_SDA": [
+      [
+        "J_CTRL",
+        "3"
+      ],
+      [
+        "J_PCA",
+        "3"
+      ]
+    ],
+    "I2C_SCL": [
+      [
+        "J_CTRL",
+        "4"
+      ],
+      [
+        "J_PCA",
+        "4"
+      ]
+    ],
+    "PCA_OE_N": [
+      [
+        "J_CTRL",
+        "5"
+      ],
+      [
+        "J_PCA",
+        "5"
+      ],
+      [
+        "R5",
+        "2"
+      ],
+      [
+        "U1",
+        "1"
+      ],
+      [
+        "U1",
+        "19"
+      ]
+    ],
+    "ACT_EN": [
+      [
+        "J_CTRL",
+        "6"
+      ],
+      [
+        "R1",
+        "1"
+      ],
+      [
+        "R4",
+        "1"
+      ]
+    ],
+    "SONAR_F_TRIG_3V3": [
+      [
+        "J_CTRL",
+        "7"
+      ],
+      [
+        "U3",
+        "2"
+      ],
+      [
+        "R40",
+        "1"
+      ]
+    ],
+    "SONAR_F_ECHO_3V3": [
+      [
+        "J_CTRL",
+        "8"
+      ],
+      [
+        "U4",
+        "4"
+      ]
+    ],
+    "SONAR_R_TRIG_3V3": [
+      [
+        "J_CTRL",
+        "9"
+      ],
+      [
+        "U5",
+        "2"
+      ],
+      [
+        "R42",
+        "1"
+      ]
+    ],
+    "SONAR_R_ECHO_3V3": [
+      [
+        "J_CTRL",
+        "10"
+      ],
+      [
+        "U6",
+        "4"
+      ]
+    ],
+    "PWM_LF_RAW": [
+      [
+        "J_PCA",
+        "6"
+      ],
+      [
+        "U1",
+        "2"
+      ],
+      [
+        "R10",
+        "1"
+      ]
+    ],
+    "PWM_LM_RAW": [
+      [
+        "J_PCA",
+        "7"
+      ],
+      [
+        "U1",
+        "4"
+      ],
+      [
+        "R11",
+        "1"
+      ]
+    ],
+    "PWM_LR_RAW": [
+      [
+        "J_PCA",
+        "8"
+      ],
+      [
+        "U1",
+        "6"
+      ],
+      [
+        "R12",
+        "1"
+      ]
+    ],
+    "PWM_RF_RAW": [
+      [
+        "J_PCA",
+        "9"
+      ],
+      [
+        "U1",
+        "8"
+      ],
+      [
+        "R13",
+        "1"
+      ]
+    ],
+    "PWM_RM_RAW": [
+      [
+        "J_PCA",
+        "10"
+      ],
+      [
+        "U1",
+        "11"
+      ],
+      [
+        "R14",
+        "1"
+      ]
+    ],
+    "PWM_RR_RAW": [
+      [
+        "J_PCA",
+        "11"
+      ],
+      [
+        "U1",
+        "13"
+      ],
+      [
+        "R15",
+        "1"
+      ]
+    ],
+    "PWM_TURRET_RAW": [
+      [
+        "J_PCA",
+        "12"
+      ],
+      [
+        "U1",
+        "15"
+      ],
+      [
+        "R16",
+        "1"
+      ]
+    ],
+    "LOAD_5V": [
+      [
+        "J_SONAR_F",
+        "1"
+      ],
+      [
+        "J_SONAR_R",
+        "1"
+      ],
+      [
+        "Q1",
+        "1"
+      ],
+      [
+        "Q1",
+        "2"
+      ],
+      [
+        "Q1",
+        "3"
+      ],
+      [
+        "Q2",
+        "1"
+      ],
+      [
+        "Q2",
+        "2"
+      ],
+      [
+        "Q2",
+        "3"
+      ],
+      [
+        "R3",
+        "1"
+      ],
+      [
+        "C1",
+        "1"
+      ],
+      [
+        "U3",
+        "5"
+      ],
+      [
+        "C10",
+        "1"
+      ],
+      [
+        "U5",
+        "5"
+      ],
+      [
+        "C12",
+        "1"
+      ],
+      [
+        "#FLG04",
+        "1"
+      ],
+      [
+        "TP3",
+        "1"
+      ],
+      [
+        "J_FAN",
+        "1"
+      ]
+    ],
+    "SONAR_F_TRIG_5V": [
+      [
+        "J_SONAR_F",
+        "2"
+      ],
+      [
+        "U3",
+        "4"
+      ]
+    ],
+    "SONAR_F_ECHO_5V": [
+      [
+        "J_SONAR_F",
+        "3"
+      ],
+      [
+        "U4",
+        "2"
+      ],
+      [
+        "R41",
+        "1"
+      ]
+    ],
+    "SONAR_R_TRIG_5V": [
+      [
+        "J_SONAR_R",
+        "2"
+      ],
+      [
+        "U5",
+        "4"
+      ]
+    ],
+    "SONAR_R_ECHO_5V": [
+      [
+        "J_SONAR_R",
+        "3"
+      ],
+      [
+        "U6",
+        "2"
+      ],
+      [
+        "R43",
+        "1"
+      ]
+    ],
+    "EXT_5V_IN": [
+      [
+        "J_PWR",
+        "1"
+      ],
+      [
+        "F1",
+        "1"
+      ],
+      [
+        "#FLG03",
+        "1"
+      ]
+    ],
+    "SERVO_5V": [
+      [
+        "J_S0",
+        "2"
+      ],
+      [
+        "J_S1",
+        "2"
+      ],
+      [
+        "J_S2",
+        "2"
+      ],
+      [
+        "J_S3",
+        "2"
+      ],
+      [
+        "J_S4",
+        "2"
+      ],
+      [
+        "J_S5",
+        "2"
+      ],
+      [
+        "J_S6",
+        "2"
+      ],
+      [
+        "Q2",
+        "5"
+      ],
+      [
+        "Q2",
+        "6"
+      ],
+      [
+        "Q2",
+        "7"
+      ],
+      [
+        "Q2",
+        "8"
+      ],
+      [
+        "R6",
+        "1"
+      ],
+      [
+        "C2",
+        "1"
+      ],
+      [
+        "C3",
+        "1"
+      ],
+      [
+        "U2",
+        "3"
+      ],
+      [
+        "C7",
+        "1"
+      ],
+      [
+        "#FLG05",
+        "1"
+      ],
+      [
+        "TP4",
+        "1"
+      ]
+    ],
+    "PWM_LF": [
+      [
+        "J_S0",
+        "3"
+      ],
+      [
+        "U1",
+        "18"
+      ],
+      [
+        "R20",
+        "1"
+      ]
+    ],
+    "PWM_LM": [
+      [
+        "J_S1",
+        "3"
+      ],
+      [
+        "U1",
+        "16"
+      ],
+      [
+        "R21",
+        "1"
+      ]
+    ],
+    "PWM_LR": [
+      [
+        "J_S2",
+        "3"
+      ],
+      [
+        "U1",
+        "14"
+      ],
+      [
+        "R22",
+        "1"
+      ]
+    ],
+    "PWM_RF": [
+      [
+        "J_S3",
+        "3"
+      ],
+      [
+        "U1",
+        "12"
+      ],
+      [
+        "R23",
+        "1"
+      ]
+    ],
+    "PWM_RM": [
+      [
+        "J_S4",
+        "3"
+      ],
+      [
+        "U1",
+        "9"
+      ],
+      [
+        "R24",
+        "1"
+      ]
+    ],
+    "PWM_RR": [
+      [
+        "J_S5",
+        "3"
+      ],
+      [
+        "U1",
+        "7"
+      ],
+      [
+        "R25",
+        "1"
+      ]
+    ],
+    "PWM_TURRET": [
+      [
+        "J_S6",
+        "3"
+      ],
+      [
+        "U1",
+        "5"
+      ],
+      [
+        "R26",
+        "1"
+      ]
+    ],
+    "FUSED_5V": [
+      [
+        "F1",
+        "2"
+      ],
+      [
+        "Q1",
+        "5"
+      ],
+      [
+        "Q1",
+        "6"
+      ],
+      [
+        "Q1",
+        "7"
+      ],
+      [
+        "Q1",
+        "8"
+      ]
+    ],
+    "SW_GATE": [
+      [
+        "Q2",
+        "4"
+      ],
+      [
+        "Q3",
+        "3"
+      ],
+      [
+        "R3",
+        "2"
+      ]
+    ],
+    "SW_BASE": [
+      [
+        "Q3",
+        "1"
+      ],
+      [
+        "R1",
+        "2"
+      ],
+      [
+        "R2",
+        "1"
+      ]
+    ],
+    "SERVO_3V3": [
+      [
+        "U2",
+        "2"
+      ],
+      [
+        "C4",
+        "1"
+      ],
+      [
+        "R7",
+        "1"
+      ],
+      [
+        "U1",
+        "20"
+      ],
+      [
+        "C5",
+        "1"
+      ],
+      [
+        "C8",
+        "1"
+      ],
+      [
+        "TP5",
+        "1"
+      ]
+    ],
+    "STOP_N": [
+      [
+        "J_CTRL",
+        "12"
+      ],
+      [
+        "R44",
+        "1"
+      ]
+    ]
+  },
+  "keep_uuids_from": "design/main.kicad_sch"
+}

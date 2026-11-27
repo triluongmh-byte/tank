@@ -1,0 +1,11 @@
+{
+ "checkedFiles": {
+  "case/interfaces.json": "392616e28aebee45e834ba668824d8c82ada10bd394aaaeb794c9d157662af12",
+  "case/reports/turret_yaw.json": "861e586eb17c6a4c38ea47b8a8f9d486632de95cd339dcd6899bdf0244ba889d"
+ },
+ "contractSha256": "a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810",
+ "convention": "yaw about +Z of the contract frame through the turret SG90 axis; 0 = sonar F looking -Y (nose); same range for option (a) lid and option (b) stack",
+ "status": "passed",
+ "turretYawMaxDeg": 70,
+ "turretYawMinDeg": -70
+}

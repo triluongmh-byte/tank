@@ -1,0 +1,1115 @@
+{
+  "inputSha256": "ca3e1019bba76f23e5f59b1850a91bcc2cc891bc67973913c93a304448a78533",
+  "model": "TI TPS61287 equations 11-18, ideal averaged CCM plant, ideal gm and nominal L; no parasitic/digital/switching or fault model",
+  "hardwareTested": false,
+  "sourceVoltageV": 5.129363636363636,
+  "carrierPeakA": 5.960000000000001,
+  "fanAllocationA": 0.3,
+  "logicUSBPeakA": 0.5,
+  "sourceOutputIncludingWiresW": 30.869007272727274,
+  "batteryBudget": [
+    {
+      "boostVinV": 3.3,
+      "loadBoostInputA": 11.692805785123968,
+      "logicBoostInputA": 0.946969696969697,
+      "totalPackA": 12.639775482093663
+    },
+    {
+      "boostVinV": 3.7,
+      "loadBoostInputA": 10.428718673218672,
+      "logicBoostInputA": 0.8445945945945945,
+      "totalPackA": 11.273313267813267
+    },
+    {
+      "boostVinV": 4.2,
+      "loadBoostInputA": 9.187204545454545,
+      "logicBoostInputA": 0.7440476190476191,
+      "totalPackA": 9.931252164502164
+    }
+  ],
+  "loopCases": [
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 69.46213184946902,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 76.1145518392594,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1014.4952080687364,
+      "phaseMarginDeg": 89.50681061672562,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 68.65073727853175,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 678.031701715246,
+      "phaseMarginDeg": 75.7234498565654,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 89.9406718992654,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 66.70206011220577,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 73.68441323329627,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 89.24937278999586,
+      "rhpZeroHz": 204786.14870658424,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 70.61997948119857,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 77.27239947098896,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1014.4952080687364,
+      "phaseMarginDeg": 90.56923715337481,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 69.88467441201742,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 678.031701715246,
+      "phaseMarginDeg": 76.91187675732334,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 91.0409593193555,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 67.91277648649451,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 74.89512960758502,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 90.3348777850031,
+      "rhpZeroHz": 102393.07435329212,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 930.572040929699,
+      "phaseMarginDeg": 75.46220333689858,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 81.85176097638772,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1014.4952080687364,
+      "phaseMarginDeg": 94.77521380799855,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 74.7689777021521,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 678.031701715246,
+      "phaseMarginDeg": 81.61837400196062,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 95.40236678549172,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 72.71048093970863,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 523.2991146814946,
+      "phaseMarginDeg": 79.69283406079916,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 554.3065366083504,
+      "phaseMarginDeg": 93.99471476559087,
+      "rhpZeroHz": 34131.0247844307,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 904.1698059234506,
+      "phaseMarginDeg": 82.77607311279148,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 904.1698059234506,
+      "phaseMarginDeg": 89.06355180378388,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 985.711900900616,
+      "phaseMarginDeg": 100.83335904197854,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 82.03298795424418,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 88.53427336409112,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 697.8305848598663,
+      "phaseMarginDeg": 101.4527193249278,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 508.4520468600939,
+      "phaseMarginDeg": 79.71122494178574,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 508.4520468600939,
+      "phaseMarginDeg": 86.49987334810977,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.3,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 538.5797247105718,
+      "phaseMarginDeg": 100.02927169876187,
+      "rhpZeroHz": 17065.51239221535,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1044.1190029805643,
+      "phaseMarginDeg": 69.36730944593029,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1074.6078283213176,
+      "phaseMarginDeg": 76.73197722669262,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1138.2823452540317,
+      "phaseMarginDeg": 91.35692823908835,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 69.38359959124247,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 760.7640819262703,
+      "phaseMarginDeg": 77.21588106106486,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 805.8421877614818,
+      "phaseMarginDeg": 92.68600015134534,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 67.71209389484774,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 587.1512637925166,
+      "phaseMarginDeg": 75.82095055272553,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 92.62965999457008,
+      "rhpZeroHz": 257440.07123903933,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1044.1190029805643,
+      "phaseMarginDeg": 70.44308735506016,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1074.6078283213176,
+      "phaseMarginDeg": 77.76394208807217,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1138.2823452540317,
+      "phaseMarginDeg": 92.30376825809354,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 70.48348223868093,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 760.7640819262703,
+      "phaseMarginDeg": 78.27516496350063,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 805.8421877614818,
+      "phaseMarginDeg": 93.66666100946658,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 68.83024320341374,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 587.1512637925166,
+      "phaseMarginDeg": 76.90014057249324,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 93.5971638989288,
+      "rhpZeroHz": 128720.03561951967,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1044.1190029805643,
+      "phaseMarginDeg": 74.70590169299975,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1044.1190029805643,
+      "phaseMarginDeg": 81.94393852160914,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1138.2823452540317,
+      "phaseMarginDeg": 96.06008223150104,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 74.846477096116,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 82.32902976416904,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 805.8421877614818,
+      "phaseMarginDeg": 97.56109413356764,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 73.26790058262928,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 587.1512637925166,
+      "phaseMarginDeg": 81.18483631169177,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 97.44240974028385,
+      "rhpZeroHz": 42906.678539839886,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1014.4952080687364,
+      "phaseMarginDeg": 81.36804545629712,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1044.1190029805643,
+      "phaseMarginDeg": 88.08145022011692,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1105.9869434355594,
+      "phaseMarginDeg": 101.49376247297725,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 81.43359501841225,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 88.70926891776736,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 782.9787941891024,
+      "phaseMarginDeg": 102.95822831407996,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 554.3065366083504,
+      "phaseMarginDeg": 79.79987219976923,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 570.4925797046321,
+      "phaseMarginDeg": 87.2963215295363,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 3.7,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 621.9421634147761,
+      "phaseMarginDeg": 102.60190933471058,
+      "rhpZeroHz": 21453.339269919943,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1171.52078983156,
+      "phaseMarginDeg": 69.02099912389002,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1205.7298145138745,
+      "phaseMarginDeg": 77.20892316788797,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1314.467945789422,
+      "phaseMarginDeg": 93.54639275688142,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 829.3732044796283,
+      "phaseMarginDeg": 69.88693656574206,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 853.5913392913657,
+      "phaseMarginDeg": 78.57002792716278,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 96.62974883912358,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 68.84928413660526,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 77.82185239266545,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 0.5,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 96.72771972794408,
+      "rhpZeroHz": 331719.71195446706,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1171.52078983156,
+      "phaseMarginDeg": 69.98483581360337,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1205.7298145138745,
+      "phaseMarginDeg": 78.13382608969576,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1314.467945789422,
+      "phaseMarginDeg": 94.3589273990564,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 829.3732044796283,
+      "phaseMarginDeg": 70.87083981021762,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 853.5913392913657,
+      "phaseMarginDeg": 79.51782403087792,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 957.7452351172411,
+      "phaseMarginDeg": 97.44062223219966,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 69.84868726364363,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 78.78658811248044,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 1,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 97.56144660295297,
+      "rhpZeroHz": 165859.85597723353,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1171.52078983156,
+      "phaseMarginDeg": 73.81156590362346,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1205.7298145138745,
+      "phaseMarginDeg": 81.80719916721347,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1314.467945789422,
+      "phaseMarginDeg": 97.58886979182536,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 829.3732044796283,
+      "phaseMarginDeg": 74.78051818126004,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 853.5913392913657,
+      "phaseMarginDeg": 83.28521553940755,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 930.572040929699,
+      "phaseMarginDeg": 100.1957016195204,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 73.82150185845201,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 658.794553441924,
+      "phaseMarginDeg": 82.62277668557542,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 3,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 739.1796465554595,
+      "phaseMarginDeg": 100.88023458208856,
+      "rhpZeroHz": 55286.61865907784,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.005,
+      "crossoverHz": 1138.2823452540317,
+      "phaseMarginDeg": 79.9033991757631,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.02,
+      "crossoverHz": 1171.52078983156,
+      "phaseMarginDeg": 87.46284300622618,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0013,
+      "esrOhm": 0.05,
+      "crossoverHz": 1277.173797581143,
+      "phaseMarginDeg": 102.27534025734079,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.005,
+      "crossoverHz": 805.8421877614818,
+      "phaseMarginDeg": 80.76856022199948,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.02,
+      "crossoverHz": 829.3732044796283,
+      "phaseMarginDeg": 88.84467528312084,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0019,
+      "esrOhm": 0.05,
+      "crossoverHz": 930.572040929699,
+      "phaseMarginDeg": 105.1132459984166,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.005,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 79.6207456813377,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.02,
+      "crossoverHz": 640.1032024709307,
+      "phaseMarginDeg": 88.11291422702945,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    },
+    {
+      "vinV": 4.2,
+      "currentA": 6,
+      "capF": 0.0025,
+      "esrOhm": 0.05,
+      "crossoverHz": 718.2076058301705,
+      "phaseMarginDeg": 105.28781057208376,
+      "rhpZeroHz": 27643.30932953892,
+      "pass": true
+    }
+  ],
+  "minPhaseMarginDeg": 66.70206011220577,
+  "maxCrossoverHz": 1314.467945789422,
+  "pass": true
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "path": "engineering/sources/1s-protector.pdf",
+    "sha256": "a368bd0b688c6973daa8618e00d8fe56154faccc69e79d0f550d0793d8120ac8"
+  },
+  {
+    "path": "engineering/sources/tps259824-evm.pdf",
+    "sha256": "097b98a239d98f19f514fa6db5661e71773024d3b3a8efd3509f5892acd8b2bf"
+  },
+  {
+    "path": "engineering/sources/tps61287-evm.pdf",
+    "sha256": "f267726920fb2280bdc5985a371a45ca2ebb35c37587f516dc47d0f9791b4726"
+  },
+  {
+    "path": "engineering/sources/tps61287.pdf",
+    "sha256": "c359d38a63c4cc24092c29574d56e9242bb74bf3d131889dd41e30464e70e227"
+  },
+  {
+    "path": "engineering/sources/tps61288-evm.pdf",
+    "sha256": "7f17be10bd9fd870ea4f2714b18461042da1014dc4bd686de59f76cfe3d62f4d"
+  },
+  {
+    "path": "engineering/sources/pack-breaker-tps25982.pdf",
+    "source": "https://www.ti.com/lit/ds/symlink/tps25982.pdf",
+    "checkedDate": "2026-11-20",
+    "sha256": "655c21dbf6b91a3c98b7ab26cd3bf0020d3eb7d765f411c71030d22fa4b6bc1f"
+  }
+]

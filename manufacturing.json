@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Board builder \u2014 Codex; independent board tester attestation pending",
+  "designInputs": {
+    "design/Tank.3dshapes/EEU_FR1A102.step": "bb6f464f73ef25ace69036681d0315aea38e0bab5e0a9635e49ae9efa94ce52f",
+    "design/Tank.3dshapes/Fuse_451.step": "2381622693420c9f74088ae4804d46c73482da9654c554e0423cd3c30cee86c2",
+    "design/Tank.pretty/CP_Radial_D10.0mm_P5.00mm.kicad_mod": "c8e870e790a3c052b3cd2fb724a329ca7725b9ed497bbfca578c0eb468be2008",
+    "design/Tank.pretty/C_0805_2012Metric.kicad_mod": "62775a51fe74ba7f1b572de327bdbd3fc92582721b2abcaa47787865590d89cb",
+    "design/Tank.pretty/Fuse_2512_6332Metric.kicad_mod": "5c7fa79067b10e2c1c9da013d50f4e82c5b4d1336901c256c7fb49c19a274426",
+    "design/Tank.pretty/MountingHole_3.2mm_M3.kicad_mod": "b83ec84428449465df3b459f1bc24b285045c812102a2052b1b7ce0f67e018f2",
+    "design/Tank.pretty/PinHeader_1x03_P2.54mm_Vertical.kicad_mod": "e5f24b6fea852f86171042806da48490229c9c8025b6d266b8cad6485b26e79f",
+    "design/Tank.pretty/PinHeader_1x04_P2.54mm_Vertical.kicad_mod": "571d2d16b49795f8f9a91f96cc83fd2adf49890cd66c377189c44204ebd03c29",
+    "design/Tank.pretty/PinHeader_2x06_P2.54mm_Vertical.kicad_mod": "9082794bd0a0cee6528b3d55c0fb1dd752cea2b7ee6e5c32ef160c9600a18e61",
+    "design/Tank.pretty/R_0805_2012Metric.kicad_mod": "f050b6a50cc7e6f86291fb7aa8f87b0d02255e21cfbddf291cdccc87e5889794",
+    "design/Tank.pretty/R_2512_6332Metric.kicad_mod": "abab4bf8eeb3ed03061d8eeb56b542cdac074ce8a0ace0f9b06e933c0b48f297",
+    "design/Tank.pretty/SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod": "074ecb2092b24fa4b4b9cdd7c926fc587b0d7d6d21e7341e57935fd42d36894f",
+    "design/Tank.pretty/SOT-23-5.kicad_mod": "455a3f7c3e5eb5b8847eaa5df23e18651e78ab9f75afd09a0883758a0d901761",
+    "design/Tank.pretty/SOT-23.kicad_mod": "0d88c86c1b6d8c1aae4aa8c09386264c089d4451a128b6ccd63ed253f4300b15",
+    "design/Tank.pretty/TSSOP-20_4.4x6.5mm_P0.65mm.kicad_mod": "b7ca3a31dd45c1225609f9b94e8ba1534bd16edd193628c8d67a8ea669b26b72",
+    "design/Tank.pretty/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.kicad_mod": "dfc55b9c4471fef83651217c98993a8cbdec2b699085c2c7be6795b48c441258",
+    "design/Tank.pretty/TestPoint_Pad_D2.0mm.kicad_mod": "0a1ce94753a7b270c8ff6c20698b4de7ce95606b643549926acc04bb698d0120",
+    "design/devices.kicad_sym": "229f9fa31fa369a07bd41e4f3fd037caf21ee10ce74947b6eb6d15bf9ac30b4d",
+    "design/fp-lib-table": "537e455343b5066ecc8b37ff3898de0033e340169539c85ccccc5fb5144b0003",
+    "design/main.kicad_pcb": "84eaa76e4673162006654fb55e1afe9b6a5a5f35944c4d05529eb8b21398bdcf",
+    "design/main.kicad_pro": "e1a8097154afcf9fee3d33ce537bedecef277390446b2f84a38748d3339e4b92",
+    "design/main.kicad_sch": "27bbcd78cd7d6dea53bd3ac054d484861a2f464b843a5297773cd1689130be5a",
+    "design/sym-lib-table": "9df1e279108b4322ae07c31fa76e45b7754ba5b791c9fc9c3f4d9db36590255a",
+    "design/tank.kicad_sym": "0fc7ae875340e12bf82a6b2bb6ce985a73c35dd075630d51a19250f69ff7fa6d",
+    "parts.json": "158595672251996e6547d55966823ce01743eb754c42f903c9d748849a030910",
+    "product.json": "d32fe2621af755f4ba09177c49f5a002e8140a8d16ed7c5b3cafceb0cb774ac0"
+  },
+  "acceptedIgnoredChecks": {
+    "drc": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ],
+    "erc": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ]
+  },
+  "checks": {
+    "power": {
+      "status": "pass",
+      "analysis": "Selected external sealed1S protection/charging, modified boost, output latching breaker and separate USB logic boost per POWER_SYSTEM.md;5.96A carrier peak including0.30A fan,12.7A pack peak budget. Exact pack fuse/holder and second input RUN breaker, wire and fault-envelope coordination are specified in POWER_SYSTEM.md and reproduced in pack-protection-calculations.json. Owned pack and physical fault/thermal qualification remain unverified. native audit measures1.2\u00b5F logic and all seven IC supply pins within2.891mm of bypass capacitors. Reset hardware and loaded module OE calculated in evidence.",
+      "evidence": [
+        {
+          "path": "engineering/power.md",
+          "sha256": "97eb92e69bb53b809404fe18f9ba6807763b6850fc97cc353894409ea0d8daaf"
+        },
+        {
+          "path": "engineering/POWER_SYSTEM.md",
+          "sha256": "681c15c4f1cc3153c50c86e4ca09925914347571723edc9f78328e57d0b54327"
+        },
+        {
+          "path": "engineering/power-calculations.json",
+          "sha256": "8396d7d1e162924d2fbc6cd08d6a338baf4f910c2d553def4c454a629e34f3be"
+        },
+        {
+          "path": "engineering/pack-protection-spec.json",
+          "sha256": "97542e9b3e1a2a8b2d7d4b9bf9336365205e399864f9b49797f9f16ec07e952c"
+        },
+        {
+          "path": "engineering/pack-protection-calculations.json",
+          "sha256": "19579a151efb12f14ac8e896434ec8e8d6e266959efedea2fe6f4c0b566e8ff8"
+        }
+      ]
+    },
+    "protection": {
+      "status": "pass",
+      "analysis": "Input fuse and reverse PMOS, default-off high-side switch, Ioff PWM isolation and five-volt tolerant sonar paths reviewed against primary datasheets. External regulated source and6.1\u20137.2A latching breaker qualification are required; regeneration and hardware fault behavior have explicit bench acceptance limits.",
+      "evidence": [
+        {
+          "path": "engineering/protection.md",
+          "sha256": "f8fe14f208da70813d60ac688a51e9f08a5298be8a1f38b34847c499aef2a08a"
+        }
+      ]
+    },
+    "pinout": {
+      "status": "pass",
+      "analysis": "Actual KiCad pad audit matches all carrier connector pins, seven buffered channel pairs, rails and mount frame. Only internal module-side PWM net names differ for required isolation; deviation recorded, physical pins/GPIOs unchanged.",
+      "evidence": [
+        {
+          "path": "engineering/pinout.md",
+          "sha256": "1314e76b8062df397311d07f85601f122c732b2b5453bd2f07c768f38a1bb31d"
+        }
+      ]
+    },
+    "thermal": {
+      "status": "pass",
+      "analysis": "Filled source/drain copper and five heat-spreading vias measured; hot-R loss and conservative board-dependent thermal estimates documented. Low-voltage prototype requires staged load/temperature qualification; no measured hardware result claimed.",
+      "evidence": [
+        {
+          "path": "engineering/thermal.md",
+          "sha256": "41091dae940b07c0039aded912875e235fef6cecd59ae4314ff3da2ebb2cb4ee"
+        }
+      ]
+    },
+    "assembly": {
+      "status": "pass",
+      "analysis": "Deliberate manual prototype assembly, all populated components top side; exact manufacturer/MPN/footprint for every populated item. Polarity, silicon pin maps and reference module qualification documented; no factory sourcing or rotations fabricated.",
+      "evidence": [
+        {
+          "path": "engineering/assembly.md",
+          "sha256": "2f2d938e9f90cf02fd11141020fc90ecb119446fd600fe4a655173171006eb6d"
+        }
+      ]
+    },
+    "fabricator": {
+      "status": "pass",
+      "analysis": "Explicit1.6mm2-layer70\u00b5m stackup,0.20mm geometry floors,0.30mm drill,0.15mm legend. Official publisher independently checks native files and final Gerber/drill truth at every publication.",
+      "evidence": [
+        {
+          "path": "engineering/fabricator.md",
+          "sha256": "afb784b792640664e3fbda28a3700880ddfb169e5bbf8ce1b44b9b1a6c0803cc"
+        }
+      ]
+    },
+    "bringup": {
+      "status": "pass",
+      "analysis": "Staged current-limited no-load, reset/isolation, module identity, sonar, single-channel, peak-load and temperature tests with numerical limits. Parallel18650 owned pack and configured external assembly require the documented acceptance checks; hardwareTested remains false.",
+      "evidence": [
+        {
+          "path": "engineering/bringup.md",
+          "sha256": "15a482cbc8cc29d5907b123ced6ee03ea01239085eb8e02f39702bdf120a795e"
+        }
+      ]
+    }
+  },
+  "assembly": {
+    "J_CTRL": {
+      "method": "manual"
+    },
+    "J_PCA": {
+      "method": "manual"
+    },
+    "J_SONAR_F": {
+      "method": "manual"
+    },
+    "J_SONAR_R": {
+      "method": "manual"
+    },
+    "J_PWR": {
+      "method": "manual"
+    },
+    "J_S0": {
+      "method": "manual"
+    },
+    "J_S1": {
+      "method": "manual"
+    },
+    "J_S2": {
+      "method": "manual"
+    },
+    "J_S3": {
+      "method": "manual"
+    },
+    "J_S4": {
+      "method": "manual"
+    },
+    "J_S5": {
+      "method": "manual"
+    },
+    "J_S6": {
+      "method": "manual"
+    },
+    "F1": {
+      "method": "manual"
+    },
+    "Q1": {
+      "method": "manual"
+    },
+    "Q2": {
+      "method": "manual"
+    },
+    "Q3": {
+      "method": "manual"
+    },
+    "R1": {
+      "method": "manual"
+    },
+    "R2": {
+      "method": "manual"
+    },
+    "R3": {
+      "method": "manual"
+    },
+    "R4": {
+      "method": "manual"
+    },
+    "R5": {
+      "method": "manual"
+    },
+    "R6": {
+      "method": "manual"
+    },
+    "C1": {
+      "method": "manual"
+    },
+    "C2": {
+      "method": "manual"
+    },
+    "C3": {
+      "method": "manual"
+    },
+    "U2": {
+      "method": "manual"
+    },
+    "C4": {
+      "method": "manual"
+    },
+    "R7": {
+      "method": "manual"
+    },
+    "U1": {
+      "method": "manual"
+    },
+    "C5": {
+      "method": "manual"
+    },
+    "C6": {
+      "method": "manual"
+    },
+    "R10": {
+      "method": "manual"
+    },
+    "R20": {
+      "method": "manual"
+    },
+    "R11": {
+      "method": "manual"
+    },
+    "R21": {
+      "method": "manual"
+    },
+    "R12": {
+      "method": "manual"
+    },
+    "R22": {
+      "method": "manual"
+    },
+    "R13": {
+      "method": "manual"
+    },
+    "R23": {
+      "method": "manual"
+    },
+    "R14": {
+      "method": "manual"
+    },
+    "R24": {
+      "method": "manual"
+    },
+    "R15": {
+      "method": "manual"
+    },
+    "R25": {
+      "method": "manual"
+    },
+    "R16": {
+      "method": "manual"
+    },
+    "R26": {
+      "method": "manual"
+    },
+    "U3": {
+      "method": "manual"
+    },
+    "U4": {
+      "method": "manual"
+    },
+    "C10": {
+      "method": "manual"
+    },
+    "C11": {
+      "method": "manual"
+    },
+    "R40": {
+      "method": "manual"
+    },
+    "R41": {
+      "method": "manual"
+    },
+    "U5": {
+      "method": "manual"
+    },
+    "U6": {
+      "method": "manual"
+    },
+    "C12": {
+      "method": "manual"
+    },
+    "C13": {
+      "method": "manual"
+    },
+    "R42": {
+      "method": "manual"
+    },
+    "R43": {
+      "method": "manual"
+    },
+    "C7": {
+      "method": "manual"
+    },
+    "C8": {
+      "method": "manual"
+    },
+    "J_FAN": {
+      "method": "manual"
+    },
+    "R44": {
+      "method": "manual"
+    }
+  }
+}

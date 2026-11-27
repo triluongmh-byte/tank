@@ -1,0 +1,14 @@
+{
+  "family": "esp32",
+  "tool": "arduino-cli",
+  "fqbn": "esp32:esp32:esp32:PartitionScheme=default",
+  "sketch": "tank",
+  "build": "../build/firmware/esp32",
+  "usbVid": [
+    "0x10c4",
+    "0x1a86",
+    "0x0403"
+  ],
+  "baud": 115200,
+  "note": "ESP32 DevKit (ASSUMED 30-pin) via its USB-UART bridge; no flashing authorised."
+}

@@ -1,0 +1,1164 @@
+{
+ "schemaVersion": 1,
+ "assemblyProcess": "Manual low-volume prototype: paste + hot air/reflow for SOIC/TSSOP/SOT23 and 0805, then hand solder through-hole connectors. No factory placement selected.",
+ "parts": [
+  {
+   "refdes": [
+    "J_CTRL"
+   ],
+   "value": "CTRL",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-106-07-G-D",
+   "native_footprint": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_PCA"
+   ],
+   "value": "PCA",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-106-07-G-D",
+   "native_footprint": "Tank:PinHeader_2x06_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_SONAR_F"
+   ],
+   "value": "SONAR_F",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-104-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_SONAR_R"
+   ],
+   "value": "SONAR_R",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-104-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x04_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_PWR"
+   ],
+   "value": "PWR",
+   "manufacturer": "Phoenix Contact",
+   "mpn": "1715721",
+   "native_footprint": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.phoenixcontact.com/en-us/products/1715721",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S0"
+   ],
+   "value": "S0",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S1"
+   ],
+   "value": "S1",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S2"
+   ],
+   "value": "S2",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S3"
+   ],
+   "value": "S3",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S4"
+   ],
+   "value": "S4",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S5"
+   ],
+   "value": "S5",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_S6"
+   ],
+   "value": "S6",
+   "manufacturer": "Samtec",
+   "mpn": "TSW-103-07-G-S",
+   "native_footprint": "Tank:PinHeader_1x03_P2.54mm_Vertical",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.samtec.com/products/tsw",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "F1"
+   ],
+   "value": "7A",
+   "manufacturer": "Littelfuse",
+   "mpn": "0451007.MRL",
+   "native_footprint": "Tank:Fuse_2512_6332Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.littelfuse.com/assetdocs/littelfuse-fuse-451-453-datasheet?assetguid=d6e015d8-250c-49aa-b2ff-331d7a3a6a98",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "Q1"
+   ],
+   "value": "AO4409",
+   "manufacturer": "Alpha & Omega Semiconductor",
+   "mpn": "AO4409",
+   "native_footprint": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.aosmd.com/sites/default/files/res/datasheets/AO4409.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "Q2"
+   ],
+   "value": "AO4409",
+   "manufacturer": "Alpha & Omega Semiconductor",
+   "mpn": "AO4409",
+   "native_footprint": "Tank:SOIC-8_3.9x4.9mm_P1.27mm",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.aosmd.com/sites/default/files/res/datasheets/AO4409.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "Q3"
+   ],
+   "value": "MMBT3904",
+   "manufacturer": "onsemi",
+   "mpn": "MMBT3904LT1G",
+   "native_footprint": "Tank:SOT-23",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R1"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R2"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R3"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R4"
+   ],
+   "value": "1k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071001L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R5"
+   ],
+   "value": "1k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071001L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R6"
+   ],
+   "value": "220",
+   "manufacturer": "Yageo",
+   "mpn": "RC2512FK-072200L",
+   "native_footprint": "Tank:R_2512_6332Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C1"
+   ],
+   "value": "1000u",
+   "manufacturer": "Panasonic",
+   "mpn": "EEU-FR1A102",
+   "native_footprint": "Tank:CP_Radial_D10.0mm_P5.00mm",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://industrial.panasonic.com/ww/products/pt/aluminum-cap-lead/models/EEUFR1A102",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C2"
+   ],
+   "value": "10u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR61C106KE15L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C3"
+   ],
+   "value": "10u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR61C106KE15L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U2"
+   ],
+   "value": "MCP1700-3302E/TT",
+   "manufacturer": "Microchip",
+   "mpn": "MCP1700T-3302E/TT",
+   "native_footprint": "Tank:SOT-23",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://ww1.microchip.com/downloads/aemDocuments/documents/APID/ProductDocuments/DataSheets/MCP1700-Data-Sheet-20001826F.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C4"
+   ],
+   "value": "1u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71E105KA99L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R7"
+   ],
+   "value": "1k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071001L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U1"
+   ],
+   "value": "SN74LVC244APW",
+   "manufacturer": "Texas Instruments",
+   "mpn": "SN74LVC244APWR",
+   "native_footprint": "Tank:TSSOP-20_4.4x6.5mm_P0.65mm",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.ti.com/lit/ds/symlink/sn74lvc244a.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C5"
+   ],
+   "value": "100n",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71H104KA01L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C6"
+   ],
+   "value": "1u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71E105KA99L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R10"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R20"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R11"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R21"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R12"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R22"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R13"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R23"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R14"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R24"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R15"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R25"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R16"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R26"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071002L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U3"
+   ],
+   "value": "SN74AHCT1G125",
+   "manufacturer": "Texas Instruments",
+   "mpn": "SN74AHCT1G125DBVR",
+   "native_footprint": "Tank:SOT-23-5",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U4"
+   ],
+   "value": "SN74LVC1G17",
+   "manufacturer": "Texas Instruments",
+   "mpn": "SN74LVC1G17DBVR",
+   "native_footprint": "Tank:SOT-23-5",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C10"
+   ],
+   "value": "100n",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71H104KA01L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C11"
+   ],
+   "value": "100n",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71H104KA01L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R40"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R41"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U5"
+   ],
+   "value": "SN74AHCT1G125",
+   "manufacturer": "Texas Instruments",
+   "mpn": "SN74AHCT1G125DBVR",
+   "native_footprint": "Tank:SOT-23-5",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "U6"
+   ],
+   "value": "SN74LVC1G17",
+   "manufacturer": "Texas Instruments",
+   "mpn": "SN74LVC1G17DBVR",
+   "native_footprint": "Tank:SOT-23-5",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C12"
+   ],
+   "value": "100n",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71H104KA01L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C13"
+   ],
+   "value": "100n",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71H104KA01L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R42"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R43"
+   ],
+   "value": "47k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-074702L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C7"
+   ],
+   "value": "1u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71E105KA99L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "C8"
+   ],
+   "value": "1u",
+   "manufacturer": "Murata",
+   "mpn": "GRM21BR71E105KA99L",
+   "native_footprint": "Tank:C_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "J_FAN"
+   ],
+   "value": "FAN_5V",
+   "manufacturer": "Phoenix Contact",
+   "mpn": "1715721",
+   "native_footprint": "Tank:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.phoenixcontact.com/en-us/products/1715721",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  },
+  {
+   "refdes": [
+    "R44"
+   ],
+   "value": "10k",
+   "manufacturer": "Yageo",
+   "mpn": "RC0805FR-071001L",
+   "native_footprint": "Tank:R_0805_2012Metric",
+   "lcsc": null,
+   "assembly": "manual",
+   "source": "https://www.yageo.com/en/Product/Index/chip-resistors",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false
+  }
+ ],
+ "externalParts": [
+  {
+   "id": "M_PROTECT",
+   "manufacturer": "AA Portable Power / BatterySpace",
+   "mpn": "PCB-Li-1S15A",
+   "purpose": "Inside professionally assembled sealed1S pack;15A continuous,65±10A backup trip. F_PACK15A and input M_PACK_BREAKER12.8–14.8A additionally REQUIRED; no raw-cell owner assembly.",
+   "source": "https://www.batteryspace.com/protection-circuit-module-pcb-for-1s-3-6-3-7v-li-ion-battery-pack-at-15a-limited-for-20700-21700-size-cell.aspx",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierItem": "2069",
+   "scope": "sealed pack, never raw-cell user assembly"
+  },
+  {
+   "id": "M_CHARGE",
+   "manufacturer": "Adafruit",
+   "mpn": "6091",
+   "purpose": "bq25185 4.2V 1A charger, pack NTC, LOAD unused; RUN physically unplugged.",
+   "source": "https://www.adafruit.com/product/6091",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "id": "M_BOOST",
+   "manufacturer": "Texas Instruments",
+   "mpn": "TPS61287EVM-042",
+   "purpose": "OPTIONAL reference only (not primary): Required modified 5.13V/6A reference; STOCK OUTPUT IS 18V. Modifications and loop model in engineering/POWER_SYSTEM.md.",
+   "source": "https://www.ti.com/tool/TPS61287EVM",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "M_BREAKER",
+   "manufacturer": "Texas Instruments",
+   "mpn": "TPS259824OEVM",
+   "purpose": "Output circuit breaker, selected resistor 232ohm and UVLO4.49/4.11V, latch-off.",
+   "source": "https://www.ti.com/tool/TPS259824OEVM",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "M_LOGIC",
+   "manufacturer": "Pololu",
+   "mpn": "U3V16F5",
+   "purpose": "Separate 5V 0.5A allocation for LILYGO USB; never parallel outputs or use USB Y cable.",
+   "source": "https://www.pololu.com/product/4941",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierItem": "4941",
+   "sizeMm": [
+    8.1,
+    13.2,
+    2.5
+   ]
+  },
+  {
+   "id": "M_BOOST_R4",
+   "manufacturer": "Vishay",
+   "mpn": "TNPW040259K0BEED",
+   "purpose": "59.0kohm 0.1% 0402 replacement on M_BOOST only",
+   "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierVerification": "https://www.digikey.com/en/products/detail/vishay-dale/TNPW040259K0BEED/9448508"
+  },
+  {
+   "id": "M_BOOST_R6",
+   "manufacturer": "Vishay",
+   "mpn": "TNPW040214K3BEED",
+   "purpose": "14.3kohm 0.1% 0402 replacement on M_BOOST only",
+   "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierVerification": "https://www.digikey.fi/en/products/detail/vishay-dale/TNPW040214K3BEED/4876040"
+  },
+  {
+   "id": "F_PACK",
+   "manufacturer": "Littelfuse",
+   "mpn": "0287015.U",
+   "purpose": "15A,32VDC,1kA interrupt ATOF fuse inside professionally sealed pack at positive takeoff; coordination in POWER_SYSTEM.md. Not carrier F1.",
+   "source": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_287_atof_r2.7.pdf?assetguid=43dcdce8-8ca2-426f-8998-7e566f048d40",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "FH_PACK",
+   "manufacturer": "Littelfuse",
+   "mpn": "0FHA0002XP",
+   "purpose": "30A,32VDC ATO inline holder,12AWG GXL leads; insulated/strain-relieved as part of qualified pack.",
+   "source": "https://www.littelfuse.com/assetdocs/littelfuse-fuse-holder-ato-fha-datasheet?assetguid=988addec-bfe3-4ea2-9204-e2982cbb488e",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "M_PACK_BREAKER",
+   "manufacturer": "Texas Instruments",
+   "mpn": "TPS259824OEVM",
+   "purpose": "ADDITIONAL input-side RUN breaker BEFORE both boosts,modified110ohm ILIM and2.92V UVLO; qualified12.8–14.8A latch-off. Separate from6.1–7.2A output M_BREAKER.",
+   "source": "https://www.ti.com/tool/TPS259824OEVM",
+   "checkedDate": "2026-11-20",
+   "assembly": "external module / qualified assembly",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "M_SERVO_BOOST",
+   "manufacturer": "Pololu",
+   "mpn": "U3V70F5",
+   "purpose": "Island A 5 V boost (servos CH0-2, turret, fan, sonar) -> J_PWR; 7 A prolonged input, ~4.0 A out at 3.3 V. Unmodified.",
+   "source": "https://www.pololu.com/product/2891",
+   "checkedDate": "2026-11-27",
+   "assembly": "external module, no modification",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "M_SERVO_BOOST_B",
+   "manufacturer": "Pololu",
+   "mpn": "U3V70F5",
+   "purpose": "Island B 5 V boost for servo V+ of CH3-5 (2.4 A) via 5 A fuse; ENABLE gated by ACT_EN, 4.7 k ENABLE->GND for default off. Unmodified module + one resistor.",
+   "source": "https://www.pololu.com/product/2891",
+   "checkedDate": "2026-11-27",
+   "assembly": "external module, no modification",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "configurationDocument": "engineering/POWER_SYSTEM.md"
+  },
+  {
+   "id": "F_ISLAND_B",
+   "manufacturer": "Littelfuse",
+   "mpn": "0287005.U",
+   "purpose": "5 A ATOF blade fuse on island B output (confirm MPN/holder at order)",
+   "checkedDate": "2026-11-27",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "assembly": "external"
+  }
+ ],
+ "externalAssemblyRequirements": {
+  "pack": "Owned 140g parallel 18650 pack unqualified. PRIMARY: protector PCB-Li-1S15A + F_PACK 0287015.U/FH_PACK 0FHA0002XP at pack positive; peak 10.6 A at 3.3 V; cells >=8 A each (2 cells). M_PACK_BREAKER and the 30 A/100 A fault qualification belong to the OPTIONAL TPS61287 chain only. See POWER_SYSTEM.md.",
+  "fan": "Owned 30x30mm 5V fan; unknown MPN/current. Design allocation including startup <=0.30A, not claimed measured.",
+  "sonar": "Owned order HC-SR04P x2. Reference 4tronix 3.0-5.5V variant; actual labels/thresholds must be checked.",
+  "powerModuleMods": "PRIMARY converters are unmodified Pololu U3V70F5 x2 (one 4.7 k ENABLE-GND resistor on island B). TPS61287 modifications apply only to the optional reference chain.",
+  "wiring": "14AWG pack pair <=0.4 m round trip to both converter inputs; each input <=7 A prolonged; outputs never joined; island B red wires via 5 A fuse; 18AWG downstream 5V on J_PWR unchanged. 12AWG/30 A terminal requirement applies only to the optional reference chain."
+ },
+ "externalModificationParts": [
+  {
+   "module": "M_BOOST",
+   "position": "R7",
+   "value": "18k",
+   "package": "0402",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW040218K0FKED",
+   "source": "https://www.ti.com/lit/ug/slvuc39/slvuc39.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BOOST",
+   "position": "C18",
+   "value": "47nF",
+   "package": "0402",
+   "manufacturer": "Murata",
+   "mpn": "GRM155R71H473KE14D",
+   "source": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor/overview/lineup/smd/grm",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BOOST",
+   "position": "C3",
+   "value": "2.2nF",
+   "package": "0402",
+   "manufacturer": "Murata",
+   "mpn": "GRM155R71H222KA01D",
+   "source": "https://www.murata.com/-/media/webrenewal/products/power/power-semiconductor/overview/lineup/led-boost/pe23108/pe23108.ashx?la=en",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BOOST",
+   "position": "R3",
+   "value": "39k",
+   "package": "0402",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW040239K0FKED",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BOOST",
+   "position": "R10",
+   "value": "20k",
+   "package": "0402",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW040220K0FKED",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BREAKER",
+   "position": "R9",
+   "value": "232",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW0603232RFKEA",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BREAKER",
+   "position": "R1",
+   "value": "100k",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW0603100KFKEA",
+   "source": "https://www.ti.com/lit/ug/snva172a/snva172a.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_BREAKER",
+   "position": "R2",
+   "value": "36.5k",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW060336K5FKEA",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_PACK_BREAKER",
+   "position": "R9",
+   "value": "110ohm0.1%",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "TNPW0603110RBEEA",
+   "source": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierVerification": "https://www.digikey.com/en/products/detail/vishay-dale/TNPW0603110RBEEA/1606657"
+  },
+  {
+   "module": "M_PACK_BREAKER",
+   "position": "R1",
+   "value": "100kohm1%",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW0603100KFKEA",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false
+  },
+  {
+   "module": "M_PACK_BREAKER",
+   "position": "R2",
+   "value": "69.8kohm1%",
+   "package": "0603",
+   "manufacturer": "Vishay",
+   "mpn": "CRCW060369K8FKEA",
+   "source": "https://www.vishay.com/docs/20035/dcrcwe3.pdf",
+   "checkedDate": "2026-11-20",
+   "stockVerified": false,
+   "hardwareTested": false,
+   "supplierVerification": "https://www.digikey.ro/ro/products/detail/vishay-dale/CRCW060369K8FKEA/1174879"
+  }
+ ]
+}
