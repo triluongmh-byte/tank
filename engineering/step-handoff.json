@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "pcbSha256": "84eaa76e4673162006654fb55e1afe9b6a5a5f35944c4d05529eb8b21398bdcf",
+  "nativeStep": "build/board/main-native.step",
+  "nativeStepSha256": "02e62b70bf3946ca2c48f39dd2c3aa566b4954b7b4e498e92fa4913369228e74",
+  "contractStep": "build/board/main-contract.step",
+  "contractStepSha256": "71d84ca1c7d66eebfdbf907ab06c01e42c4971bc10b6e332091d930ca896c06d",
+  "transform4x4": [
+    [
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      -1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      0.08
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ]
+  ],
+  "description": "Native STEP Y reflection and Z+0.08mm to center the explicit70um copper/10um mask stackup about nominal board Z0..1.6. KiCad visual mask adds5um each side: exported skin Z-0.005..1.605. Includes populated component bodies and tails.",
+  "assemblyBoundsMm": [
+    0.0,
+    0.0,
+    -1.8600000000000003,
+    62.0,
+    60.0,
+    17.64
+  ],
+  "hardwareTested": false,
+  "frameNote": "release note 8: board frame x 0..62, y 0..60 (y down = tail), z 0..1.6 plus parts; place at case X=-31, Y=-46, Z=49; do not mirror again"
+}

@@ -1,0 +1,1173 @@
+{
+  "fasteners": [
+    {
+      "name": "servo_cap_L-51",
+      "origin": [
+        -25,
+        -51,
+        37.81851652578136
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "05_servo_cap_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "servo_cap_L-17",
+      "origin": [
+        -25,
+        -17,
+        37.81851652578136
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "05_servo_cap_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rail_L-5",
+      "origin": [
+        -80,
+        -5,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "06_outer_rail_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rail_L5",
+      "origin": [
+        -80,
+        5,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "06_outer_rail_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "drive_stack_L6.7",
+      "origin": [
+        -57.6,
+        -33.3,
+        34.518516525781365
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "wheel_L",
+      "mates": [
+        "07_drive_wheel_L",
+        "08_drive_guide_L",
+        "09_horn_cap_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "idler_stack_L6.7",
+      "origin": [
+        -57.6,
+        46.7,
+        34.518516525781365
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "idler_L",
+      "mates": [
+        "10_idler_wheel_L",
+        "11_idler_guide_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "drive_stack_L-6.7",
+      "origin": [
+        -57.6,
+        -46.7,
+        21.118516525781367
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "wheel_L",
+      "mates": [
+        "07_drive_wheel_L",
+        "08_drive_guide_L",
+        "09_horn_cap_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "idler_stack_L-6.7",
+      "origin": [
+        -57.6,
+        33.3,
+        21.118516525781367
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "idler_L",
+      "mates": [
+        "10_idler_wheel_L",
+        "11_idler_guide_L"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rear_axle_L",
+      "origin": [
+        -81.8,
+        40,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 50,
+      "group": "fixed",
+      "mates": [
+        "20_rear_cap_L",
+        "12_axle_spacer_L",
+        "17_inner_round_axle"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "factory_centre_L",
+      "origin": [
+        -49.8,
+        -40,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 6,
+      "group": "wheel_L",
+      "mates": [
+        "ref_horn_L",
+        "ref_servo_L"
+      ],
+      "standard": "factory centre screw, dimensions assumed"
+    },
+    {
+      "name": "servo_cap_R-51",
+      "origin": [
+        25,
+        -51,
+        37.81851652578136
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "05_servo_cap_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "servo_cap_R-17",
+      "origin": [
+        25,
+        -17,
+        37.81851652578136
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "05_servo_cap_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rail_R-5",
+      "origin": [
+        80,
+        -5,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "06_outer_rail_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rail_R5",
+      "origin": [
+        80,
+        5,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "06_outer_rail_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "drive_stack_R6.7",
+      "origin": [
+        57.6,
+        -33.3,
+        34.518516525781365
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "wheel_R",
+      "mates": [
+        "07_drive_wheel_R",
+        "08_drive_guide_R",
+        "09_horn_cap_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "idler_stack_R6.7",
+      "origin": [
+        57.6,
+        46.7,
+        34.518516525781365
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "idler_R",
+      "mates": [
+        "10_idler_wheel_R",
+        "11_idler_guide_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "drive_stack_R-6.7",
+      "origin": [
+        57.6,
+        -46.7,
+        21.118516525781367
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "wheel_R",
+      "mates": [
+        "07_drive_wheel_R",
+        "08_drive_guide_R",
+        "09_horn_cap_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "idler_stack_R-6.7",
+      "origin": [
+        57.6,
+        33.3,
+        21.118516525781367
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 16,
+      "group": "idler_R",
+      "mates": [
+        "10_idler_wheel_R",
+        "11_idler_guide_R"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "rear_axle_R",
+      "origin": [
+        81.8,
+        40,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 50,
+      "group": "fixed",
+      "mates": [
+        "20_rear_cap_R",
+        "12_axle_spacer_R",
+        "17_inner_round_axle"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "factory_centre_R",
+      "origin": [
+        49.8,
+        -40,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 6,
+      "group": "wheel_R",
+      "mates": [
+        "ref_horn_R",
+        "ref_servo_R"
+      ],
+      "standard": "factory centre screw, dimensions assumed"
+    },
+    {
+      "name": "lid_(-6, -52)",
+      "origin": [
+        -6,
+        -52,
+        45.5
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "02_lid_head_seat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "lid_(6, -52)",
+      "origin": [
+        6,
+        -52,
+        45.5
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "02_lid_head_seat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "lid_(-31, 51)",
+      "origin": [
+        -31,
+        51,
+        45.5
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "02_lid_head_seat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "lid_(31, 51)",
+      "origin": [
+        31,
+        51,
+        45.5
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "01_chassis",
+        "02_lid_head_seat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "gate_-17.5",
+      "origin": [
+        -17.5,
+        53,
+        48.7
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat",
+        "03_cable_gate"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "gate_17.5",
+      "origin": [
+        17.5,
+        53,
+        48.7
+      ],
+      "axis": [
+        0,
+        0,
+        -1
+      ],
+      "lengthMm": 12,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat",
+        "03_cable_gate"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "head_1",
+      "origin": [
+        -37,
+        7,
+        54
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 20,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat",
+        "reuse_head_cleat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "head_-1",
+      "origin": [
+        33.5,
+        7,
+        54
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 20,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat",
+        "reuse_head_cleat"
+      ],
+      "standard": "M3 countersunk"
+    },
+    {
+      "name": "reuse_TFT_0",
+      "origin": [
+        -18,
+        -9.28,
+        60.65
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 8,
+      "group": "fixed",
+      "mates": [
+        "reuse_tft_clamp_0",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_padboard"
+    },
+    {
+      "name": "reuse_TFT_1",
+      "origin": [
+        -18,
+        -9.28,
+        99.35
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 8,
+      "group": "fixed",
+      "mates": [
+        "reuse_tft_clamp_1",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_padboard"
+    },
+    {
+      "name": "reuse_TFT_2",
+      "origin": [
+        18,
+        -9.28,
+        60.65
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 8,
+      "group": "fixed",
+      "mates": [
+        "reuse_tft_clamp_2",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_padboard"
+    },
+    {
+      "name": "reuse_TFT_3",
+      "origin": [
+        18,
+        -9.28,
+        99.35
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 8,
+      "group": "fixed",
+      "mates": [
+        "reuse_tft_clamp_3",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_padboard"
+    },
+    {
+      "name": "reuse_cleat_-17",
+      "origin": [
+        -17,
+        0,
+        67
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 6,
+      "group": "fixed",
+      "mates": [
+        "reuse_head_cleat",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_cleat"
+    },
+    {
+      "name": "reuse_cleat_17",
+      "origin": [
+        17,
+        0,
+        67
+      ],
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "lengthMm": 6,
+      "group": "fixed",
+      "mates": [
+        "reuse_head_cleat",
+        "reuse_head_padboard"
+      ],
+      "standard": "M3 countersunk",
+      "reuse": true,
+      "tappedPart": "reuse_head_cleat"
+    }
+  ],
+  "nuts": [
+    {
+      "name": "axle_end_L",
+      "origin": [
+        -32.3,
+        40,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "17_inner_round_axle"
+      ]
+    },
+    {
+      "name": "axle_end_R",
+      "origin": [
+        32.3,
+        40,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "17_inner_round_axle"
+      ]
+    },
+    {
+      "name": "lid_(-6, -52)",
+      "origin": [
+        -6,
+        -52,
+        37
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "lid_(6, -52)",
+      "origin": [
+        6,
+        -52,
+        37
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "lid_(-31, 51)",
+      "origin": [
+        -31,
+        51,
+        37
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "lid_(31, 51)",
+      "origin": [
+        31,
+        51,
+        37
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "gate_-17.5",
+      "origin": [
+        -17.5,
+        53,
+        42.5
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat"
+      ]
+    },
+    {
+      "name": "gate_17.5",
+      "origin": [
+        17.5,
+        53,
+        42.5
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "02_lid_head_seat"
+      ]
+    },
+    {
+      "name": "servo_cap_L-51",
+      "origin": [
+        -25,
+        -51,
+        31.4
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "servo_cap_L-17",
+      "origin": [
+        -25,
+        -17,
+        31.4
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "rail_L-5",
+      "origin": [
+        -66.5,
+        -5,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "rail_L5",
+      "origin": [
+        -66.5,
+        5,
+        27.818516525781366
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "drive_stack_L6.7",
+      "origin": [
+        -42.6,
+        -33.3,
+        34.518516525781365
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "wheel_L",
+      "mates": [
+        "09_horn_cap_L"
+      ]
+    },
+    {
+      "name": "idler_stack_L6.7",
+      "origin": [
+        -45.4,
+        46.7,
+        34.518516525781365
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "idler_L",
+      "mates": [
+        "11_idler_guide_L"
+      ]
+    },
+    {
+      "name": "drive_stack_L-6.7",
+      "origin": [
+        -42.6,
+        -46.7,
+        21.118516525781367
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "wheel_L",
+      "mates": [
+        "09_horn_cap_L"
+      ]
+    },
+    {
+      "name": "idler_stack_L-6.7",
+      "origin": [
+        -45.4,
+        33.3,
+        21.118516525781367
+      ],
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "idler_L",
+      "mates": [
+        "11_idler_guide_L"
+      ]
+    },
+    {
+      "name": "servo_cap_R-51",
+      "origin": [
+        25,
+        -51,
+        31.4
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "servo_cap_R-17",
+      "origin": [
+        25,
+        -17,
+        31.4
+      ],
+      "axis": [
+        0,
+        0,
+        1
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "rail_R-5",
+      "origin": [
+        66.5,
+        -5,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "rail_R5",
+      "origin": [
+        66.5,
+        5,
+        27.818516525781366
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "fixed",
+      "mates": [
+        "01_chassis"
+      ]
+    },
+    {
+      "name": "drive_stack_R6.7",
+      "origin": [
+        42.6,
+        -33.3,
+        34.518516525781365
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "wheel_R",
+      "mates": [
+        "09_horn_cap_R"
+      ]
+    },
+    {
+      "name": "idler_stack_R6.7",
+      "origin": [
+        45.4,
+        46.7,
+        34.518516525781365
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "idler_R",
+      "mates": [
+        "11_idler_guide_R"
+      ]
+    },
+    {
+      "name": "drive_stack_R-6.7",
+      "origin": [
+        42.6,
+        -46.7,
+        21.118516525781367
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "wheel_R",
+      "mates": [
+        "09_horn_cap_R"
+      ]
+    },
+    {
+      "name": "idler_stack_R-6.7",
+      "origin": [
+        45.4,
+        33.3,
+        21.118516525781367
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 2.4,
+      "group": "idler_R",
+      "mates": [
+        "11_idler_guide_R"
+      ]
+    },
+    {
+      "name": "head_left",
+      "origin": [
+        -23,
+        7,
+        54
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 3.9,
+      "group": "fixed",
+      "mates": [
+        "reuse_head_cleat"
+      ]
+    },
+    {
+      "name": "head_right",
+      "origin": [
+        19.1,
+        7,
+        54
+      ],
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "lengthMm": 3.9,
+      "group": "fixed",
+      "mates": [
+        "reuse_head_cleat"
+      ]
+    }
+  ],
+  "hardwareTested": false
+}

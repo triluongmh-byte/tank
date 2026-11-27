@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "hardwareTested": false,
+  "scope": "External sealed pack and RUN harness only; no carrier placement",
+  "fuse": {
+    "id": "F_PACK",
+    "manufacturer": "Littelfuse",
+    "mpn": "0287015.U",
+    "ratedA": 15,
+    "ratedVDC": 32,
+    "interruptA": 1000,
+    "coldResistanceOhmTypical": 0.0048,
+    "meltingI2tA2sTypical": 340,
+    "ambientMaxC": 40,
+    "source": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_287_atof_r2.7.pdf?assetguid=43dcdce8-8ca2-426f-8998-7e566f048d40",
+    "sourcePages": [
+      1,
+      2,
+      3
+    ],
+    "openingPoints": [
+      {
+        "multiple": 1.35,
+        "maxSeconds": 600
+      },
+      {
+        "multiple": 1.6,
+        "maxSeconds": 50
+      },
+      {
+        "multiple": 2,
+        "maxSeconds": 5
+      },
+      {
+        "multiple": 3.5,
+        "maxSeconds": 0.5
+      },
+      {
+        "multiple": 6,
+        "maxSeconds": 0.1
+      }
+    ]
+  },
+  "holder": {
+    "id": "FH_PACK",
+    "manufacturer": "Littelfuse",
+    "mpn": "0FHA0002XP",
+    "ratedA": 30,
+    "ratedVDC": 32,
+    "leadAWG": 12,
+    "source": "https://www.littelfuse.com/assetdocs/littelfuse-fuse-holder-ato-fha-datasheet?assetguid=988addec-bfe3-4ea2-9204-e2982cbb488e"
+  },
+  "pack": {
+    "assemblyContinuousA": 15,
+    "cellAndInterconnectContinuousARequired": 30,
+    "maxV": 4.2,
+    "prospectiveFaultMaxARequired": 100,
+    "faultWithstand": "Cell/interconnect/terminal/insulation assembly must withstand the complete F_PACK upper clearing envelope in POWER_SYSTEM.md, or open safely sooner; qualified pack maker must substantiate. Unknown owned pack not accepted."
+  },
+  "runBreaker": {
+    "id": "M_PACK_BREAKER",
+    "mpn": "TPS259824OEVM",
+    "r9Ohm": 110,
+    "r9Tolerance": 0.001,
+    "nominalFormula": "1460/R9 + 0.11",
+    "qualifiedTripMinA": 12.8,
+    "qualifiedTripMaxA": 14.8,
+    "qualifiedOnResistanceMaxOhm": 0.006,
+    "r1Ohm": 100000,
+    "r2Ohm": 69800,
+    "maxProgrammedBlankingSeconds": 0,
+    "qualifiedOverloadOpenMaxSeconds": 0.001,
+    "qualifiedShortOpenMaxSeconds": 1e-05,
+    "source": "https://www.ti.com/lit/ds/symlink/tps25982.pdf",
+    "guide": "https://www.ti.com/lit/pdf/SLUUBX8"
+  },
+  "wiring": {
+    "minAreaMm2": 3.31,
+    "awg": 12,
+    "maxRoundTripM": 0.4,
+    "qualifiedContinuousA": 30,
+    "copperResistivityOhmM20C": 1.724e-08,
+    "copperDensityKgM3": 8960,
+    "copperHeatCapacityJkgK": 385,
+    "maxFuseHolderPlusContactsOhmRequired": 0.012,
+    "unfusedPositiveMaxMm": 25
+  },
+  "qualification": "All required ratings are acceptance requirements, not measurements or approvals of the owned pack. No owner short-circuit tests; manufacturer/current-limited laboratory only."
+}

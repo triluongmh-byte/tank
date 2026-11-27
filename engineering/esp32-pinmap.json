@@ -1,0 +1,33 @@
+{
+ "schema": 1,
+ "releaseNote": 8,
+ "status": "board-published, untested on hardware; GIẢ ĐỊNH 30-pin ESP32 DevKit (ESP-WROOM-32, DOIT-style silk names); verify against the real module",
+ "avoids": {"strapping": [0, 2, 5, 12, 15], "flash": [6, 7, 8, 9, 10, 11], "hostUartBridge": [1, 3], "inputOnlyUsedAsInputsOnly": [34, 35]},
+ "carrierHarness": [
+  {"jctrl": 1, "net": "GND", "esp32": "GND"},
+  {"jctrl": 2, "net": "LOGIC_3V3", "esp32": "3V3 pin (DevKit LDO output; carrier is a load on it)"},
+  {"jctrl": 3, "net": "I2C_SDA", "esp32": "GPIO21"},
+  {"jctrl": 4, "net": "I2C_SCL", "esp32": "GPIO22"},
+  {"jctrl": 5, "net": "PCA_OE_N", "esp32": "GPIO25", "bootState": "carrier R5 1k pull-up to 3V3 = PCA outputs disabled"},
+  {"jctrl": 6, "net": "ACT_EN", "esp32": "GPIO26", "bootState": "carrier R4 1k pull-down = servo power OFF"},
+  {"jctrl": 7, "net": "SONAR_F_TRIG_3V3", "esp32": "GPIO32"},
+  {"jctrl": 8, "net": "SONAR_F_ECHO_3V3", "esp32": "GPIO34 (input only)"},
+  {"jctrl": 9, "net": "SONAR_R_TRIG_3V3", "esp32": "GPIO33"},
+  {"jctrl": 10, "net": "SONAR_R_ECHO_3V3", "esp32": "GPIO35 (input only)"},
+  {"jctrl": 11, "net": "GND", "esp32": "GND"},
+  {"jctrl": 12, "net": "STOP_N", "esp32": "GPIO27", "note": "local stop: pushbutton between J_CTRL.12 and J_CTRL.11 (GND), active low; carrier R44 10k pull-up to 3V3; firmware reads low as STOP"}
+ ],
+ "displayST7789_1p54_240x240_SPI_direct_wires_not_on_carrier": [
+  {"signal": "SCK/SCL", "esp32": "GPIO18 (VSPI)"},
+  {"signal": "MOSI/SDA", "esp32": "GPIO23 (VSPI)"},
+  {"signal": "CS", "esp32": "GPIO16", "note": "if the real module has no CS pin, tie CS to GND"},
+  {"signal": "DC", "esp32": "GPIO17"},
+  {"signal": "RST", "esp32": "GPIO4"},
+  {"signal": "BL", "esp32": "GPIO13 (or tie to 3V3)"},
+  {"signal": "VCC/GND", "esp32": "3V3 / GND"}
+ ],
+ "unassigned": "GPIO19 reserved for the optional WS2812 data line (LED electrical interface still open; not wired on the carrier)",
+ "hostLink": "DevKit USB-UART bridge on UART0 (GPIO1/GPIO3); not routed through the carrier",
+ "firmwareChatTable": "prompts/assets/robot-tank-cadsmith-v1/firmware-chat-2026-11-25.md was read as reference only; it has no OE/ACT_EN and was not copied",
+ "safeDefaults": "reset/boot: PCA_OE_N high (R5), ACT_EN low (R4), STOP_N high (R44), buffers U1 outputs held low by R20-R26; servo rail off"
+}

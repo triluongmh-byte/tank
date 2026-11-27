@@ -1,0 +1,126 @@
+{
+ "description": "soi con claude-pet đi fen. MÌnh sẽ clone nó ra làm lại với 6 servors 360. Pin tao đi chôm dc nặng 140g. Yêu cầu là 6 bánh như xe thiết giáp. Mũi xe hình > để tao gắn màn hình lên mặt nghiêng phía trên. Cái turret có cái servor sg90 180 độ xoay có 2 cái sonar đâu lưng lại với nhau để nó dò đường đi. phía trứớ turret có vài lỗ xỏ ốc m3 để mở rộng gắn đèn sau này. sau turret có lỗ quạt. 30x30mm cho thông gió he. \n\nKhung gầm nó có thể nhún dc độc lập từng servor theo cơ chế đòn bẩy. 1 bên bẩy gắn servor 1 bên gắn dây thun kéo.\n[Request interrupted by user]\nquên nữa, tao có đồ của con crab-robot-v17g, do tao mua dư rất nhiều.\n\n---\nEntry-agent note (clearly labelled facts to interpret the prompt; not the user's words):\n- \"con claude-pet\" resolves to the user's existing desk pet whose current source lives at\n  /Users/macbookpro/harnesses/claude-pet-case (ESP32 with SPI TFT face, 2 continuous-rotation\n  servos on GPIO20/GPIO21 driven by LEDC 50 Hz, USB serial link to a host bridge that shows\n  Claude Code session status and plays motion cues; see firmware/claude_pet/ and firmware/MOTION.md).\n  The user named it, so that one path may be read as the reference.\n- \"đồ của con crab-robot-v17g\" = surplus parts the user owns, listed in\n  /Users/macbookpro/harnesses/crab-robot-v17g/BOM.md (SG90 servos with horns/screws, M3 screws/nuts,\n  LILYGO T-Display-S3 non-touch, PCA9685 16-ch servo module, WS2812 8-LED stick, Dupont wires,\n  USB-A data cable, USB-A-to-screw-terminal adapter, Bambu A1 + PETG). The user named it, so that\n  one path may be read as the parts inventory.\n- \"Pin ... nặng 140g\": the user already has a 140 g battery; its type/size are not stated. No image was attached.\n",
+ "name": "Pet Tank servo carrier (ESP32 DevKit, tank v1 case)",
+ "sizeMm": [
+  62,
+  60,
+  1.6
+ ],
+ "layers": 2,
+ "power": {
+  "input": "Island A: Pololu U3V70F5 #1 -> carrier J_PWR (F1, Q1, ACT_EN switch) for servos CH0-2, turret CH6, fan, sonar. Island B: Pololu U3V70F5 #2 (ENABLE gated by ACT_EN, off by default) -> 5 A fuse -> V+ wires of servos CH3-5. Outputs never paralleled; four user '5V 2A' modules not used for servo rails; DevKit on a separate USB branch; common GND. See POWER_SYSTEM.md 'DECIDED'.",
+  "servoBudgetA": 5.6,
+  "hardwareTested": false,
+  "carrierPeakA": 3.56,
+  "fanAllocationA": 0.3,
+  "logicUSBAllocationA": 0.5,
+  "powerAssembly": "engineering/POWER_SYSTEM.md",
+  "packProtection": "PCB-Li-1S15A protector (15 A) + Littelfuse 0287015.U in 0FHA0002XP at pack positive; cells >=8 A each (2 cells); owner pack unverified.",
+  "userModules": {
+   "count": 4,
+   "ratedA": 2,
+   "verified": false,
+   "parallelOutputs": false
+  },
+  "servoStallProxyA": 5.6,
+  "carrierOrdinaryA": 2.1,
+  "primaryConverter": {
+   "mpn": "U3V70F5",
+   "quantity": 2,
+   "manufacturer": "Pololu",
+   "source": "https://www.pololu.com/product/2891",
+   "checkedDate": "2026-11-27",
+   "stockVerified": false
+  },
+  "primaryPackPeakA": 11.5,
+  "primaryPackPeakNote": "10.6 A servo islands A+B plus ~0.9 A M_LOGIC input (0.5 A x 5 V / (0.85 x 3.3 V)); 15 A F_PACK still covers it",
+  "logicBranch": {"module": "M_LOGIC", "mpn": "U3V16F5", "feeds": "ESP32 DevKit USB 5 V (battery-fed, portable mode)", "inputFrom": "RUN harness after F_PACK, parallel with both U3V70F5 inputs", "neverParallelWithHostUsb": true},
+  "referenceChain": {
+   "packPeakEstimateA": 12.7,
+   "packRequiredRatingA": 15,
+   "cellInterconnectRequiredRatingA": 30,
+   "note": "OPTIONAL TPS61287/15 A chain only; checked by tools/board/pack-protection.py; not the primary path"
+  },
+  "islandBPeakA": 2.4,
+  "converterContinuousInputA": 7,
+  "primaryFuseA": 15
+ },
+ "railLimitsUF": {
+  "LOGIC_3V3": 10
+ },
+ "assembly": "manual prototype, all top side",
+ "assumptions": [
+  "User confirms 140g 18650 cells in parallel: 1S nominal3.7V reference; cell count, capacity, discharge/charge rating and existing protection unknown. No direct 1S at J_PWR.",
+  "User order names HC-SR04P x2,3–5.5V; actual pinout, thresholds and dimensions unverified. Keep5V translation.",
+  "User confirms5V30x30mm fan; current allocation<=0.30A including startup, unknown thickness/mounts. J_FAN.1=LOAD_5V,.2=GND, noGPIO.",
+  "GIẢ ĐỊNH: external selected power assembly requires qualified modification, sealed pack and bench qualification; native carrier checks do not certify this assembly or owned battery.",
+  "Release note 8: MCU/display changed LILYGO T-Display-S3 -> ESP32 DevKit + ST7789 1.54in SPI; 30-pin DevKit is GIẢ ĐỊNH, check the real module.",
+  "Release note 8: case is the PRINTED robot-tank v1 (hash-checked sources in prompts/assets/robot-tank-cadsmith-v1); carrier is re-fit to 62x60 and needs ADDED printed rails; no fit verified.",
+  "Release note 8: LOGIC_3V3 is the DevKit LDO output; carrier load 1.2 uF caps + <1 mA pull-ups + PCA9685 module/level shifters (<10 mA), not verified on hardware.",
+  "Release note 9: stack (v5) default; PCA9685 62.2x25.4 and DevKit 51.5x28.3 are cadsmith ASSUMPTIONS; carrier kept on an added deck tier because it holds the servo power switch, OE pull-up, PWM buffer and Echo shifters (STACK_WIRING.md)."
+ ],
+ "board": {
+  "mounts": [
+   {
+    "id": "H1",
+    "xMm": 3,
+    "yMm": 26,
+    "holeDiameterMm": 3.2
+   },
+   {
+    "id": "H2",
+    "xMm": 59,
+    "yMm": 26,
+    "holeDiameterMm": 3.2
+   },
+   {
+    "id": "H3",
+    "xMm": 59,
+    "yMm": 52,
+    "holeDiameterMm": 3.2
+   },
+   {
+    "id": "H4",
+    "xMm": 3,
+    "yMm": 52,
+    "holeDiameterMm": 3.2
+   }
+  ],
+  "outlineMm": [
+   [
+    0,
+    0
+   ],
+   [
+    62,
+    0
+   ],
+   [
+    62,
+    60
+   ],
+   [
+    0,
+    60
+   ],
+   [
+    0,
+    0
+   ]
+  ],
+  "thicknessMm": 1.6,
+  "caseFrame": "KiCad x=case X+31, KiCad y=case Y+46 (y down = tail). Underside plane Z=49 on the printed v1 hull bosses (x_v1=20) plus two ADDED rail supports at x_v1=-6; keep-low zone for turret servo body."
+ },
+ "releaseNotesApplied": [
+  "925a86e2870b7771a6384cfc1df26373c453eb6b1641875672edac24955a0f9b",
+  "970ada06549758588b018766ef373dfc419cde2300bb9706493bc9685ee53bda",
+  "52b5a7b49794e2797ccff9a78a6298a64ab29bf400afcb34fb6cdfe213e4fa72",
+  "26b0ea5e6ba885938587576b25c07a5a0217e2237f58721f65e2086d49971af1"
+ ],
+ "mcu": {
+  "reference": "ESP32 DevKit (30-pin assumed, GIẢ ĐỊNH) + ST7789 1.54in 240x240 SPI display",
+  "wiring": "carrier J_CTRL 2x6 by 12-wire harness; pins in engineering/ESP32_PINS.md and engineering/esp32-pinmap.json",
+  "hostLink": "DevKit USB-UART bridge (not through carrier)",
+  "localStop": "J_CTRL.12 STOP_N, 10k pull-up R44, active-low pushbutton to GND (J_CTRL.11) off-carrier"
+ }
+}

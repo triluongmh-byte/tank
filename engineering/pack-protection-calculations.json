@@ -1,0 +1,67 @@
+{
+  "inputSha256": "e3d2db004f4e14f350e4fe414643388ea54b51d461d7bcfb9fb01a2acfe53d7d",
+  "specificationArithmeticPass": true,
+  "hardwareTested": false,
+  "qualificationStatus": "REQUIRED: unknown owned pack, modified modules, fault/thermal/threshold acceptance remain unverified",
+  "boostInputPeakEstimateA": 12.639775482093663,
+  "packPeakBudgetA": 12.7,
+  "runTripNominalA": 13.382727272727273,
+  "runTripQualifiedRangeA": [
+    12.8,
+    14.8
+  ],
+  "runUVLONominalV": {
+    "rising": 2.9191977077363895,
+    "falling": 2.6759312320916906
+  },
+  "fuseBackupEnvelope": [
+    {
+      "fromA": 20.25,
+      "toA": 24.0,
+      "upperTimeS": 600,
+      "rectangularI2tA2s": 345600.0,
+      "adiabaticCopperRiseEstimateC": null,
+      "qualificationRequired": "Pack maker must substantiate safe assembly withstand or earlier safe opening; not measured."
+    },
+    {
+      "fromA": 24.0,
+      "toA": 30,
+      "upperTimeS": 50,
+      "rectangularI2tA2s": 45000,
+      "adiabaticCopperRiseEstimateC": null,
+      "qualificationRequired": "Pack maker must substantiate safe assembly withstand or earlier safe opening; not measured."
+    },
+    {
+      "fromA": 30,
+      "toA": 52.5,
+      "upperTimeS": 5,
+      "rectangularI2tA2s": 13781.25,
+      "adiabaticCopperRiseEstimateC": 6.286387471155545,
+      "qualificationRequired": "Pack maker must substantiate safe assembly withstand or earlier safe opening; not measured."
+    },
+    {
+      "fromA": 52.5,
+      "toA": 90,
+      "upperTimeS": 0.5,
+      "rectangularI2tA2s": 4050.0,
+      "adiabaticCopperRiseEstimateC": 1.8474281547885683,
+      "qualificationRequired": "Pack maker must substantiate safe assembly withstand or earlier safe opening; not measured."
+    },
+    {
+      "fromA": 90,
+      "toA": 100,
+      "upperTimeS": 0.1,
+      "rectangularI2tA2s": 1000.0,
+      "adiabaticCopperRiseEstimateC": 0.45615509994779463,
+      "qualificationRequired": "Pack maker must substantiate safe assembly withstand or earlier safe opening; not measured."
+    }
+  ],
+  "maxShortPulseCopperRiseEstimateC": 6.286387471155545,
+  "wireResistance20COhm": 0.0020833836858006045,
+  "peakPackToBoostDropEstimateV": 0.5090589728096677,
+  "packVNeededFor3V3BoostAtPeakEstimate": 3.8090589728096678,
+  "fuseColdLossTypicalW": 0.7741919999999999,
+  "holderFuseContactsLossAtAcceptanceLimitW": 1.9354799999999999,
+  "runBreakerLossAtAcceptanceLimitW": 0.9677399999999999,
+  "limitations": "Copper estimate excludes contacts/cells and cooling. No interpolation of fuse typical curve or use of typical pre-arcing I2t as guaranteed total clearing. No selective-trip or safety certification claimed."
+}

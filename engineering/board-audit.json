@@ -1,0 +1,773 @@
+{
+  "schema": 1,
+  "inputSha256": "119d9b47c85c61d989dcaf4c73b527148bc8a2e3c0e32218ceaa34fcd35c094f",
+  "pcbSha256": "84eaa76e4673162006654fb55e1afe9b6a5a5f35944c4d05529eb8b21398bdcf",
+  "contractSha256": "a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810",
+  "fan": {
+    "pins": [
+      {
+        "number": "1",
+        "net": "LOAD_5V",
+        "x": 45.5,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      },
+      {
+        "number": "2",
+        "net": "GND",
+        "x": 50.58,
+        "y": 52.0,
+        "layers": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "through": true
+      }
+    ],
+    "maxAllocatedA": 0.3,
+    "controlGPIO": null
+  },
+  "pins": [
+    {
+      "device": "J_CTRL",
+      "net": "GND",
+      "pin": "1",
+      "signal": "GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 10.0,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "LOGIC_3V3",
+      "pin": "2",
+      "signal": "3V3 từ LILYGO",
+      "voltageV": 3.3,
+      "actualNet": "LOGIC_3V3",
+      "xMm": 10.0,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "I2C_SDA",
+      "pin": "3",
+      "signal": "SDA",
+      "voltageV": 3.3,
+      "actualNet": "I2C_SDA",
+      "xMm": 12.54,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "I2C_SCL",
+      "pin": "4",
+      "signal": "SCL",
+      "voltageV": 3.3,
+      "actualNet": "I2C_SCL",
+      "xMm": 12.54,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "PCA_OE_N",
+      "pin": "5",
+      "signal": "OE",
+      "voltageV": 3.3,
+      "actualNet": "PCA_OE_N",
+      "xMm": 15.08,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "ACT_EN",
+      "pin": "6",
+      "signal": "Servo power enable",
+      "voltageV": 3.3,
+      "actualNet": "ACT_EN",
+      "xMm": 15.08,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "SONAR_F_TRIG_3V3",
+      "pin": "7",
+      "signal": "Front trigger",
+      "voltageV": 3.3,
+      "actualNet": "SONAR_F_TRIG_3V3",
+      "xMm": 17.62,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "SONAR_F_ECHO_3V3",
+      "pin": "8",
+      "signal": "Front echo",
+      "voltageV": 3.3,
+      "actualNet": "SONAR_F_ECHO_3V3",
+      "xMm": 17.62,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "SONAR_R_TRIG_3V3",
+      "pin": "9",
+      "signal": "Rear trigger",
+      "voltageV": 3.3,
+      "actualNet": "SONAR_R_TRIG_3V3",
+      "xMm": 20.16,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "SONAR_R_ECHO_3V3",
+      "pin": "10",
+      "signal": "Rear echo",
+      "voltageV": 3.3,
+      "actualNet": "SONAR_R_ECHO_3V3",
+      "xMm": 20.16,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "GND",
+      "pin": "11",
+      "signal": "GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 22.7,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_CTRL",
+      "net": "NC",
+      "pin": "12",
+      "signal": "Không nối; không dùng làm nguồn dự phòng",
+      "voltageV": 0,
+      "actualNet": "STOP_N",
+      "xMm": 22.7,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "LOGIC_3V3",
+      "pin": "1",
+      "signal": "Tới module VCC",
+      "voltageV": 3.3,
+      "actualNet": "LOGIC_3V3",
+      "xMm": 30.0,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "GND",
+      "pin": "2",
+      "signal": "Tới module GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 30.0,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "I2C_SDA",
+      "pin": "3",
+      "signal": "Tới module SDA",
+      "voltageV": 3.3,
+      "actualNet": "I2C_SDA",
+      "xMm": 32.54,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "I2C_SCL",
+      "pin": "4",
+      "signal": "Tới module SCL",
+      "voltageV": 3.3,
+      "actualNet": "I2C_SCL",
+      "xMm": 32.54,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PCA_OE_N",
+      "pin": "5",
+      "signal": "Tới module OE",
+      "voltageV": 3.3,
+      "actualNet": "PCA_OE_N",
+      "xMm": 35.08,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_LF",
+      "pin": "6",
+      "signal": "Từ PCA CH0 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LF_RAW",
+      "xMm": 35.08,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_LM",
+      "pin": "7",
+      "signal": "Từ PCA CH1 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LM_RAW",
+      "xMm": 37.62,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_LR",
+      "pin": "8",
+      "signal": "Từ PCA CH2 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LR_RAW",
+      "xMm": 37.62,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_RF",
+      "pin": "9",
+      "signal": "Từ PCA CH3 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RF_RAW",
+      "xMm": 40.16,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_RM",
+      "pin": "10",
+      "signal": "Từ PCA CH4 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RM_RAW",
+      "xMm": 40.16,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_RR",
+      "pin": "11",
+      "signal": "Từ PCA CH5 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RR_RAW",
+      "xMm": 42.7,
+      "yMm": 5.2,
+      "ok": true
+    },
+    {
+      "device": "J_PCA",
+      "net": "PWM_TURRET",
+      "pin": "12",
+      "signal": "Từ PCA CH6 signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_TURRET_RAW",
+      "xMm": 42.7,
+      "yMm": 2.66,
+      "ok": true
+    },
+    {
+      "device": "J_S0",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo LF GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 4.0,
+      "yMm": 3.0,
+      "ok": true
+    },
+    {
+      "device": "J_S0",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo LF nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 4.0,
+      "yMm": 5.54,
+      "ok": true
+    },
+    {
+      "device": "J_S0",
+      "net": "PWM_LF",
+      "pin": "3",
+      "signal": "Servo LF signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LF",
+      "xMm": 4.0,
+      "yMm": 8.08,
+      "ok": true
+    },
+    {
+      "device": "J_S1",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo LM GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 4.0,
+      "yMm": 14.0,
+      "ok": true
+    },
+    {
+      "device": "J_S1",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo LM nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 4.0,
+      "yMm": 16.54,
+      "ok": true
+    },
+    {
+      "device": "J_S1",
+      "net": "PWM_LM",
+      "pin": "3",
+      "signal": "Servo LM signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LM",
+      "xMm": 4.0,
+      "yMm": 19.08,
+      "ok": true
+    },
+    {
+      "device": "J_S2",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo LR GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 4.0,
+      "yMm": 37.0,
+      "ok": true
+    },
+    {
+      "device": "J_S2",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo LR nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 4.0,
+      "yMm": 39.54,
+      "ok": true
+    },
+    {
+      "device": "J_S2",
+      "net": "PWM_LR",
+      "pin": "3",
+      "signal": "Servo LR signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_LR",
+      "xMm": 4.0,
+      "yMm": 42.08,
+      "ok": true
+    },
+    {
+      "device": "J_S3",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo RF GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 58.0,
+      "yMm": 3.0,
+      "ok": true
+    },
+    {
+      "device": "J_S3",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo RF nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 58.0,
+      "yMm": 5.54,
+      "ok": true
+    },
+    {
+      "device": "J_S3",
+      "net": "PWM_RF",
+      "pin": "3",
+      "signal": "Servo RF signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RF",
+      "xMm": 58.0,
+      "yMm": 8.08,
+      "ok": true
+    },
+    {
+      "device": "J_S4",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo RM GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 58.0,
+      "yMm": 14.0,
+      "ok": true
+    },
+    {
+      "device": "J_S4",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo RM nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 58.0,
+      "yMm": 16.54,
+      "ok": true
+    },
+    {
+      "device": "J_S4",
+      "net": "PWM_RM",
+      "pin": "3",
+      "signal": "Servo RM signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RM",
+      "xMm": 58.0,
+      "yMm": 19.08,
+      "ok": true
+    },
+    {
+      "device": "J_S5",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Servo RR GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 58.0,
+      "yMm": 32.0,
+      "ok": true
+    },
+    {
+      "device": "J_S5",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Servo RR nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 58.0,
+      "yMm": 34.54,
+      "ok": true
+    },
+    {
+      "device": "J_S5",
+      "net": "PWM_RR",
+      "pin": "3",
+      "signal": "Servo RR signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_RR",
+      "xMm": 58.0,
+      "yMm": 37.08,
+      "ok": true
+    },
+    {
+      "device": "J_S6",
+      "net": "GND",
+      "pin": "1",
+      "signal": "Turret GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 52.0,
+      "yMm": 3.0,
+      "ok": true
+    },
+    {
+      "device": "J_S6",
+      "net": "SERVO_5V",
+      "pin": "2",
+      "signal": "Turret nguồn",
+      "voltageV": 5,
+      "actualNet": "SERVO_5V",
+      "xMm": 52.0,
+      "yMm": 5.54,
+      "ok": true
+    },
+    {
+      "device": "J_S6",
+      "net": "PWM_TURRET",
+      "pin": "3",
+      "signal": "Turret signal",
+      "voltageV": 3.3,
+      "actualNet": "PWM_TURRET",
+      "xMm": 52.0,
+      "yMm": 8.08,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_F",
+      "net": "LOAD_5V",
+      "pin": "1",
+      "signal": "HC-SR04 trước VCC",
+      "voltageV": 5,
+      "actualNet": "LOAD_5V",
+      "xMm": 11.0,
+      "yMm": 13.0,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_F",
+      "net": "SONAR_F_TRIG_5V",
+      "pin": "2",
+      "signal": "HC-SR04 trước Trig",
+      "voltageV": 5,
+      "actualNet": "SONAR_F_TRIG_5V",
+      "xMm": 11.0,
+      "yMm": 15.54,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_F",
+      "net": "SONAR_F_ECHO_5V",
+      "pin": "3",
+      "signal": "HC-SR04 trước Echo",
+      "voltageV": 5,
+      "actualNet": "SONAR_F_ECHO_5V",
+      "xMm": 11.0,
+      "yMm": 18.08,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_F",
+      "net": "GND",
+      "pin": "4",
+      "signal": "HC-SR04 trước GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 11.0,
+      "yMm": 20.62,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_R",
+      "net": "LOAD_5V",
+      "pin": "1",
+      "signal": "HC-SR04 sau VCC",
+      "voltageV": 5,
+      "actualNet": "LOAD_5V",
+      "xMm": 17.0,
+      "yMm": 13.0,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_R",
+      "net": "SONAR_R_TRIG_5V",
+      "pin": "2",
+      "signal": "HC-SR04 sau Trig",
+      "voltageV": 5,
+      "actualNet": "SONAR_R_TRIG_5V",
+      "xMm": 17.0,
+      "yMm": 15.54,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_R",
+      "net": "SONAR_R_ECHO_5V",
+      "pin": "3",
+      "signal": "HC-SR04 sau Echo",
+      "voltageV": 5,
+      "actualNet": "SONAR_R_ECHO_5V",
+      "xMm": 17.0,
+      "yMm": 18.08,
+      "ok": true
+    },
+    {
+      "device": "J_SONAR_R",
+      "net": "GND",
+      "pin": "4",
+      "signal": "HC-SR04 sau GND",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 17.0,
+      "yMm": 20.62,
+      "ok": true
+    },
+    {
+      "device": "J_PWR",
+      "net": "EXT_5V_IN",
+      "pin": "1",
+      "signal": "Nguồn tải DC điều chỉnh",
+      "voltageV": 5,
+      "actualNet": "EXT_5V_IN",
+      "xMm": 10.0,
+      "yMm": 47.5,
+      "ok": true
+    },
+    {
+      "device": "J_PWR",
+      "net": "GND",
+      "pin": "2",
+      "signal": "Nguồn tải âm",
+      "voltageV": 0,
+      "actualNet": "GND",
+      "xMm": 15.08,
+      "yMm": 47.5,
+      "ok": true
+    }
+  ],
+  "servoChannels": [
+    {
+      "pcaChannel": 0,
+      "inputPin": 2,
+      "outputPin": 18,
+      "inputNet": "PWM_LF_RAW",
+      "outputNet": "PWM_LF",
+      "servoRef": "J_S0",
+      "ok": true
+    },
+    {
+      "pcaChannel": 1,
+      "inputPin": 4,
+      "outputPin": 16,
+      "inputNet": "PWM_LM_RAW",
+      "outputNet": "PWM_LM",
+      "servoRef": "J_S1",
+      "ok": true
+    },
+    {
+      "pcaChannel": 2,
+      "inputPin": 6,
+      "outputPin": 14,
+      "inputNet": "PWM_LR_RAW",
+      "outputNet": "PWM_LR",
+      "servoRef": "J_S2",
+      "ok": true
+    },
+    {
+      "pcaChannel": 3,
+      "inputPin": 8,
+      "outputPin": 12,
+      "inputNet": "PWM_RF_RAW",
+      "outputNet": "PWM_RF",
+      "servoRef": "J_S3",
+      "ok": true
+    },
+    {
+      "pcaChannel": 4,
+      "inputPin": 11,
+      "outputPin": 9,
+      "inputNet": "PWM_RM_RAW",
+      "outputNet": "PWM_RM",
+      "servoRef": "J_S4",
+      "ok": true
+    },
+    {
+      "pcaChannel": 5,
+      "inputPin": 13,
+      "outputPin": 7,
+      "inputNet": "PWM_RR_RAW",
+      "outputNet": "PWM_RR",
+      "servoRef": "J_S5",
+      "ok": true
+    },
+    {
+      "pcaChannel": 6,
+      "inputPin": 15,
+      "outputPin": 5,
+      "inputNet": "PWM_TURRET_RAW",
+      "outputNet": "PWM_TURRET",
+      "servoRef": "J_S6",
+      "ok": true
+    }
+  ],
+  "capacitanceUF": {
+    "LOAD_5V": 1000.2,
+    "SERVO_3V3": 2.1,
+    "LOGIC_3V3": 1.2,
+    "SERVO_5V": 21
+  },
+  "decoupling": [
+    {
+      "ref": "U1",
+      "pin": "20",
+      "net": "SERVO_3V3",
+      "nearestCap": "C5",
+      "distanceMm": 2.541,
+      "ok": true
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "net": "SERVO_3V3",
+      "nearestCap": "C4",
+      "distanceMm": 2.516,
+      "ok": true
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "net": "SERVO_5V",
+      "nearestCap": "C7",
+      "distanceMm": 2.712,
+      "ok": true
+    },
+    {
+      "ref": "U3",
+      "pin": "5",
+      "net": "LOAD_5V",
+      "nearestCap": "C10",
+      "distanceMm": 2.622,
+      "ok": true
+    },
+    {
+      "ref": "U4",
+      "pin": "5",
+      "net": "LOGIC_3V3",
+      "nearestCap": "C11",
+      "distanceMm": 2.622,
+      "ok": true
+    },
+    {
+      "ref": "U5",
+      "pin": "5",
+      "net": "LOAD_5V",
+      "nearestCap": "C12",
+      "distanceMm": 2.622,
+      "ok": true
+    },
+    {
+      "ref": "U6",
+      "pin": "5",
+      "net": "LOGIC_3V3",
+      "nearestCap": "C13",
+      "distanceMm": 2.622,
+      "ok": true
+    }
+  ],
+  "hardwareTested": false,
+  "failures": [],
+  "pass": true
+}

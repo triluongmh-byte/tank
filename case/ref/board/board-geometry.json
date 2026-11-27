@@ -1,0 +1,1093 @@
+{
+  "schema": 1,
+  "releaseNote": 8,
+  "contractSha256": "a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810",
+  "pcbSha256": "84eaa76e4673162006654fb55e1afe9b6a5a5f35944c4d05529eb8b21398bdcf",
+  "outlineMm": [
+    [
+      0,
+      0
+    ],
+    [
+      62,
+      0
+    ],
+    [
+      62,
+      60
+    ],
+    [
+      0,
+      60
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "caseFrame": "KiCad x = case X, KiCad y = case Y + 46 (y down = tail); board origin at case (X=-31,Y=-46); v1 model x = 46 - y, v1 y = 31 - x. Board underside Z=49 (v1 chassis boss tops) assumed.",
+  "thicknessMm": 1.6,
+  "mounts": [
+    {
+      "id": "H1",
+      "xMm": 3,
+      "yMm": 26,
+      "holeDiameterMm": 3.2
+    },
+    {
+      "id": "H2",
+      "xMm": 59,
+      "yMm": 26,
+      "holeDiameterMm": 3.2
+    },
+    {
+      "id": "H3",
+      "xMm": 59,
+      "yMm": 52,
+      "holeDiameterMm": 3.2
+    },
+    {
+      "id": "H4",
+      "xMm": 3,
+      "yMm": 52,
+      "holeDiameterMm": 3.2
+    }
+  ],
+  "nativeCoordinates": "KiCad absolute x right,y down; raw STEP core Z0..1.44, copper/mask extend nominally -0.08..1.52",
+  "contractStepTransform": "mirror raw STEP Y and translate Z +0.08; exported main-contract.step already transformed, do not transform twice",
+  "footprints": [
+    {
+      "ref": "C1",
+      "xMm": 16.5,
+      "yMm": 35.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KIPRJMOD}/Tank.3dshapes/EEU_FR1A102.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        13.445354,
+        29.725,
+        24.275,
+        40.275
+      ]
+    },
+    {
+      "ref": "TP2",
+      "xMm": 12.5,
+      "yMm": 27.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        10.975,
+        25.475,
+        14.025,
+        28.525
+      ]
+    },
+    {
+      "ref": "J_S6",
+      "xMm": 52.0,
+      "yMm": 3.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        50.205,
+        1.205,
+        53.795,
+        9.875
+      ]
+    },
+    {
+      "ref": "Q2",
+      "xMm": 34.0,
+      "yMm": 51.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        30.275,
+        48.125,
+        37.725,
+        53.725
+      ]
+    },
+    {
+      "ref": "J_S4",
+      "xMm": 58.0,
+      "yMm": 14.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        56.205,
+        12.205,
+        59.795,
+        20.875
+      ]
+    },
+    {
+      "ref": "U2",
+      "xMm": 39.0,
+      "yMm": 41.0,
+      "angleDeg": 180.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        37.045,
+        39.275,
+        40.955,
+        42.725
+      ]
+    },
+    {
+      "ref": "J_PCA",
+      "xMm": 30.0,
+      "yMm": 5.2,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x06_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        28.205,
+        0.855,
+        44.495,
+        6.995
+      ]
+    },
+    {
+      "ref": "J_S3",
+      "xMm": 58.0,
+      "yMm": 3.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        56.205,
+        1.205,
+        59.795,
+        9.875
+      ]
+    },
+    {
+      "ref": "H2",
+      "xMm": 59.0,
+      "yMm": 26.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        55.525,
+        22.525,
+        62.475,
+        29.475
+      ]
+    },
+    {
+      "ref": "H3",
+      "xMm": 59.0,
+      "yMm": 52.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        55.525,
+        48.525,
+        62.475,
+        55.475
+      ]
+    },
+    {
+      "ref": "R40",
+      "xMm": 21.0,
+      "yMm": 15.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        19.295,
+        14.025,
+        22.705,
+        15.975
+      ]
+    },
+    {
+      "ref": "R23",
+      "xMm": 45.2,
+      "yMm": 36.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        35.025,
+        46.905,
+        36.975
+      ]
+    },
+    {
+      "ref": "C5",
+      "xMm": 40.4,
+      "yMm": 30.0,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        39.395,
+        28.275,
+        41.405,
+        31.725
+      ]
+    },
+    {
+      "ref": "C11",
+      "xMm": 28.6,
+      "yMm": 21.0,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        27.595,
+        19.275,
+        29.605,
+        22.725
+      ]
+    },
+    {
+      "ref": "R1",
+      "xMm": 28.0,
+      "yMm": 47.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        26.295,
+        46.025,
+        29.705,
+        47.975
+      ]
+    },
+    {
+      "ref": "C12",
+      "xMm": 40.6,
+      "yMm": 15.0,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        39.595,
+        13.275,
+        41.605,
+        16.725
+      ]
+    },
+    {
+      "ref": "J_S2",
+      "xMm": 4.0,
+      "yMm": 37.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        2.205,
+        35.205,
+        5.795,
+        43.875
+      ]
+    },
+    {
+      "ref": "R43",
+      "xMm": 34.0,
+      "yMm": 19.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        32.295,
+        18.025,
+        35.705,
+        19.975
+      ]
+    },
+    {
+      "ref": "J_FAN",
+      "xMm": 45.5,
+      "yMm": 52.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        42.435,
+        46.265,
+        53.655,
+        57.405
+      ]
+    },
+    {
+      "ref": "TP5",
+      "xMm": 52.0,
+      "yMm": 40.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        50.475,
+        38.475,
+        53.525,
+        41.525
+      ]
+    },
+    {
+      "ref": "R11",
+      "xMm": 26.0,
+      "yMm": 30.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        29.025,
+        27.705,
+        30.975
+      ]
+    },
+    {
+      "ref": "R3",
+      "xMm": 38.0,
+      "yMm": 47.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        36.295,
+        46.025,
+        39.705,
+        47.975
+      ]
+    },
+    {
+      "ref": "C10",
+      "xMm": 28.6,
+      "yMm": 15.0,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        27.595,
+        13.275,
+        29.605,
+        16.725
+      ]
+    },
+    {
+      "ref": "R41",
+      "xMm": 21.0,
+      "yMm": 23.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        19.295,
+        22.025,
+        22.705,
+        23.975
+      ]
+    },
+    {
+      "ref": "J_SONAR_R",
+      "xMm": 17.0,
+      "yMm": 13.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        15.205,
+        11.205,
+        18.795,
+        22.415
+      ]
+    },
+    {
+      "ref": "R6",
+      "xMm": 34.5,
+      "yMm": 57.2,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_2512_6332Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        30.645,
+        55.245,
+        38.355,
+        59.155
+      ]
+    },
+    {
+      "ref": "C4",
+      "xMm": 42.2,
+      "yMm": 40.2,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        41.195,
+        38.475,
+        43.205,
+        41.925
+      ]
+    },
+    {
+      "ref": "R44",
+      "xMm": 22.0,
+      "yMm": 11.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        20.295,
+        10.025,
+        23.705,
+        11.975
+      ]
+    },
+    {
+      "ref": "R7",
+      "xMm": 31.0,
+      "yMm": 39.2,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        29.295,
+        38.225,
+        32.705,
+        40.175
+      ]
+    },
+    {
+      "ref": "Q1",
+      "xMm": 24.0,
+      "yMm": 52.0,
+      "angleDeg": 180.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        20.275,
+        49.275,
+        27.725,
+        54.875
+      ]
+    },
+    {
+      "ref": "R22",
+      "xMm": 45.2,
+      "yMm": 33.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        32.025,
+        46.905,
+        33.975
+      ]
+    },
+    {
+      "ref": "TP4",
+      "xMm": 52.0,
+      "yMm": 36.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        50.475,
+        34.475,
+        53.525,
+        37.525
+      ]
+    },
+    {
+      "ref": "R10",
+      "xMm": 26.0,
+      "yMm": 27.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        26.025,
+        27.705,
+        27.975
+      ]
+    },
+    {
+      "ref": "TP1",
+      "xMm": 8.5,
+      "yMm": 28.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        6.975,
+        26.475,
+        10.025,
+        29.525
+      ]
+    },
+    {
+      "ref": "R16",
+      "xMm": 26.0,
+      "yMm": 45.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        44.025,
+        27.705,
+        45.975
+      ]
+    },
+    {
+      "ref": "J_S1",
+      "xMm": 4.0,
+      "yMm": 14.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        2.205,
+        12.205,
+        5.795,
+        20.875
+      ]
+    },
+    {
+      "ref": "C7",
+      "xMm": 34.4,
+      "yMm": 41.0,
+      "angleDeg": 180.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        32.675,
+        39.995,
+        36.125,
+        42.005
+      ]
+    },
+    {
+      "ref": "H4",
+      "xMm": 3.0,
+      "yMm": 52.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        -0.475,
+        48.525,
+        6.475,
+        55.475
+      ]
+    },
+    {
+      "ref": "J_PWR",
+      "xMm": 10.0,
+      "yMm": 47.5,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        6.935,
+        41.765,
+        18.155,
+        52.905
+      ]
+    },
+    {
+      "ref": "F1",
+      "xMm": 16.5,
+      "yMm": 57.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KIPRJMOD}/Tank.3dshapes/Fuse_451.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        12.645,
+        55.045,
+        20.355,
+        58.955
+      ]
+    },
+    {
+      "ref": "TP3",
+      "xMm": 22.0,
+      "yMm": 43.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        20.475,
+        41.475,
+        23.525,
+        44.525
+      ]
+    },
+    {
+      "ref": "U5",
+      "xMm": 37.0,
+      "yMm": 16.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        34.925,
+        14.085,
+        39.075,
+        17.725
+      ]
+    },
+    {
+      "ref": "J_S5",
+      "xMm": 58.0,
+      "yMm": 32.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        56.205,
+        30.205,
+        59.795,
+        38.875
+      ]
+    },
+    {
+      "ref": "C8",
+      "xMm": 35.0,
+      "yMm": 44.6,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        33.275,
+        43.595,
+        36.725,
+        45.605
+      ]
+    },
+    {
+      "ref": "J_SONAR_F",
+      "xMm": 11.0,
+      "yMm": 13.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x04_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        9.205,
+        11.205,
+        12.795,
+        22.415
+      ]
+    },
+    {
+      "ref": "R13",
+      "xMm": 26.0,
+      "yMm": 36.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        35.025,
+        27.705,
+        36.975
+      ]
+    },
+    {
+      "ref": "R42",
+      "xMm": 34.0,
+      "yMm": 13.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        32.295,
+        12.025,
+        35.705,
+        13.975
+      ]
+    },
+    {
+      "ref": "C13",
+      "xMm": 40.6,
+      "yMm": 21.0,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        39.595,
+        19.275,
+        41.605,
+        22.725
+      ]
+    },
+    {
+      "ref": "R4",
+      "xMm": 22.0,
+      "yMm": 46.5,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        20.295,
+        45.525,
+        23.705,
+        47.475
+      ]
+    },
+    {
+      "ref": "R12",
+      "xMm": 26.0,
+      "yMm": 33.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        32.025,
+        27.705,
+        33.975
+      ]
+    },
+    {
+      "ref": "R26",
+      "xMm": 45.2,
+      "yMm": 45.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        44.025,
+        46.905,
+        45.975
+      ]
+    },
+    {
+      "ref": "R20",
+      "xMm": 45.2,
+      "yMm": 27.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        26.025,
+        46.905,
+        27.975
+      ]
+    },
+    {
+      "ref": "Q3",
+      "xMm": 30.0,
+      "yMm": 43.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        28.045,
+        41.275,
+        31.955,
+        44.725
+      ]
+    },
+    {
+      "ref": "R14",
+      "xMm": 26.0,
+      "yMm": 39.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        38.025,
+        27.705,
+        39.975
+      ]
+    },
+    {
+      "ref": "R21",
+      "xMm": 45.2,
+      "yMm": 30.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        29.025,
+        46.905,
+        30.975
+      ]
+    },
+    {
+      "ref": "J_S0",
+      "xMm": 4.0,
+      "yMm": 3.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x03_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        2.205,
+        1.205,
+        5.795,
+        9.875
+      ]
+    },
+    {
+      "ref": "U1",
+      "xMm": 35.0,
+      "yMm": 34.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/TSSOP-20_4.4x6.5mm_P0.65mm.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        30.735,
+        30.475,
+        38.875,
+        37.525
+      ]
+    },
+    {
+      "ref": "C2",
+      "xMm": 40.4,
+      "yMm": 54.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        38.675,
+        52.995,
+        42.125,
+        55.005
+      ]
+    },
+    {
+      "ref": "R24",
+      "xMm": 45.2,
+      "yMm": 39.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        38.025,
+        46.905,
+        39.975
+      ]
+    },
+    {
+      "ref": "C3",
+      "xMm": 40.4,
+      "yMm": 57.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        38.675,
+        55.995,
+        42.125,
+        58.005
+      ]
+    },
+    {
+      "ref": "C6",
+      "xMm": 30.0,
+      "yMm": 28.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        28.275,
+        26.995,
+        31.725,
+        29.005
+      ]
+    },
+    {
+      "ref": "U4",
+      "xMm": 25.0,
+      "yMm": 22.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        22.925,
+        20.085,
+        27.075,
+        23.725
+      ]
+    },
+    {
+      "ref": "U3",
+      "xMm": 25.0,
+      "yMm": 16.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        22.925,
+        14.085,
+        27.075,
+        17.725
+      ]
+    },
+    {
+      "ref": "J_CTRL",
+      "xMm": 10.0,
+      "yMm": 5.2,
+      "angleDeg": 90.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_2x06_P2.54mm_Vertical.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        8.205,
+        0.855,
+        24.495,
+        6.995
+      ]
+    },
+    {
+      "ref": "R5",
+      "xMm": 33.0,
+      "yMm": 25.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        31.295,
+        24.025,
+        34.705,
+        25.975
+      ]
+    },
+    {
+      "ref": "H1",
+      "xMm": 3.0,
+      "yMm": 26.0,
+      "angleDeg": 0.0,
+      "models": [],
+      "bodyAndCourtyardBoxMm": [
+        -0.475,
+        22.525,
+        6.475,
+        29.475
+      ]
+    },
+    {
+      "ref": "R2",
+      "xMm": 32.0,
+      "yMm": 47.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        30.295,
+        46.025,
+        33.705,
+        47.975
+      ]
+    },
+    {
+      "ref": "R15",
+      "xMm": 26.0,
+      "yMm": 42.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        24.295,
+        41.025,
+        27.705,
+        42.975
+      ]
+    },
+    {
+      "ref": "U6",
+      "xMm": 37.0,
+      "yMm": 22.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        34.925,
+        20.085,
+        39.075,
+        23.725
+      ]
+    },
+    {
+      "ref": "R25",
+      "xMm": 45.2,
+      "yMm": 42.0,
+      "angleDeg": 0.0,
+      "models": [
+        "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+      ],
+      "bodyAndCourtyardBoxMm": [
+        43.495,
+        41.025,
+        46.905,
+        42.975
+      ]
+    }
+  ],
+  "hardwareTested": false
+}

@@ -1,0 +1,176 @@
+{
+ "checks": {
+  "holders-print-fit-wires": [
+   "pass",
+   "pass"
+  ],
+  "turret-yaw-limits": [
+   "pass",
+   "pass"
+  ],
+  "v5-vs-v1-geometry": [
+   "pass",
+   "v5 chassis/hull/lid geometry equals printed v1"
+  ]
+ },
+ "current": null,
+ "finished": true,
+ "notes": 0,
+ "parts": {
+  "cell_cradle": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "coupon_deck_TEST_ONLY": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "coupon_fit_TEST_ONLY": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "coupon_stack_TEST_ONLY": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "esp32_post_front": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "esp32_post_rear": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "fan_plate": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "pca_post_front_left": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "pca_post_front_right": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "pca_post_rear_left": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "pca_post_rear_right": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "power_tray_a": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "power_tray_b": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "screen_clip_left": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "screen_clip_right": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_bridge_plate": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_carrier_deck": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_leg_front_left": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_leg_front_right": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_leg_rear_left": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_leg_rear_right": {
+   "group": "glue-on",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_tier_1": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_tier_2": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  },
+  "stack_turret_mount": {
+   "group": "frame",
+   "stage": "simple",
+   "status": "done"
+  }
+ },
+ "schema": 1,
+ "stages": [
+  {
+   "name": "simple",
+   "notes": [],
+   "parts": [
+    "esp32_post_rear",
+    "esp32_post_front",
+    "power_tray_a",
+    "power_tray_b",
+    "cell_cradle",
+    "fan_plate",
+    "screen_clip_left",
+    "screen_clip_right",
+    "pca_post_rear_left",
+    "pca_post_rear_right",
+    "pca_post_front_left",
+    "pca_post_front_right",
+    "coupon_fit_TEST_ONLY",
+    "stack_bridge_plate",
+    "stack_leg_rear_left",
+    "stack_leg_rear_right",
+    "stack_leg_front_left",
+    "stack_leg_front_right",
+    "stack_tier_1",
+    "stack_tier_2",
+    "stack_turret_mount",
+    "coupon_stack_TEST_ONLY",
+    "stack_carrier_deck",
+    "coupon_deck_TEST_ONLY"
+   ],
+   "status": "done",
+   "title": "Simple parts (frame/box and small parts)"
+  }
+ ]
+}

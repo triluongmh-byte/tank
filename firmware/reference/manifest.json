@@ -1,0 +1,19 @@
+{
+  "source": "/Users/macbookpro/harnesses/claude-pet-case/firmware/claude_pet",
+  "purpose": "User-named reference; retain pet renderer and wire protocol, no reference motor or SPI driver reused",
+  "files": {
+    "pet_logic.h": "8ec39d3ca85ce7ca208c1d5f10c6d2545ba7e70d7114c0772d675841cac23793",
+    "text_protocol.h": "4cf95792b05c58058cd6c1a50c333d434256f7532732a1718a05dda9fffde393",
+    "activity.h": "be906bc08500aaf093c14720b2fae635b1fb05089c1da53d56e2a4f8f78fd7b5",
+    "fun.h": "48343fd902013df585d4a6dd672af2c77f64b161a57c1b1da1879beff28209cd",
+    "usage_logic.h": "03eae07660000de598db6e775790762fc55fa259349496a54767e18d7eadd621",
+    "session_list.h": "c12bf191a890d48f8c8888a922166d6dbae19f09806a814e1360480314aafab8",
+    "face.h": "db5cc6b34b9bad50dd0bd9fe37b8e12cf4e36eefc58a253ed38c594e48a5141e",
+    "font_rasters.h": "de3a5ff0969500faa26e433f32717097b4afa139cda7c3c0048ad33637f2c444",
+    "personality.h": "4855ead9df710681283841e6381a4a7f5209324b85273c68bf14c018ff6d864c",
+    "led_colors.h": "f96180f39d8289200bb630223ef4cfe2b956126fecffa8c4789d447b6d3db8e0",
+    "usage_face.h": "1cfc306b624bfc1a5f51ba5421e21e1c68adedcf808718b150f3d2b8d92e6b65",
+    "session_face.h": "c46eb6babebd24932b651f21a8aa7a651e4b2e1f6b18897cf3bb47c4ff0bf92f",
+    "status_bar.h": "1fb4051094675371ca0c54471b302da194438af76b520c40bf9915e55bfab48f"
+  }
+}
