@@ -37,7 +37,9 @@ Yêu cầu, không tự cài gì qua mạng:
 - `KICAD_HARNESS_PYTHON` (Python có `kicadpy`) và `KICAD_CASE_PYTHON` (Python có CadQuery + `kicadpy`). Harness cấp sẵn cả hai.
 - KiCad 9 `kicad-cli`. Script tự tìm ở `/Applications/KiCad/KiCad.app`, hoặc set `KICAD_CLI`.
 - Bambu Studio ở `/Applications/BambuStudio.app`, dùng để slice `case/print/*.3mf`. Không job in nào được gửi.
-- `arduino-cli` với core `esp32:esp32@2.0.14` đã cài sẵn.
+- `arduino-cli` với core `esp32:esp32@2.0.14` đã cài sẵn. Nếu core nằm ngoài thư mục mặc định thì set `ARDUINO_DIRECTORIES_DATA` trỏ tới đó (Harness để ở `~/.cache/autonomous-circuit/firmware/arduino`).
+
+Build sinh lại vài file đang commit: hash STEP của board trong `case/ref/board/SHA256SUMS`, `engineering/step-handoff.json` và `case/firmware-limits.json`. Thấy chúng đổi sau khi build là bình thường.
 
 Từng stage sinh ra:
 
