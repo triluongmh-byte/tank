@@ -1058,3 +1058,199 @@ Reference `references/user-images/2026-11-20-wheel-hub-tubes.png`: SHA-256 `0c43
 Reference `references/user-images/2026-11-23-case-r002-overview.png`: SHA-256 `51a9b19c18624e05bb270d5c4eb581fde6e4f670dd6c3def6c6940f4a0f987d3`
 
 Reference `references/user-images/2026-11-23-style-apc-references.png`: SHA-256 `9d9d217b434639f7bd6e7fc00f7203d76e19f5f4db738f34f07766e8d00bb201`
+
+## 10. firmware
+
+Note SHA-256: `c4e55f73e992daecb49e1b21711e192689ff69e941050d97f7076d509658252a`
+
+Changed contract fields: firmwareBehavior, assumptions, tasks
+
+User message (verbatim):
+
+```text
+soi con cua crab-robot-v17g á, tham khảo cái ui trên Phone của nó đi fen. Rồi làm tao 1 cái UI điều khiển như vậy đi.
+
+---
+Entry-agent note (clearly labelled facts to interpret the message; not the user's words):
+- "con cua crab-robot-v17g" = the user's crab robot at /Users/macbookpro/harnesses/crab-robot-v17g. Its phone UI is
+  served by the ESP32 itself over a direct Wi-Fi AP (open network "CuaRobot-XXXX", page http://192.168.4.1/,
+  captive-portal probes serve the same page; optional home Wi-Fi setup). Hash-checked copies:
+  /Users/macbookpro/harnesses/pet-tank/prompts/assets/crab-phone-ui/ui.html (the page), /Users/macbookpro/harnesses/pet-tank/prompts/assets/crab-phone-ui/network_http.h (HTTP API), /Users/macbookpro/harnesses/pet-tank/prompts/assets/crab-phone-ui/DIRECT-AP.md (behaviour).
+- Crab page sections: "Lái" (8-direction hold-to-drive pad ↖↑↗←DỪNG→↙↓↘, light on/off, speed 0.4/0.65/1),
+  "Wi-Fi" (scan + join home network, optional), "Ráp" (assembly/centre trim), test pages.
+  API: POST /api/session (token), /api/move (token, seq, dir 0..8, fresh; 500 ms command lease stops stale motion),
+  /api/light, /api/speed, GET /api/status.
+- This answers the earlier open point: the tank firmware currently has only the USB host link; the lead
+  noted WiFi/joystick from the cadsmith chat was not requested. The user is now requesting a phone control UI
+  like the crab's for the tank (6 wheels, turret, 2 sonars, LEDs). Interfaces specific to the tank
+  (turret, sonar readout, auto-scan) are not named by the user.
+
+```
+
+Lead routing note:
+
+Người dùng: "tham khảo cái UI trên Phone của [crab-robot-v17g]… làm tao 1 cái UI điều khiển như vậy". Đây là yêu cầu mới, trả lời câu hỏi mở trước đó: xe tăng giờ cần điều khiển bằng điện thoại qua Wi-Fi, ngoài liên kết USB với host. Tham chiếu đã kiểm hash: prompts/assets/crab-phone-ui/ui.html, network_http.h, DIRECT-AP.md. Chỉ đọc làm mẫu, không sửa repo crab.
+
+Firmware (phải rebuild, vẫn trên đích ESP32 DevKit + ST7789 240×240 theo note trước):
+- ESP32 tự phát AP mở riêng của xe, tên kiểu "XeTang-XXXX" do firmware chọn. Trang ở http://192.168.4.1/, captive portal trả cùng trang. Màn 240×240 hiện tên mạng, địa chỉ và QR. Wi-Fi nhà là tùy chọn như crab: quét, nhập mật khẩu, lưu NVS, không trả hay ghi log mật khẩu, báo lỗi tiếng Việt. Thiếu Wi-Fi nhà thì AP vẫn chạy. Giao diện bằng tiếng Việt.
+- Trang "Lái": pad 8 hướng giữ để chạy, thả là dừng (↖↑↗←DỪNG→↙↓↘), cùng 3 mức tốc độ 0.4/0.65/1. Firmware ánh xạ sang lái vi sai 6 bánh: tới/lui, xoay tại chỗ trái/phải, cua chéo. API theo mẫu crab: session có token, một chủ điều khiển tại một thời điểm; move có seq/dir/fresh; lease lệnh khoảng 500 ms; GET status. Hằng số tự chọn và ghi là mục tiêu chưa thử.
+- Trang "Ráp": hiệu chuẩn trung tính và chiều quay từng bánh CH0–5, cùng tâm và giới hạn turret CH6. Dùng chung cơ chế hiệu chuẩn có giới hạn thời gian mà hợp đồng đã yêu cầu. Mở trang này thì khóa lái.
+- Điện thoại là nguồn "điều khiển tay" trong phân xử chế độ. Không giành quyền khi host cue hoặc chế độ tự dò đang chạy, trừ khi đã STOP. STOP từ bất kỳ nguồn nào đều thắng. Giữ mọi đường dừng sẵn có: hết lease, thả nút, đổi hay mất session, mất client AP, watchdog, lỗi I2C, nút dừng cục bộ do board chỉ định. Thêm vào đó: chỉ cho tới/lui khi dữ liệu sonar hướng đó còn mới và tin cậy, khi bị chặn thì trang hiện lý do. Khởi động luôn đứng yên, mặc định OE cao/ACT_EN thấp.
+- Nút đèn: điện cho LED vẫn là câu hỏi mở và chưa có chân. Hiện nút ở trạng thái "chưa nối", không tự thêm GPIO.
+- Status chỉ đọc có thể gồm chế độ, lý do khóa và hai khoảng cách sonar, đo không hợp lệ thì ghi rõ. Người dùng CHƯA yêu cầu điều khiển turret bằng tay hay nút bật tự dò trên điện thoại. Để làm câu hỏi mở, chưa thêm.
+- Giữ USB-UART và giao thức MOTOR/CUE. Viết test bằng mock cho parser HTTP, token/seq, lease, phân xử nguồn và khóa theo sonar. Bổ sung hướng dẫn kết nối điện thoại vào tài liệu firmware. firmware/WIRING.md không đổi chân.
+- Không flash, không chạy servo. Chưa khẳng định tầm phủ, độ ổn định radio hay hành vi trên điện thoại thật.
+
+Không giao board: không đổi chân, rail hay bảng dây. Radio nằm sẵn trong DevKit, nguồn logic vẫn đi theo nhánh logic từ pin như note trước. Không giao case hay print: không đổi hình học hay plate, không có yêu cầu in. Các yêu cầu khác giữ nguyên, kể cả case v1/v5 stack và các phương án turret/màn chưa chốt.
+
+Reference `prompts/assets/2026-11-20-nose-current-blue-wedge.png`: SHA-256 `3e6fb7f8675dbccd279c4f0f587c979bc679aa9109a23354aa35a2dac6111138`
+
+Reference `prompts/assets/2026-11-20-nose-sketch-chevron.png`: SHA-256 `3dd263ef32e2df759c6248eae710d28eb17d3bf43e319b5f22e94ebe3d5af9f3`
+
+Reference `prompts/assets/2026-11-20-sonar-order-hc-sr04p.png`: SHA-256 `8ec21b7846ad1be930697c6f514a47bca21a0d6863aa7e20225c3b2e86860f7e`
+
+Reference `prompts/assets/2026-11-20-wheel-hub-tubes.png`: SHA-256 `0c43c2710a7927c0ef9f193761776d51d360caec376f4fd3313fa3bcb4ecd970`
+
+Reference `prompts/assets/2026-11-23-case-r002-overview.png`: SHA-256 `51a9b19c18624e05bb270d5c4eb581fde6e4f670dd6c3def6c6940f4a0f987d3`
+
+Reference `prompts/assets/2026-11-23-style-apc-references.png`: SHA-256 `9d9d217b434639f7bd6e7fc00f7203d76e19f5f4db738f34f07766e8d00bb201`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/07_drive_wheel_L.step`: SHA-256 `969db3a4c0dfff0078d15465cc651843cbd3d1639416684627861e45a0739b99`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/07_drive_wheel_L.stl`: SHA-256 `58acbc848111aeb9494a65ba38b133a280eff92bb77ed162ee169deb7f1f61c4`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/07_drive_wheel_R.step`: SHA-256 `43279bc785fc8d484c790f5160b2e69abf27a15eb3eb2ed1ebbf7c774f76832c`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/07_drive_wheel_R.stl`: SHA-256 `161f27fb9624ff1412b5072694928c3fcaace2ed75af16e1fde3cf04cedfe654`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/08_drive_guide_L.step`: SHA-256 `385515423bcdc6acfed95c63f9a3354fcb8b49e09fb8b2ed42e8503911c46d29`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/08_drive_guide_L.stl`: SHA-256 `919fc9f071681ace65fc84683e6a7028b9691ea528694accf323183ecc6f4fc8`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/08_drive_guide_R.step`: SHA-256 `4e1314e402aea54170ea0aa94cb078576869a96217a13ed62f060640c9afe9e8`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/08_drive_guide_R.stl`: SHA-256 `3b1aa783f94aa5d530554a75218bfc182b380de5a6ca7ce4470be7a4818ffb85`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/09_horn_cap_L.step`: SHA-256 `c8e3ae32a0e409d93defaad638d99eabad35ed5cebaedc255d37e693a9011f20`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/09_horn_cap_L.stl`: SHA-256 `46df24d095c0127fe27f21ec1b31ad002e65dc001b0a40f6d3f2d5520af51532`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/09_horn_cap_R.step`: SHA-256 `3abb6260052ae468d736585d6dfce9084a6beeb59143ae96b1d9b0f40910c343`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/09_horn_cap_R.stl`: SHA-256 `e0c9a1c80b5a358d12182907ad0a0e82da2061809d7d62cf018baaf9cd442271`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/10_idler_wheel_L.step`: SHA-256 `f495d1eb35fef2a9eed51f58e2a6ef22435b1dbc399408085ed8580fd7342140`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/10_idler_wheel_L.stl`: SHA-256 `e785045c004390718c76d0394a52d2c28b8ad755996bbccd66f405d35a416608`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/10_idler_wheel_R.step`: SHA-256 `ad419db5aa7749597e1997ef2d56037476f57367f5211cadee506430be5349a4`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/10_idler_wheel_R.stl`: SHA-256 `6014f24cd63819adb952e94885dfaca4b1c2ed855c717ae4dc7ddf75c89c46ad`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/11_idler_guide_L.step`: SHA-256 `348ad795e8e70f163d5cc1daf50e37ba25c6602077af0a5fbf0ada04b3f6830c`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/11_idler_guide_L.stl`: SHA-256 `05716c2d510ca1bd9f01d0aa1a976996effea12269e3588a538cd0cd33915fee`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/11_idler_guide_R.step`: SHA-256 `6e1a41f7deea6010429c6dcca5b1867323dc1c524b011f150afc8f34cabebec2`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/11_idler_guide_R.stl`: SHA-256 `b009e198d5bfbb45556c43a89ff5c17e7e9039b2a654e73aa05be8b3ca8d5740`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/SHA256SUMS`: SHA-256 `370c4b538888c0a473110b8af1866a886ac8cdf627550fa7ee8e9878a8bc030b`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/axle-detail.png`: SHA-256 `5594247b82f15ab6cc93a9a3e77585e074a37c17bf88346c62eace9389eedc37`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/drive-assembly.md`: SHA-256 `56ab8c38cd6c2e20c282404da518602136efd1e1c9ead7c7e66f621b143a356e`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/drive-assembly.png`: SHA-256 `408d9165e9881c0498c1663346f7f0b76af402c76dec11096906c415abcc8c8e`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/hardware-list.md`: SHA-256 `01457ae7422838001fc6dae61b6a903eb6138e1a6b281621729ec6f131f19661`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/hardware.json`: SHA-256 `806e32561d1e905e4b2d78685a0e3a77ad41645faf5d2fd0e7115d59202c9a8e`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/ref_horn_L.step`: SHA-256 `d26c301b04d63d73695ba24594599564a2a5fa411f3e2a6c81ddd35cf5ed91a6`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/ref_horn_L.stl`: SHA-256 `80157464e65b1e7d151588572b729107c3e7e64514a53caa6196277670392a91`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/ref_servo_L.step`: SHA-256 `10beadf6998135b463df2ee682bf13a799b60240efb63f93d6deff2ee0e9aa0b`
+
+Reference `prompts/assets/claude-pet-wheels-3c5e945/ref_servo_L.stl`: SHA-256 `e3954c0479fc9013c52c24156a8508e0a2ef049d123e9e896eb553475d3a6f8b`
+
+Reference `prompts/assets/crab-phone-ui/DIRECT-AP.md`: SHA-256 `99050aa01f4a7c13da1c58b35ac3339ccb3e67a1a851ea200583d8f2bd83d41f`
+
+Reference `prompts/assets/crab-phone-ui/SHA256SUMS`: SHA-256 `5e4f24be2e5a3e5d3185cccb64bfdc8ff3814659c09cd44187d35921c15657bc`
+
+Reference `prompts/assets/crab-phone-ui/network_http.h`: SHA-256 `bdb1aecbc7488b68d68748da56f53beb81b659c41b8175046b30c1358e8ad7b8`
+
+Reference `prompts/assets/crab-phone-ui/ui.html`: SHA-256 `447d3b22498122862e1658617c97a778233b3d6bab04ffa8fc242c8a786945cf`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/SHA256SUMS`: SHA-256 `fd36ec06531bd98559bd57699e7c4ae1f27d2d3465595212dc66fce67982622f`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/Screenshot-2026-11-25-at-3-53-33-PM.png`: SHA-256 `d324a2660e3081f5a89dd5be99491015ac7b980a243e6fe8732f97c7ee578199`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/Screenshot-2026-11-25-at-3-54-41-PM.png`: SHA-256 `b29dbf3aaf5913d13fcc298cd43b70d6db0f5033632dd308f08cf127ab876b60`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/Screenshot-2026-11-25-at-3-55-11-PM.png`: SHA-256 `8b83dc3d4efa4be511065ca42dd6e4b82a9055542731824dc392dfc95900281f`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/Screenshot-2026-11-25-at-3-55-25-PM.png`: SHA-256 `a1ffd4756e4a5f066c85068d00c5381cb19f6ee922ae66f53dc2eb8d6714f2f3`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/arm_front_left.step`: SHA-256 `b4dd773ca028ee345abd00851feb53026f53e84a3cdafe051fb5683e56458d24`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/chassis.step`: SHA-256 `e6afd37a840523a3783d34da000b88e1229cc5095279c4e7815be06e532cddd3`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/drawing.svg`: SHA-256 `7b1abe4cfb992d018b632e4d73547a2f7a0b8a9ff4c2bee61b31b661a27e8e3d`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/firmware-chat-2026-11-25.md`: SHA-256 `7a095130f80f2379d2aac29e43f1d15d96e8b35275bb9deb3f12420dde6d5f48`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/hull.step`: SHA-256 `3900b637ffd4bb657ede788ea70c96d86ba885747979970047afd5cc850e108a`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/led_bracket.step`: SHA-256 `fe4e6526d0ae8038e4f87133edaf4b38cfdc89f511f7a915c33bc4e628cb7197`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/lid.step`: SHA-256 `1915dffb799332f7871ce96f913d083839c2e8a479c60d0018ed125a1db3f07f`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/model.py`: SHA-256 `0500d9de5b6c818b41381bce4887e64baa84474537012df9d71f80a20418808d`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/report.json`: SHA-256 `6cd8df6d9dbc13c06e217fccea82c53eccb55df330fa69659488cb520edf00bc`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/turret_head.step`: SHA-256 `14bda38c48e4c48fd481487016ef6267d05754bf07f060570ccfd8e8fa9aaf77`
+
+Reference `prompts/assets/robot-tank-cadsmith-v1/wheel_front_left.step`: SHA-256 `136028340aedc346d6aaba9db250e0a106f3b080e0661ad1da7b39ddf9c76ae1`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/SHA256SUMS`: SHA-256 `ceb49db77849f506f7f624d7fb3a964dfa9408fd54aba8b55d7443ed6d43a72a`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/chassis.step`: SHA-256 `2a4a4b5caf1218b0e081c69a0029eb9e92772ba7e2c575f4c4942258a234a80d`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/drawing.svg`: SHA-256 `1013f0e4ad81fcfe0f193cf9292237a79aac91b532d993338b8cb9961fea0c62`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/esp32.step`: SHA-256 `1e1b9f199f40cbc8346660a554a7bc0eaa137e222aca020432c9b6ee995f3244`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/hull.step`: SHA-256 `6cd01dacaef686c21fa5119986c43f2ef7c2d8db6df56c94675078a2e9e2b98b`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/lid.step`: SHA-256 `42e1de372e21ac008d5d4864d65e8c505fab3bcb0d22fa97e83994ccea0661bc`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/model.py`: SHA-256 `2f8277f217dca32d9de4f0a5969be4be22701be013b0ed25dd4aeed0fddfaa82`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/pca9685.step`: SHA-256 `c7a31efb23078f31045ac60bcb6f43cec080d0de6c63ba09723f2450c657761a`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/report.json`: SHA-256 `2b9d95d91e79ab07124b3fb8422dd0ac176abc664b2472b16a179c45c8182d7f`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/screen_stack.step`: SHA-256 `3bd302e3582fc7ff37062fc814b23a46a110fa347e8bf0b757daec9bb1a80ce5`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/stack_base.step`: SHA-256 `c37cb1ef41dbaafb1440761c2c29ea70caa9919c73edd964a4a1aba2f8b53d2f`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/stack_tier_1.step`: SHA-256 `0803025ca855faae62f574628d7ec50ab7df0843253c977e27da3c1c53560c34`
+
+Reference `prompts/assets/robot-tank-cadsmith-v5/stack_turret_mount.step`: SHA-256 `e1fc492f484defe7afd62458dbdb383addbd966ba883e65336ea455c86c70c54`
+
+Reference `references/IMAGES.md`: SHA-256 `93ac22eae5f50c54d84e5cfb292685e2b9f264b463f168e92f0c7e9b6e35e13a`
+
+Reference `references/user-images/2026-11-20-nose-current-blue-wedge.png`: SHA-256 `3e6fb7f8675dbccd279c4f0f587c979bc679aa9109a23354aa35a2dac6111138`
+
+Reference `references/user-images/2026-11-20-nose-sketch-chevron.png`: SHA-256 `3dd263ef32e2df759c6248eae710d28eb17d3bf43e319b5f22e94ebe3d5af9f3`
+
+Reference `references/user-images/2026-11-20-sonar-order-hc-sr04p.png`: SHA-256 `8ec21b7846ad1be930697c6f514a47bca21a0d6863aa7e20225c3b2e86860f7e`
+
+Reference `references/user-images/2026-11-20-wheel-hub-tubes.png`: SHA-256 `0c43c2710a7927c0ef9f193761776d51d360caec376f4fd3313fa3bcb4ecd970`
+
+Reference `references/user-images/2026-11-23-case-r002-overview.png`: SHA-256 `51a9b19c18624e05bb270d5c4eb581fde6e4f670dd6c3def6c6940f4a0f987d3`
+
+Reference `references/user-images/2026-11-23-style-apc-references.png`: SHA-256 `9d9d217b434639f7bd6e7fc00f7203d76e19f5f4db738f34f07766e8d00bb201`

@@ -15,3 +15,4 @@
 - Full check in the role sandbox: `TAILN=25 bash tools/board/check-sandbox.sh` (plain check.py fails: the publisher store `<worktree parent>/.kicadpy` is not creatable). Last run 2026-11-27: 202/202 pins, DRC/ERC findings 0, prototypeReady, gate+stale OK.
 
 - Power decision (closed, DEVIATIONS 8, POWER_SYSTEM.md 'DECIDED'): two split islands, each its own Pololu U3V70F5 (A -> J_PWR for CH0-2/turret/fan/sonar 3.56 A; B off-carrier for CH3-5 V+ 2.4 A, ENABLE gated by ACT_EN). Pack = PCB-Li-1S15A + 15 A fuse, peak 10.6 A; owner pack unverified. No carrier change. Legacy 15 A TPS61287 chain = product.json power.referenceChain (pack-protection.py reads it).
+- Logic branch (DEVIATIONS 11): M_LOGIC U3V16F5 battery-fed -> USB -> DevKit; POWER_SYSTEM.md last section, STACK_WIRING.md last section, product.json logicBranch. case/layout_b.json + firmware/WIRING.md need case/firmware teams to adopt it.

@@ -1555,6 +1555,145 @@
      ]
     }
    ]
+  },
+  {
+   "name": "XT60 RUN harness -> M_LOGIC U3V16F5 VIN/GND (22 AWG pair, third branch after F_PACK + protector)",
+   "clearDiameterMm": 3.0,
+   "note": "crimped into the same XT60 Y harness as the two U3V70F5 inputs (inputs in parallel, outputs never joined)",
+   "routes": [
+    {
+     "name": "across the front window, low",
+     "pointsMm": [
+      [
+       20.0,
+       -44.5,
+       52.0
+      ],
+      [
+       8.0,
+       -45.0,
+       50.0
+      ],
+      [
+       -22.5,
+       -45.0,
+       47.0
+      ]
+     ]
+    },
+    {
+     "name": "across the front window, high",
+     "pointsMm": [
+      [
+       20.0,
+       -44.5,
+       52.0
+      ],
+      [
+       20.0,
+       -44.5,
+       60.0
+      ],
+      [
+       -22.5,
+       -44.5,
+       60.0
+      ],
+      [
+       -22.5,
+       -45.0,
+       47.0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "name": "M_LOGIC VOUT -> USB power-only lead -> ESP32 DevKit USB (tier 3, portable mode)",
+   "clearDiameterMm": 4.0,
+   "note": "same DevKit port as the host data cable: portable mode = this lead plugged, host mode = unplug it and plug the host cable; never both, no Y cable, no joined USB positives (engineering/POWER_SYSTEM.md)",
+   "routes": [
+    {
+     "name": "up the left of the hull, left of the stack, in under the screen face",
+     "pointsMm": [
+      [
+       -22.45,
+       -63.6,
+       46.5
+      ],
+      [
+       -22.5,
+       -55.0,
+       58.0
+      ],
+      [
+       -22.5,
+       -40.0,
+       78.5
+      ],
+      [
+       -40.0,
+       -10.0,
+       102.5
+      ],
+      [
+       -40.0,
+       2.0,
+       146.2
+      ],
+      [
+       0.0,
+       2.0,
+       146.2
+      ],
+      [
+       0.0,
+       15.0,
+       146.2
+      ]
+     ]
+    },
+    {
+     "name": "up the middle of the nose, right of the stack, in under the screen face",
+     "pointsMm": [
+      [
+       -22.45,
+       -63.6,
+       46.5
+      ],
+      [
+       -14.0,
+       -52.0,
+       60.0
+      ],
+      [
+       -14.0,
+       -30.0,
+       87.5
+      ],
+      [
+       40.0,
+       -10.0,
+       112.5
+      ],
+      [
+       40.0,
+       2.0,
+       146.2
+      ],
+      [
+       0.0,
+       2.0,
+       146.2
+      ],
+      [
+       0.0,
+       15.0,
+       146.2
+      ]
+     ]
+    }
+   ]
   }
  ]
 }

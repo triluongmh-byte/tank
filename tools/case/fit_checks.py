@@ -43,9 +43,11 @@ SEATS = {'ref_esp32_devkit': ['esp32_post_rear', 'esp32_post_front'],
          'ref_sonar_front_B': ['ref_turret_head_B'], 'ref_sonar_rear_B': ['ref_turret_head_B'],
          # layout B power chain (case/power_b.py, lead integration review 2)
          'ref_conv_a_B': ['conv_holder_a'], 'ref_conv_b_B': ['conv_holder_b'], 'ref_fuse_pack_B': ['fuse_holder_pack'],
-         'ref_protector_B': ['protector_holder', 'chassis'], 'ref_fuse_b_B': ['fuse_clip_b']}
+         'ref_protector_B': ['protector_holder', 'chassis'], 'ref_fuse_b_B': ['fuse_clip_b'],
+         'ref_logic_B': ['logic_holder']}
 POWER_B = ['conv_holder_a', 'conv_holder_b', 'fuse_holder_pack', 'protector_holder', 'fuse_clip_b',
-           'ref_conv_a_B', 'ref_conv_b_B', 'ref_fuse_pack_B', 'ref_protector_B', 'ref_fuse_b_B']
+           'ref_conv_a_B', 'ref_conv_b_B', 'ref_fuse_pack_B', 'ref_protector_B', 'ref_fuse_b_B',
+           'logic_holder', 'ref_logic_B']   # lead review 3: M_LOGIC U3V16F5 (case/logic_b.py)
 # ---- layout B (note 9): stack drawn beside the car at contract X +130; checked here on the car -----
 B_SHIFT = (-130.0, 0.0, 0.0)
 B_MOVE = ['stack_carrier_deck', 'ref_carrier_B', 'ref_fan_B', 'stack_bridge_plate', 'stack_leg_rear_left', 'stack_leg_rear_right', 'stack_leg_front_left', 'stack_leg_front_right', 'stack_tier_1', 'stack_tier_2', 'stack_turret_mount', 'ref_pca9685_B', 'ref_esp32_B',
@@ -62,11 +64,11 @@ B_ALLOW = {'stack_bridge_plate': ['stack_carrier_deck'] + LEGS, **{l: ['chassis'
            'stack_tier_2': ['stack_tier_1', 'stack_turret_mount', 'ref_esp32_B', 'ref_servo_turret_stack_B'],
            'stack_turret_mount': ['stack_tier_2', 'ref_screen_stack_B', 'ref_servo_turret_stack_B'],
            **{n: ['chassis'] for n in ('conv_holder_a', 'conv_holder_b', 'fuse_holder_pack', 'protector_holder')},
-           'fuse_clip_b': ['hull']}
+           'fuse_clip_b': ['hull'], 'logic_holder': ['chassis']}
 B_LAYOUT = ROOT / 'case' / 'layout_b.json'
 MASS_G = {'ref_carrier': 30.0, 'ref_fan': 10.0, 'ref_servo': 9.0, 'ref_cell': 47.0, 'ref_sonar': 9.0, 'ref_pca9685': 9.0, 'ref_esp32': 10.0, 'ref_screen': 6.0,
           'ref_power_module': 5.0, 'ref_servo_turret': 9.0,
-          'ref_conv': 7.0, 'ref_fuse_pack': 12.0, 'ref_fuse_b': 8.0, 'ref_protector': 8.0}
+          'ref_conv': 7.0, 'ref_logic': 2.0, 'ref_fuse_pack': 12.0, 'ref_fuse_b': 8.0, 'ref_protector': 8.0}
 PETG_G_MM3 = 1.27e-3 * 0.5     # GIẢ ĐỊNH: printed at about half solid density
 # a holder's glue face and the printed part it is glued to
 GLUED = {'esp32_post_rear': 'chassis', 'esp32_post_front': 'chassis', 'pca_post_rear_left': 'chassis', 'pca_post_rear_right': 'chassis',

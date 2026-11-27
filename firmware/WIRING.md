@@ -14,7 +14,7 @@
 | ST7789 SCK / MOSI / CS / DC | 18 / 23 / 16 / 17 | SPI chỉ ghi, VCC 3V3, GND |
 | ST7789 RST / BL | 4 / 13 | BL = mức cao bật; xác nhận nhãn module (có thể tên SDA=MOSI, SCL=SCK) |
 
-Tránh strapping 0 (chỉ là nút BOOT), 2, 5, 12, 15 và flash 6–11. Nguồn logic: LOGIC_3V3 lấy từ LDO của DevKit; tổng tải 3V3 (PCA, màn, buffer) board tính lại. Cấp DevKit qua USB host, hoặc 5 V logic riêng vào chân VIN theo tài liệu board; không cấp hai nguồn cùng lúc.
+Tránh strapping 0 (chỉ là nút BOOT), 2, 5, 12, 15 và flash 6–11. Nguồn logic: LOGIC_3V3 lấy từ LDO của DevKit; tổng tải 3V3 (PCA, màn, buffer) board tính lại. Cấp DevKit theo một trong hai chế độ (xem mục 6 phần nguồn): **chế độ cáp host** (USB từ máy tính) hoặc **chế độ pin** (nhánh logic 5 V riêng). Không bao giờ cấp hai nguồn cùng lúc.
 
 ---
 
@@ -97,7 +97,7 @@ bộ pin 1S 18650 kín (140 g, chưa xác minh) + PCB-Li-1S15A + F_PACK 0287015.
         |      carrier F1 -> Q1 -> LOAD_5V -> quạt J_FAN, J_SONAR, Q2/Q3(ACT_EN) -> SERVO_5V -> J_S0-2, J_S6
         '-- U3V70F5 #2 (B) VIN/GND -> VOUT -> cầu chì lưỡi 5 A -> mối nối 3 dây đỏ servo CH3-5
                ENABLE: 4.7 kΩ xuống GND, và dây nhánh từ J_CTRL.6 (GPIO26 ACT_EN)
-ESP32 DevKit: nhánh USB 5 V riêng (cáp host hoặc bộ 5 V logic); LOGIC_3V3 chỉ từ LDO DevKit
+ESP32 DevKit: M_LOGIC (bộ 5 V logic riêng, VIN/GND lấy từ dây RUN sau F_PACK) -> cáp USB tới cổng USB DevKit, HOẶC cáp host (thay thế, không đồng thời); LOGIC_3V3 chỉ từ LDO DevKit
 GND chung tại cực âm pin / J_PWR.2 / GND converter B / GND carrier
 ```
 
@@ -106,7 +106,11 @@ GND chung tại cực âm pin / J_PWR.2 / GND converter B / GND carrier
 3. **Đảo A (đỉnh ≈3,56 A, ≤4,0 A):** converter A VOUT/GND → J_PWR.1/.2 (18 AWG). J_PWR cấp CH0–2, turret CH6, quạt 5 V, hai sonar HC-SR04P và buffer; qua F1 7 A, Q1 chống ngược, công tắc ACT_EN Q2/Q3 (mặc định tắt). Quạt (J_FAN 1 +5V, 2 GND) nằm trên LOAD_5V, không có GPIO.
 4. **Đảo B (đỉnh ≈2,4 A):** converter B VOUT → cầu chì lưỡi 5 A → mối nối ba dây đỏ của servo J_S3–J_S5; GND và signal của ba servo vẫn đi qua J_S3–J_S5; GND converter B nối cực âm pin. **ENABLE:** hàn/đấu điện trở 4,7 kΩ ENABLE→GND (≈0,17 V, tắt mặc định) và kéo dây nhánh từ J_CTRL chân 6 (GPIO26 ACT_EN) vào ENABLE. Việc 3,3 V bật được ENABLE là GIẢ ĐỊNH; nếu bench không bật, dùng 2N7002 kéo ENABLE xuống từ /ACT_EN theo POWER_SYSTEM.md.
 5. **Mặc định tắt:** khi reset/boot GPIO26 ở trạng thái high-Z; R4 và 4,7 kΩ giữ cả hai đảo servo tắt tới khi firmware đưa ACT_EN lên. PCA_OE_N vẫn kéo lên nên không có xung PWM. **Rủi ro mở:** nếu U3V70F5 khi disable vẫn lọt xấp xỉ Vin qua cuộn cảm/diode, CH3–5 có thể nhận ≈3,7 V khi ACT_EN thấp — bắt buộc đo "ACT_EN tắt = 0 V ở cả hai đảo"; không đạt thì thêm công tắc tải (chưa thực hiện).
-6. **DevKit:** nhánh USB 5 V riêng, không nối dây 5 V carrier–DevKit. Không nối hai nguồn USB; không dùng cáp Y.
+6. **DevKit — hai chế độ loại trừ nhau:**
+   - **Chế độ cáp host** (nạp/gỡ lỗi, giao thức MOTOR/CUE): chỉ cáp USB dữ liệu từ máy tính; M_LOGIC rút đầu ra USB khỏi DevKit (có thể để nguyên đầu vào).
+   - **Chế độ pin** (lái bằng điện thoại, AUTO, không có máy tính): M_LOGIC = bộ 5 V logic riêng (tham chiếu U3V16F5; hoặc MỘT module "5V 2A" của người dùng nếu board xác nhận), VIN/GND nhận từ dây RUN sau F_PACK/breaker, song song hai đảo A/B tại pack; VOUT → cáp USB (chỉ cấp nguồn) vào cổng USB DevKit. Đầu ra M_LOGIC không nối với đầu ra converter A/B hay 5 V carrier; GND chung tại cực âm pin. Rút cáp host trước khi cắm cáp M_LOGIC và ngược lại; không cáp Y, không cấp VIN song song với USB.
+   - Tải logic cần tính vào ngân sách pin: DevKit + Wi-Fi AP + PCA + màn ≈0,25–0,35 A tại 5 V (GIẢ ĐỊNH, chưa đo), tức ≈0,4–0,5 A tại đầu vào pin 3,7 V cộng vào tổng đỉnh ở mục 2. Board là nơi công bố module và vị trí M_LOGIC chính thức; mục này chỉ mô tả cách đấu từ phía firmware.
+   - Thứ tự bring-up: (a) chế độ cáp host trước, kiểm ping/STATUS; (b) rút cáp host, cắm M_LOGIC, kiểm màn hiện mạng XeTang-XXXX; (c) chỉ sau đó mới cấp đảo A/B.
 7. **Sạc:** phích RUN và phích CHARGE loại trừ nhau; không chạy khi sạc; F_PACK vẫn nằm trong mạch. Chỉ một module "5V 2A" của người dùng không đủ cho đảo A (3,56 A), không dùng làm đường tải chính.
 8. Pack 140 g của người dùng chưa chứng minh được ≈11 A cho trường hợp cả bảy servo kẹt cùng lúc; vận hành thường ≈2,1 A. Chỉ chấp nhận cấp tải sau khi bên có chuyên môn xác minh pack và bench: converter không tải 4,8–5,2 V, bước tải A 0,5→3,5 A / B 2,4 A, xung ≤5,5 V khi phanh.
 

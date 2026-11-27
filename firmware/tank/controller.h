@@ -25,7 +25,8 @@ struct Hardware {
   virtual bool healthy()=0;
   virtual bool save(const Calibration&)=0;
 };
-enum class Mode:uint8_t {Idle,Cue,Manual,Auto,Test,Turret,Scan};
+enum class Mode:uint8_t {Idle,Cue,Manual,Auto,Test,Turret,Scan,Phone};
+enum class Block:uint8_t {None,NoData,Stale,Blocked,Turret};
 enum class Stage:uint8_t {Off,PowerWait,CenterWait,Run,Neutral,Fault};
 struct Range { unsigned mm=0; uint32_t at=0; bool valid=false; int yaw=0; unsigned good=0; Range()=default; Range(unsigned m,uint32_t t,bool v,int y):mm(m),at(t),valid(v),yaw(y){} };
 inline bool elapsed(uint32_t now,uint32_t since,uint32_t duration){return uint32_t(now-since)>=duration;}
@@ -33,7 +34,7 @@ class Controller {
   Hardware& hw;
   uint16_t target[16]{};
   uint32_t startAt=0,runAt=0,duration=0,lastLink=0,lastProbe=0,stageAt=0,yawAt=0;
-  bool connected=false,held=false,armed=false,sleeping=false;
+  bool connected=false,usb=false,phone=false,held=false,armed=false,sleeping=false;
   int left=0,right=0,yaw=0,testIndex=-1,scanIndex=0;
   uint32_t scanAt=0;
   void cut(Stage next,const char* why) {
@@ -83,7 +84,49 @@ public:
   Mode mode=Mode::Idle;Stage stage=Stage::Off;const char* reason="boot";
   explicit Controller(Hardware& h):hw(h){}
   void begin(uint32_t now) {cut(Stage::Off,"boot");yawAt=now;if(!hw.initialize())cut(Stage::Fault,"i2c");}
-  void link(bool up,uint32_t now){if(!up){cut(Stage::Off,"disconnect");}else if(!connected){lastLink=now;armed=false;}connected=up;}
+  void link(bool up,uint32_t now){if(!up){cut(Stage::Off,"disconnect");}else if(!connected){lastLink=now;armed=false;}usb=up;connected=usb||phone;}
+  // Phone (Wi-Fi) source: its own link flag; losing it cuts immediately. Never seizes an active host/auto mode.
+  void phoneLink(bool up,uint32_t now){if(!up){if(phone)cut(Stage::Off,"phone-lost");}else if(!connected){lastLink=now;armed=false;}phone=up;connected=usb||phone;}
+  bool phoneUp()const{return phone;}
+  Block rangeBlock(unsigned n,uint32_t now)const {
+    if(yaw!=0||!elapsed(now,yawAt,TURRET_SETTLE_MS))return Block::Turret;
+    const Range& r=ranges[n];
+    if(!r.valid||r.good<2||r.yaw!=0)return Block::NoData;
+    if(elapsed(now,r.at,FRESH_MS))return Block::Stale;
+    return r.mm<CLEAR_MM?Block::Blocked:Block::None;
+  }
+  // side: 0 front, 1 rear, -1 nothing needed (stop).
+  Block driveBlock(int l,int r,uint32_t now,int& side)const {
+    side=-1;if(!l&&!r)return Block::None;
+    if(l>=0&&r>=0){side=0;return rangeBlock(0,now);}
+    if(l<=0&&r<=0){side=1;return rangeBlock(1,now);}
+    Block f=rangeBlock(0,now);if(f!=Block::None){side=0;return f;}
+    side=1;return rangeBlock(1,now);
+  }
+  // Hold-to-drive from the phone. Each call renews a short lease; nothing else keeps wheels moving.
+  bool phoneDrive(int l,int r,uint32_t now,uint32_t lease) {
+    if(!phone){reason="phone-link";return false;}
+    if(active()) {
+      if(mode!=Mode::Phone){reason="busy-source";return false;}
+      if(held||sleeping){stop("inhibit");return false;}
+      if(stage==Stage::Run&&!guarded(l,r,now)){stop("sonar");return false;}
+      speeds(l,r);lastLink=startAt=now;
+      if(stage==Stage::Run){runAt=now;duration=lease;if(!send(target))return false;}
+      return true;
+    }
+    if(stage==Stage::Fault||held||sleeping){reason="inhibited";return false;}
+    hw.gate(true);hw.power(false);
+    if(!hw.initialize()){cut(Stage::Fault,"i2c");return false;}
+    stage=Stage::Off;armed=true;lastLink=now;
+    if(!start(Mode::Phone,l,r,lease,now)){stop(reason);return false;}
+    return true;
+  }
+  // Assembly jog/turret use the validated command path; true only if the command was accepted.
+  bool phoneArm(uint32_t now) {
+    if(!phone||held||sleeping||active()||stage==Stage::Fault)return false;
+    hw.gate(true);hw.power(false);if(!hw.initialize()){cut(Stage::Fault,"i2c");return false;}
+    stage=Stage::Off;armed=true;lastLink=now;reason="armed";return true;
+  }
   void stop(const char* why="stop"){cut(stage==Stage::Fault?Stage::Fault:Stage::Off,why);}
   void button(bool down){held=down;if(down)stop("button");}
   void sleep(bool value){sleeping=value;if(value)stop("sleep");}

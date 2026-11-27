@@ -53,10 +53,18 @@ Stage nào đọc output của stage trước thì `build.sh` tự chạy luôn 
 
 - Giữ mặt pet và trạng thái phiên Claude Code của claude-pet, giờ trên màn ST7789 1.54" 240×240.
 - Nói chuyện với máy tính qua USB (UART0 115200).
+- **Điều khiển bằng điện thoại**, làm theo UI của con cua crab-robot-v17g:
+  - Xe tự phát WiFi mở tên `XeTang-XXXX`. Trên màn hiện tên mạng, địa chỉ và mã QR.
+  - Vào WiFi đó rồi mở `http://192.168.4.1/`. Nhiều máy tự bật trang lên luôn.
+  - Trang **Lái**: pad 8 hướng, giữ nút để chạy, thả là dừng. Có 3 mức tốc độ 0.4 / 0.65 / 1. Xe không cho tiến/lùi khi sonar hướng đó báo vật cản gần hơn 350 mm, hoặc chưa có số đo mới (cũ hơn 250 ms). Nút đèn hiện "chưa nối" vì đèn chưa có chân điều khiển.
+  - Trang **Ráp**: chỉnh tâm, biên và chiều quay cho từng bánh, chỉnh tâm turret (giới hạn ±70°), rồi Lưu. Chưa hiệu chuẩn xong thì xe không cho lái.
+  - Trang **Wi-Fi** (tuỳ chọn): nối vào WiFi nhà, mật khẩu lưu trong NVS.
+  - Cái gì đòi dừng thì dừng: thả nút, quá 500 ms không có lệnh, mất kết nối phone, nút STOP, lỗi I2C, watchdog.
+  - Mấy hằng số (500 ms, 5 s, 60 % xung ở tốc độ 1) **chưa thử** trên xe và phone thật.
+- Board có thêm module nâng áp logic `M_LOGIC` (Pololu U3V16F5) cấp USB cho DevKit từ pin. Nhờ vậy xe chạy được mà không cần cắm máy tính.
 - Điều khiển 6 bánh (PCA CH0–5) với hiệu chuẩn từng bánh, và turret (CH6).
 - Chế độ dò đường kiểu chạy–dừng bằng 2 sonar HC-SR04P. `AUTO SCAN` đang bị khoá cho đến khi đo góc turret thật trên xe.
-- Bật lên luôn ở trạng thái dừng, chạy phải có lệnh ARM. Mất link, hết heartbeat hoặc bấm nút STOP (GPIO27) là cắt servo.
-- **Không có** WiFi/điều khiển bằng điện thoại/joystick. Firmware WiFi trong đoạn chat cadsmith chỉ là tham khảo, người dùng chưa yêu cầu cho dự án này.
+- Bật lên luôn ở trạng thái dừng. Mất link, hết heartbeat hoặc bấm nút STOP (GPIO27) là cắt servo.
 
 Chân GPIO: xem [firmware/README.md](firmware/README.md) và [engineering/esp32-pinmap.json](engineering/esp32-pinmap.json).
 
@@ -71,7 +79,7 @@ Chân GPIO: xem [firmware/README.md](firmware/README.md) và [engineering/esp32-
 
 ## Những chỗ có thể phải tự sửa tay
 
-Team tester ghi lại các điểm dưới đây ở lần chạy cuối (`r006`). Lần chạy đó không có `lead-document-findings.json`. Chưa điểm nào được đo trên phần cứng.
+Các tester ghi lại những điểm dưới đây. Mục 1–8 có từ lần chạy `r006`, có thể đã được sửa một phần. Mục 9–11 có từ lần chạy mới nhất `r007`. Cả 2 lần chạy đều không có `lead-document-findings.json`. Chưa điểm nào được đo trên phần cứng.
 
 1. **Bộ nâng áp servo sát giới hạn.** Dòng đỉnh ước tính khi lấy từ pin là ~8,9 A, cao hơn mức 8 A điển hình của Pololu U3V70F5. Đo dòng thật khi 6 bánh cùng kẹt hoặc khởi động, cân nhắc giới hạn tốc độ hoặc tách tải.
 2. **Tài liệu nguồn còn sót bản cũ.** Vài dòng trong `product.json`, `engineering/POWER_SYSTEM.md`, `parts.json` vẫn mô tả chuỗi nguồn cũ (TPS61287, LILYGO, carrier 100×70, dây 12 AWG / 30 A). Bản đang dùng là: 2 module Pololu U3V70F5, ESP32 DevKit, carrier 62×60. Dây pin chính cần đầu nối chịu ≥15 A, khớp với cầu chì `F_PACK`.
@@ -81,6 +89,9 @@ Team tester ghi lại các điểm dưới đây ở lần chạy cuối (`r006`
 6. **Không có chỗ cho mạch sạc trên xe.** Muốn sạc thì rút phích RUN ra, sạc trên bàn.
 7. **Kích thước module là giả định:** ESP32 51,5×28,3, PCA9685 62,2×25,4, quạt 30×30×10, màn 32×38×4. Đo đồ thật và in coupon TEST ONLY trước.
 8. **Phương án B làm xe cao gần gấp đôi** và phải bỏ lid. Nếu muốn giữ lid như v1 thì phải nhờ team thiết kế lại.
+9. **Sơ đồ nguồn chưa cập nhật `M_LOGIC`.** Vài chỗ trong `engineering/POWER_SYSTEM.md` vẫn ghi DevKit lấy 5 V từ USB riêng, có dòng còn nhắc LILYGO. `case/logic_b.py` và `firmware/reports/integration.json` cũng còn nhắc "chuỗi optional" cũ. Thứ tự cấp nguồn bring-up trong `firmware/WIRING.md` (cấp logic trước, rồi mới cấp 2 đảo A/B) không khớp sơ đồ, vì trên sơ đồ cả 3 module nâng áp nối song song ngay ở dây RUN.
+10. **Chỗ đặt DevKit:** đường dây `M_LOGIC` ghi DevKit nằm ở "tier 3", trong khi `STACK_WIRING.md` và `parts.json` ghi tier 2. Lấy tier 2.
+11. **Cấp nguồn DevKit qua cổng USB thôi**, đừng nối thêm vào chân VIN song song với USB.
 
 ## An toàn
 

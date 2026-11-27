@@ -112,3 +112,23 @@
 - Evidence (re-run on the final case/out/parts.json, hashes recorded in both reports): tools/case/fit_checks.py pass, 151 checks; kicadpy.case check-print pass (holders and devices clear on the car, all 22 layout-B wires ≥ 2 open routes).
 - Cross-team: firmware/WIRING.md must describe this chain (lead finding 2, firmware domain, not edited here).
   Board: case/modules.json layoutB lists M_SERVO_BOOST(_B), FH_PACK, M_PROTECT, F_ISLAND_B boxes.
+
+## 10. Integration review 3: battery-fed 5 V logic branch for the ESP32 DevKit (layout B)
+- Text: lead finding on case/layout_b.json: "layout B has no holder, position or wire route for the DevKit's battery-fed
+  logic 5 V supply … Add a glue-on holder for the logic converter (U3V16F5 ≈8.1×13.2×2.5 mm or the chosen module) … and a
+  checked route from the RUN harness to it and from it to the DevKit USB end on tier 2, without blocking existing risers."
+- Change (new parts only, case/logic_b.py; no closed part edited): `logic_holder` — flat floor tray (15.2×10.9×4.5) for an
+  M_LOGIC Pololu U3V16F5, glued with 502 on the solid hull floor left of the front window (v1 x 47..62, y 17..28; contract
+  X −27.9..−17, Y −62.2..−47). Ends open for the leads, foam tape under the module. `ref_logic_B` envelope;
+  `coupon_logic_TEST_ONLY` = the holder itself. Risers (0,−8.3)/(39.9,0) and every earlier route stay open.
+- Wiring (2 routes each, checked): XT60 RUN Y harness third branch → U3V16F5 VIN/GND (22 AWG, 3.0 mm); VOUT/GND → USB
+  power-only lead up the open nose, outside the stack, into the DevKit USB port at the stack front (same exit as the host
+  cable; the stack's ESP32 tier is called "tier 3" in the route names, it is the lead's "tier 2" above the PCA tier).
+- Case choice (board to confirm): the lead is a USB power-only pigtail soldered to VOUT/GND ending in the plug the real
+  DevKit takes (micro-B on most 30-pin DevKits, GIẢ ĐỊNH; the old chain text says USB-A socket + A-to-C cable, written for
+  the LILYGO). A USB-A socket + cable joint would need a ~16×8 mm plug body in the bay; the pigtail needs only the 4 mm route.
+  Same rule as the board: portable = this lead plugged, host = unplug it and plug the host data cable; never both, no Y cable.
+- Not verified: U3V16F5 size/pin ends, its draw in the pack budget (board), the real DevKit connector type.
+- Evidence: tools/case/fit_checks.py pass, 161 checks (holder print, collisions on the car, both new wires 2/2 open routes).
+- Cross-team: board must publish M_LOGIC in the DECIDED chain + parts.json externalParts purpose (DevKit, not LILYGO);
+  firmware/WIRING.md must name it (lead findings 1 and 3, other domains, not edited here). modules.json layoutB: M_LOGIC box.

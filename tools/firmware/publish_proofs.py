@@ -15,12 +15,12 @@ if evidence.get('inputSha256') is None or sha(binary)!=evidence['binarySha256']:
 rep=json.loads((ROOT/'firmware/reports/integration.json').read_text())
 if rep.get('status')!='passed':sys.exit('integration report not passed; run reconcile.py')
 suites={}
-for n in ('core','guard','pet','scan'):
+for n in ('core','guard','pet','scan','phone'):
     f=ROOT/f'build/firmware/tests/{n}_test'
     if not (ROOT/f'build/firmware/tests/{n}_test.passed').exists():sys.exit('suite not passed: '+n)
     suites[n]={'status':'passed','executableSha256':sha(f),'inputSha256':(ROOT/f'build/firmware/tests/{n}_test.passed').read_text(),'sanitizers':['address','undefined']}
 out={'schema':1,'checkedAtUtc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'contractSha256':rep['contractSha256'],'stage':'firmware','status':'local-checks-passed','hardwareTested':False,
- 'releaseNotes':'1,2,8 (chain tip 26b0ea5e…)','target':'esp32:esp32:esp32 core 2.0.14','binarySha256':sha(binary),'pinsHSha256':srcs['firmware/tank/pins.h'],'mechanicalLimitsHSha256':srcs['firmware/tank/mechanical_limits.h'],
+ 'releaseNotes':'1,2,8,10 (chain tip c4e55f73…)','target':'esp32:esp32:esp32 core 2.0.14','binarySha256':sha(binary),'pinsHSha256':srcs['firmware/tank/pins.h'],'mechanicalLimitsHSha256':srcs['firmware/tank/mechanical_limits.h'],
  'cppSuites':suites,'integrationReportSha256':sha(ROOT/'firmware/reports/integration.json'),'integrationStatus':rep['status'],'board':rep['board'],'case':rep['case'],
  'caseYawDeg':[-70,70],'note':'Host mocks only; no device, flash or physical test.'}
 (ROOT/'firmware/reports/validation.json').write_text(json.dumps(out,indent=2)+'\n')

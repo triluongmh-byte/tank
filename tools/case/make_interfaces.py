@@ -163,6 +163,21 @@ bwires += [
     {'name': 'charge: XT60 pack plug lifted out to the bench charger (M_CHARGE off the car, RUN unplugged)', 'clearDiameterMm': 16.0,
      'routes': [vroute('straight up, right front corner', [XT60, (44.5, -20.0, 95.0)]),
                 vroute('up over the nose', [XT60, (44.5, -6.0, 62.0), (44.5, -6.0, 95.0)])]},
+    # ---- lead integration review 3: battery-fed DevKit logic branch (M_LOGIC U3V16F5, case/logic_b.py) ----
+    {'name': 'XT60 RUN harness -> M_LOGIC U3V16F5 VIN/GND (22 AWG pair, third branch after F_PACK + protector)', 'clearDiameterMm': 3.0,
+     'note': 'crimped into the same XT60 Y harness as the two U3V70F5 inputs (inputs in parallel, outputs never joined)',
+     'routes': [vroute('across the front window, low', [XT60, (45.0, -8.0, 50.0), (45.0, 22.5, 47.0)]),
+                vroute('across the front window, high', [XT60, (44.5, -20.0, 60.0), (44.5, 22.5, 60.0), (45.0, 22.5, 47.0)])]},
+]
+LOGIC_OUT = (-22.45, -63.6, 46.5)    # contract: U3V16F5 VOUT end + 2.4 (v1 x 63.6, y 22.45)
+bwires += [
+    {'name': 'M_LOGIC VOUT -> USB power-only lead -> ESP32 DevKit USB (tier 3, portable mode)', 'clearDiameterMm': 4.0,
+     'note': 'same DevKit port as the host data cable: portable mode = this lead plugged, host mode = unplug it and plug the '
+             'host cable; never both, no Y cable, no joined USB positives (engineering/POWER_SYSTEM.md)',
+     'routes': [croute('up the left of the hull, left of the stack, in under the screen face',
+                       [LOGIC_OUT, (-22.5, -55.0, 58.0), (-22.5, -40.0, 76.0), (-40.0, -10.0, 100.0), (-40.0, 2.0, 143.7), (0.0, 2.0, 143.7), (0.0, 15.0, 143.7)]),
+                croute('up the middle of the nose, right of the stack, in under the screen face',
+                       [LOGIC_OUT, (-14.0, -52.0, 60.0), (-14.0, -30.0, 85.0), (40.0, -10.0, 110.0), (40.0, 2.0, 143.7), (0.0, 2.0, 143.7), (0.0, 15.0, 143.7)])]},
 ]
 (ROOT / 'case' / 'layout_b.json').write_text(json.dumps(
     {'schema': 1, 'note': 'Layout B = the buildable layout (lead integration review): lid off, v5 stack on the carrier deck on stack_bridge. '
@@ -199,7 +214,10 @@ fits = [{'name': n, 'testPart': COUPON, 'note': note} for n, note in [
         ('PCB-Li-1S15A between the protector_holder lips, foam tape on the wall', 'coupon piece 3: wall end with one lip'),
         ('5 A inline fuse holder between the fuse_clip_b lips (14.4 between lips)', 'coupon piece 4: clip slice, glue face on the bed'),
         ('power holders glued with 502: floor holders on the hull floor, fuse_clip_b flat on the 45 deg right side wall',
-         'every piece keeps its real glue face')]]
+         'every piece keeps its real glue face')]] + [
+    {'name': n, 'testPart': 'coupon_logic_TEST_ONLY', 'note': note} for n, note in [
+        ('U3V16F5 (8.1 x 13.2 GIẢ ĐỊNH) between the logic_holder lips (8.5 between lips, foam tape)', 'the coupon is the whole holder'),
+        ('logic_holder glued with 502 flat on the hull floor left of the front window', 'coupon keeps the real glue face')]]
 
 SKINS = [{'part': 'stack_turret_mount', 'centerMm': [130.0 + dy, -29.9, 134.2], 'radiusMm': 9.0,
           'reason': 'v5 design: the 45-degree face panel ends in a knife edge at its lower lip (imported unchanged)'}

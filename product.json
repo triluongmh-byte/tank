@@ -32,7 +32,9 @@
    "checkedDate": "2026-11-27",
    "stockVerified": false
   },
-  "primaryPackPeakA": 10.6,
+  "primaryPackPeakA": 11.5,
+  "primaryPackPeakNote": "10.6 A servo islands A+B plus ~0.9 A M_LOGIC input (0.5 A x 5 V / (0.85 x 3.3 V)); 15 A F_PACK still covers it",
+  "logicBranch": {"module": "M_LOGIC", "mpn": "U3V16F5", "feeds": "ESP32 DevKit USB 5 V (battery-fed, portable mode)", "inputFrom": "RUN harness after F_PACK, parallel with both U3V70F5 inputs", "neverParallelWithHostUsb": true},
   "referenceChain": {
    "packPeakEstimateA": 12.7,
    "packRequiredRatingA": 15,

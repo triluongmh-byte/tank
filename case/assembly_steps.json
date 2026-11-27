@@ -113,13 +113,16 @@
     "ref_conv_b_B",
     "ref_fuse_pack_B",
     "ref_protector_B",
-    "ref_fuse_b_B"
+    "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B"
    ],
    "focus": [
     "conv_holder_*",
     "fuse_holder_pack",
     "protector_holder",
-    "fuse_clip_b"
+    "fuse_clip_b",
+    "logic_holder"
    ],
    "camera": "top",
    "hw": [
@@ -127,8 +130,8 @@
      "ids": [
       "keo-502"
      ],
-     "what": "dán 4 giá (2 bộ nâng áp, giá cầu chì pin, tường bảo vệ) lên sàn trước cell",
-     "count": 4,
+     "what": "dán 5 giá (2 bộ nâng áp, giá cầu chì pin, tường bảo vệ, giá bộ 5 V logic U3V16F5) lên sàn trước cell",
+     "count": 5,
      "entry": "từ trên xuống"
     },
     {
@@ -140,7 +143,7 @@
      "entry": "từ trong"
     }
    ],
-   "action": "Theo board deviation 8: pin kín → F_PACK → PCB-Li-1S15A → XT60 → hai U3V70F5 (đầu vào song song, đầu ra KHÔNG nối nhau). A → J_PWR; B → cầu chì 5 A → chập dây đỏ servo CH3–5 (rút chân V+ khỏi J_S3…J_S5); ACT_EN (J_CTRL.6) → ENABLE của B kèm 4,7 kΩ xuống GND. Dây ≥14 AWG. Kích thước linh kiện công suất là GIẢ ĐỊNH, in coupon nguồn trước. Khay sạc A/B (module \"5V 2A\") chỉ cho phương án A, không lắp ở B. Chưa kiểm chứng B tắt hẳn khi ACT_EN thấp."
+   "action": "Theo board deviation 8: pin kín → F_PACK → PCB-Li-1S15A → XT60 → hai U3V70F5 (đầu vào song song, đầu ra KHÔNG nối nhau). A → J_PWR; B → cầu chì 5 A → chập dây đỏ servo CH3–5 (rút chân V+ khỏi J_S3…J_S5); ACT_EN (J_CTRL.6) → ENABLE của B kèm 4,7 kΩ xuống GND. Dây ≥14 AWG. Kích thước linh kiện công suất là GIẢ ĐỊNH, in coupon nguồn trước. Bộ 5 V logic U3V16F5 (logic_holder, trái cửa sổ trước): cấp DevKit chạy pin qua XT60→VIN và VOUT→USB DevKit; không cắm đồng thời cáp host (không Y-cable); tuyến theo case/layout_b.json, kích thước GIẢ ĐỊNH, in coupon logic trước. Khay sạc A/B (module \"5V 2A\") chỉ cho phương án A, không lắp ở B. Chưa kiểm chứng B tắt hẳn khi ACT_EN thấp."
   },
   {
    "title": "Bàn đỡ stack + 4 chân (bỏ lid)",
@@ -168,6 +171,8 @@
     "ref_fuse_pack_B",
     "ref_protector_B",
     "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B",
     "stack_bridge_plate",
     "stack_leg_*"
    ],
@@ -214,6 +219,8 @@
     "ref_fuse_pack_B",
     "ref_protector_B",
     "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B",
     "stack_bridge_plate",
     "stack_leg_*",
     "stack_carrier_deck",
@@ -262,6 +269,8 @@
     "ref_fuse_pack_B",
     "ref_protector_B",
     "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B",
     "stack_bridge_plate",
     "stack_leg_*",
     "stack_carrier_deck",
@@ -321,6 +330,8 @@
     "ref_fuse_pack_B",
     "ref_protector_B",
     "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B",
     "stack_bridge_plate",
     "stack_leg_*",
     "stack_carrier_deck",
@@ -374,6 +385,8 @@
     "ref_fuse_pack_B",
     "ref_protector_B",
     "ref_fuse_b_B",
+    "logic_holder",
+    "ref_logic_B",
     "stack_bridge_plate",
     "stack_leg_*",
     "stack_carrier_deck",

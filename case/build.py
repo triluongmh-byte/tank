@@ -137,6 +137,18 @@ for n, fn in P.REFS.items():
 build.add('coupon_power_TEST_ONLY', lambda: to_contract(P.coupon_power()), inputs=P_IN, role='coupon', group='test',
           note='TEST ONLY: converter slot, pack-fuse slot, protector wall end and the 45 deg fuse clip; try the real parts first')
 
+# ---- lead integration review 3: battery-fed DevKit logic branch (M_LOGIC U3V16F5), layout B -------
+import logic_b as L  # noqa: E402
+L_IN = ['case/logic_b.py', 'case/v1frame.py', 'case/stack.py']
+build.add('logic_holder', lambda: to_contract(S.display(L.logic_holder())), inputs=L_IN, role='bracket', glueOn=True,
+          group='power', layout='B', printed=False,
+          note='NEW: flat tray for the M_LOGIC U3V16F5 (DevKit 5 V on battery), foam tape, ends open for the leads; '
+               'glued with 502 to the hull floor left of the front window; prints flat')
+build.add('ref_logic_B', lambda: to_contract(S.display(L.logic_ref())), inputs=L_IN, printable=False, bought=True,
+          group='power', layout='B', note='U3V16F5 envelope 13.2 x 8.1 x 2.5 GIẢ ĐỊNH, DO NOT PRINT')
+build.add('coupon_logic_TEST_ONLY', lambda: to_contract(L.coupon_logic()), inputs=L_IN, role='coupon', group='test',
+          note='TEST ONLY: the logic holder itself; try the real U3V16F5 first')
+
 # ---- device envelopes (GIẢ ĐỊNH, never printed) -------------------------------------------------
 DEV = {
     'ref_esp32_devkit': H.esp32_ref,

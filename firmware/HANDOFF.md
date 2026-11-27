@@ -1,5 +1,5 @@
-# Firmware handoff — 2026-11-27 (note 8: ESP32 DevKit + SPI ST7789 240×240)
-- Contract: a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810; notes 1,2,8 applied (tip 52b5a7b4…). Note 8 retargeted MCU/display/pins; see DEVIATIONS.md last section.
+# Firmware handoff — 2026-11-27 (notes 8 + 10: ESP32 DevKit, ST7789, Wi-Fi phone UI)
+- Contract: a3ef67fc11d668fdbe01fd2d5a06c6fef5fed069868d7fb6fb4b3995edd55810; notes 1,2,8,10 applied (tip c4e55f73…). Note 8 retargeted MCU/display/pins; see DEVIATIONS.md last section.
 - Scope: firmware/, tools/firmware/, build/firmware/ only. No hardware, flash, commits or delegation performed.
 - Fast full checks: `python3 firmware/check.py`; compile: `python3 firmware/build.py` (both incremental/all-core).
 - Real target (esp32:esp32:esp32): build/firmware/esp32/tank.ino.bin + .elf + bootloader/partitions; recipe firmware/flash.json.
@@ -31,3 +31,4 @@
 - Open bench assumptions: 30-pin DevKit identity, ST7789 offset/invert/BL polarity, Echo level on input-only 34/35, exact LILYGO/PCA/servo/sonar clones, signed yaw, every neutral/direction, current/pulse/frequency, stopping distance, reset/OE bias/backfeed, 140g parallel-18650 pack protection/current/capacity, wire clearance and fit.
 - HardwareTested=false. Local checks/binary do not establish teamReady or native board readiness.
 - tools/firmware/publish_proofs.py: after build+check+reconcile, rewrites build-proof.json and reports/validation.json from current hashes.
+- Note 10 phone UI: tank/phone.h Phone::handle (API routes), move() blocks/lease, status(), handleAssembly() Ráp; tick() idle/AP-loss. Controller::phoneDrive/phoneLink/driveBlock/rangeBlock (controller.h). http_lite.h parseHttp; wifi_net.h WifiNet::service/begin/join (target only); net_screen.h renderNet; qr.h Qr::encode; page.h PAGE. Checks: `python3 firmware/check.py phone host`; target `python3 firmware/build.py`. Constants PHONE_* untested; light unwired; no turret/auto buttons (open question). Binary rebuilt for note 10; run publish_proofs.py after check+reconcile.

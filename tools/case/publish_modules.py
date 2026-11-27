@@ -59,10 +59,14 @@ B = {
  'ref_fuse_pack_B': ('FH_PACK', 'F_PACK 0287015.U in 0FHA0002XP inline holder (GIẢ ĐỊNH 39 x 22 x 12) on edge in fuse_holder_pack, in front of the cells'),
  'ref_protector_B': ('M_PROTECT', 'PCB-Li-1S15A (GIẢ ĐỊNH <= 45 x 20 x 4.5 with pads) standing in protector_holder against the cell ends, under the bridge plate'),
  'ref_fuse_b_B': ('F_ISLAND_B', '5 A ATOF fuse 0287005.U in an inline holder (GIẢ ĐỊNH 32 x 14 x 10) in fuse_clip_b on the right 45 deg side wall'),
+ # lead integration review 3: battery-fed DevKit logic 5 V (portable mode)
+ 'ref_logic_B': ('M_LOGIC', 'Pololu U3V16F5 (GIẢ ĐỊNH 13.2 x 8.1 x 2.5) flat in logic_holder on the hull floor left of the front window; '
+                 'VIN/GND end toward the tail (+Y) <- third branch of the XT60 RUN Y harness (22 AWG); VOUT/GND end toward the nose -> '
+                 'USB power-only lead into the DevKit USB port (swap with the host data cable, never both)'),
 }
 out['layoutB'] = {'note': 'Option (b), release note 9: lid off, v5 stack standing on stack_bridge over the cells. '
                           'BUILDABLE layout. Positions ON THE CAR (parts.json draws this group shifted +130 mm in X). Order: bridge, carrier deck (carrier), tier 1 PCA9685, tier 2 ESP32, cap. '
-                          'Extra tiers add 26 mm each in Z. Power chain (pack protector, F_PACK, 2 x U3V70F5, F_ISLAND_B, XT60 RUN plug) in the hull front bay; '
+                          'Extra tiers add 26 mm each in Z. Power chain (pack protector, F_PACK, 2 x U3V70F5, F_ISLAND_B, XT60 RUN plug, M_LOGIC U3V16F5 for the DevKit) in the hull front bay; '
                           'M_CHARGE (Adafruit 6091) stays off the car on the bench: unplug RUN, mate the pack XT60 with the charger lead (case/DEVIATIONS.md 9).',
                   'modules': []}
 for n, (mid, note) in B.items():

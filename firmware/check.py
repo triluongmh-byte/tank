@@ -24,11 +24,11 @@ def run_test(name,extra):
  result=OUT/f'{name}.passed'
  if result.exists() and result.read_text()==sha:print('UNCHANGED',name);return
  subprocess.run([str(binary)],check=True,cwd=ROOT);result.write_text(sha)
-selected=sys.argv[1:] or ['core','guard','pet','scan','host','interfaces']
+selected=sys.argv[1:] or ['core','guard','pet','scan','phone','host','interfaces']
 with concurrent.futures.ThreadPoolExecutor(max_workers=jobs) as pool:
  futures=[]
  for group in selected:
-  if group in ('core','guard','pet','scan'):
+  if group in ('core','guard','pet','scan','phone'):
    futures.append(pool.submit(run_test,group+'_test',['-I',str(FIRM/'tests/mock')] if group=='guard' else []))
   elif group=='host':futures.append(pool.submit(subprocess.run,[sys.executable,'-B','-m','unittest','discover','-s',str(FIRM/'tests'),'-p','test_*.py'],check=True,cwd=ROOT))
   elif group=='interfaces':futures.append(pool.submit(subprocess.run,[sys.executable,str(FIRM/'reconcile.py')],check=True,cwd=ROOT))

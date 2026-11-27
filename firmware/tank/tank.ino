@@ -10,12 +10,18 @@
 #include "session_face.h"
 #include "status_bar.h"
 #include "usage_face.h"
+#include "wifi_net.h"
+#include "net_screen.h"
 static tank::EspHardware hardware;
 static tank::Controller control(hardware);
 static tank::MotionParser motion;
 static tank::EchoIO echoIO;
 static tank::Sonars<tank::EchoIO> sonars(echoIO);
 static tank::Display display;
+static uint32_t rnd32(){return esp_random();}
+static tank::WifiNet wifi;
+static tank::Phone phone(control,wifi,rnd32);
+static tank::Qr qrWifi,qrUrl;
 // Half-height (240x120, 57.6 KB) static buffer: classic ESP32 has no single 115 KB block.
 // Each frame is rendered twice with a row window (top half, then bottom half) and streamed in bands.
 static uint16_t framebuffer[pet::W*pet::H/2];
@@ -83,6 +89,7 @@ void setup() {
   if(!timerOK||!displayReady){tank::prerequisitesReady=false;tank::safetyTrip=true;control.stop(!timerOK?"timer":"display");}
   // IDF task watchdog resets a stuck loop; startup/reset hardware is required to inhibit loads.
   if(esp_task_wdt_init(2,true)!=ESP_OK||esp_task_wdt_add(nullptr)!=ESP_OK){tank::prerequisitesReady=false;tank::safetyTrip=true;control.stop("watchdog-init");}
+  wifi.begin();{char w[48];snprintf(w,sizeof(w),"WIFI:T:nopass;S:%s;;",wifi.apName);qrWifi.encode(w);qrUrl.encode("http://192.168.4.1/");}
   blink.begin(millis(),esp_random());browse.begin(digitalRead(tank::BOOT_PIN)==LOW,millis());
   usageView.begin(millis());identity();
 }
@@ -96,6 +103,7 @@ void loop() {
   for(unsigned budget=0;budget<64&&Serial.available();budget++){feed(char(Serial.read()),now);control.button(digitalRead(tank::STOP_PIN)==LOW||digitalRead(tank::BOOT_PIN)==LOW);}
   sonars.tick(micros(),millis(),control.heading(),control);
   if(sonars.triggering()){delayMicroseconds(12);sonars.tick(micros(),millis(),control.heading(),control);}
+  wifi.service(phone,millis());phone.tick(millis());
   control.tick(millis());
   // Refresh only after the control loop completed, never from a display callback or a heartbeat ISR.
   portENTER_CRITICAL(&tank::safetyMux);
@@ -112,9 +120,11 @@ void loop() {
   else if(displayReady&&(bottomPending||uint32_t(now-lastFrame)>=80)){
     if(!bottomPending){lastFrame=now;frameNow=now;}
     canvas.y0=bottomPending?pet::H/2:0;canvas.h=pet::H/2;
+    if(wifi.clients()==0)pet::renderNet(canvas,wifi.apName,"192.168.4.1",qrWifi,qrUrl,(frameNow/6000)&1);
+    else{
     if(showUsage)pet::renderUsage(canvas,usage,state,frameNow);
     else{pet::render(canvas,state,frameNow,blink.height(frameNow),pet::Press::None,false,connected,frameNow-visualSince,&text,0,&activity,&fun);pet::renderSingleTask(canvas,list,taskView,frameNow,state,&text);}
-    pet::renderStatusBar(canvas,host,frameNow,fun.sleeping);
+    pet::renderStatusBar(canvas,host,frameNow,fun.sleeping);}
     if(!display.start(framebuffer,canvas.y0,pet::H/2)){displayReady=false;tank::prerequisitesReady=false;control.stop("display");}
     bottomPending=!bottomPending;
   }

@@ -23,11 +23,11 @@ PROD = {  # plate name -> parts (names <= 40 chars, no / \ : * ? " < > |)
     'MỚI-SỬA — CẦN IN — Stack B — tầng': ['stack_bridge_plate', 'stack_tier_1', 'stack_tier_2'],
     'MỚI-SỬA — CẦN IN — Stack B — deck mạch': ['stack_carrier_deck'],
     'MỚI-SỬA — CẦN IN — Nguồn B — giá, kẹp': ['conv_holder_a', 'conv_holder_b', 'fuse_holder_pack',
-        'protector_holder', 'fuse_clip_b'],
+        'protector_holder', 'fuse_clip_b', 'logic_holder'],
     'MỚI-SỬA — CẦN IN — Stack B — nắp, chân': ['stack_turret_mount', 'stack_leg_rear_left', 'stack_leg_rear_right',
         'stack_leg_front_left', 'stack_leg_front_right'],
 }
-TEST = {'TEST ONLY — thử khớp A, stack, deck, nguồn': ['coupon_fit_TEST_ONLY', 'coupon_stack_TEST_ONLY', 'coupon_deck_TEST_ONLY', 'coupon_power_TEST_ONLY']}
+TEST = {'TEST ONLY — thử khớp A, stack, deck, nguồn, logic': ['coupon_fit_TEST_ONLY', 'coupon_stack_TEST_ONLY', 'coupon_deck_TEST_ONLY', 'coupon_power_TEST_ONLY', 'coupon_logic_TEST_ONLY']}
 
 
 def rot(deg):

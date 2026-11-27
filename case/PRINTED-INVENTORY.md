@@ -30,11 +30,11 @@ hỏng thì in lại từ STEP v1 gốc ở `case/ref/v1/`).
 | stack_bridge_plate, stack_tier_1, stack_tier_2 | 1 mỗi loại | B | chưa in (chưa rõ người dùng đã in stack v5 chưa → không tính là đã in) |
 | stack_carrier_deck (mới, tích hợp: đỡ carrier 62×60) | 1 | B | chưa in |
 | stack_turret_mount, stack_leg ×4 | 1 + 4 | B | chưa in |
-| conv_holder_a/b, fuse_holder_pack, protector_holder, fuse_clip_b (mới: chuỗi nguồn hai đảo) | 5 | B | chưa in |
-| coupon_fit_TEST_ONLY, coupon_stack_TEST_ONLY, coupon_deck_TEST_ONLY, coupon_power_TEST_ONLY | 1 + 1 + 1 + 1 | thử | TEST ONLY, in trước, không lắp vào xe |
+| conv_holder_a/b, fuse_holder_pack, protector_holder, fuse_clip_b (mới: chuỗi nguồn hai đảo), logic_holder (bộ 5 V logic DevKit) | 6 | B | chưa in |
+| coupon_fit_TEST_ONLY, coupon_stack_TEST_ONLY, coupon_deck_TEST_ONLY, coupon_power_TEST_ONLY, coupon_logic_TEST_ONLY | 1 + 1 + 1 + 1 + 1 | thử | TEST ONLY, in trước, không lắp vào xe |
 | stack_base (v5 92×43) | — | — | KHÔNG in: lỗ M3 82×20 không khớp phần đã in, thay bằng bridge + 4 chân |
 
-Đối chiếu: 17 chi tiết v1 đã in + 26 chi tiết mới (12 gá A + 9 stack B + 5 nguồn B) = 43 chi tiết hiện hành; thêm 4 coupon TEST ONLY riêng. Production 3MF chứa 26 chi tiết mới.
+Đối chiếu: 17 chi tiết v1 đã in + 27 chi tiết mới (12 gá A + 9 stack B + 6 nguồn B) = 44 chi tiết hiện hành; thêm 5 coupon TEST ONLY riêng. Production 3MF chứa 27 chi tiết mới.
 Phương án B là phương án lắp được (carrier 62×60 không lọt phương án A, xem INSPECTION.md); nhóm gá A chỉ còn để ghi lại / phần cell_cradle và dùng chung với B (khay sạc chỉ A). Cả hai nhóm vẫn nằm trong 3MF.
 
 Cập nhật file này khi người dùng báo đã in, hỏng, chỉnh hoặc gửi ảnh. Chưa có print/events.jsonl.

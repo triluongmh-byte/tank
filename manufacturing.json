@@ -26,8 +26,8 @@
     "design/main.kicad_sch": "27bbcd78cd7d6dea53bd3ac054d484861a2f464b843a5297773cd1689130be5a",
     "design/sym-lib-table": "9df1e279108b4322ae07c31fa76e45b7754ba5b791c9fc9c3f4d9db36590255a",
     "design/tank.kicad_sym": "0fc7ae875340e12bf82a6b2bb6ce985a73c35dd075630d51a19250f69ff7fa6d",
-    "parts.json": "158595672251996e6547d55966823ce01743eb754c42f903c9d748849a030910",
-    "product.json": "d32fe2621af755f4ba09177c49f5a002e8140a8d16ed7c5b3cafceb0cb774ac0"
+    "parts.json": "4b3c14eaa1e7164a906e81833ef4dc99cfc12bce83c942194113642f8529331c",
+    "product.json": "b614b2e04a74fcf584502ba6d0e7eedc515fde4236f4376cf00338fbbf14bb89"
   },
   "acceptedIgnoredChecks": {
     "drc": [
@@ -82,7 +82,7 @@
         },
         {
           "path": "engineering/POWER_SYSTEM.md",
-          "sha256": "681c15c4f1cc3153c50c86e4ca09925914347571723edc9f78328e57d0b54327"
+          "sha256": "752e7dbfc0f7f5a990e536e1be7342df27a9a514ff76a31ab9452e7c43de118f"
         },
         {
           "path": "engineering/power-calculations.json",
@@ -94,7 +94,7 @@
         },
         {
           "path": "engineering/pack-protection-calculations.json",
-          "sha256": "19579a151efb12f14ac8e896434ec8e8d6e266959efedea2fe6f4c0b566e8ff8"
+          "sha256": "5390c86ce71d897cd2ebaee4e508c858ac89aa9333872294658874293564b22e"
         }
       ]
     },

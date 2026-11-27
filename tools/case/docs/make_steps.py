@@ -9,7 +9,7 @@ SUSP = ['arm_*', 'wheel_*', 'ref_servo_front_*', 'ref_servo_mid_*', 'ref_servo_r
 CELLS = ['cell_cradle', 'ref_cell_*']
 A_LID = ['lid']
 BASE = V1 + ['led_bracket'] + SUSP + CELLS
-PWR = ['conv_holder_a', 'conv_holder_b', 'fuse_holder_pack', 'protector_holder', 'fuse_clip_b', 'ref_conv_a_B', 'ref_conv_b_B', 'ref_fuse_pack_B', 'ref_protector_B', 'ref_fuse_b_B']
+PWR = ['conv_holder_a', 'conv_holder_b', 'fuse_holder_pack', 'protector_holder', 'fuse_clip_b', 'ref_conv_a_B', 'ref_conv_b_B', 'ref_fuse_pack_B', 'ref_protector_B', 'ref_fuse_b_B', 'logic_holder', 'ref_logic_B']
 STK = ['stack_bridge_plate', 'stack_leg_*']
 DECK = ['stack_carrier_deck', 'ref_carrier_B']
 T1 = ['stack_tier_1', 'ref_pca9685_B', 'ref_fan_B']
@@ -25,10 +25,10 @@ STEPS = [
   [{'ids': ['keo-502'], 'what': 'keo 502 dán yên đỡ lên sàn chassis', 'count': 1, 'entry': 'dán từ trên xuống'},
    {'ids': ['dai-15'], 'what': 'đai/dây rút 15 mm giữ cell', 'count': 2, 'entry': 'luồn qua 4 rãnh đai'}],
   'Dán cradle vào sàn chassis trước, rồi đặt 2 cell Ø18,6 song song. Mạch bảo vệ/nối cell chưa xác minh.'),
- ('Cụm nguồn B: bảo vệ pin, cầu chì, 2 bộ nâng áp', BASE + PWR, ['conv_holder_*', 'fuse_holder_pack', 'protector_holder', 'fuse_clip_b'], 'top',
-  [{'ids': ['keo-502'], 'what': 'dán 4 giá (2 bộ nâng áp, giá cầu chì pin, tường bảo vệ) lên sàn trước cell', 'count': 4, 'entry': 'từ trên xuống'},
+ ('Cụm nguồn B: bảo vệ pin, cầu chì, 2 bộ nâng áp', BASE + PWR, ['conv_holder_*', 'fuse_holder_pack', 'protector_holder', 'fuse_clip_b', 'logic_holder'], 'top',
+  [{'ids': ['keo-502'], 'what': 'dán 5 giá (2 bộ nâng áp, giá cầu chì pin, tường bảo vệ, giá bộ 5 V logic U3V16F5) lên sàn trước cell', 'count': 5, 'entry': 'từ trên xuống'},
    {'ids': ['keo-502'], 'what': 'dán kẹp cầu chì 5 A lên vách nghiêng 45° bên phải (mặt dán úp xuống khi in)', 'count': 1, 'entry': 'từ trong'}],
-  'Theo board deviation 8: pin kín → F_PACK → PCB-Li-1S15A → XT60 → hai U3V70F5 (đầu vào song song, đầu ra KHÔNG nối nhau). A → J_PWR; B → cầu chì 5 A → chập dây đỏ servo CH3–5 (rút chân V+ khỏi J_S3…J_S5); ACT_EN (J_CTRL.6) → ENABLE của B kèm 4,7 kΩ xuống GND. Dây ≥14 AWG. Kích thước linh kiện công suất là GIẢ ĐỊNH, in coupon nguồn trước. Khay sạc A/B (module "5V 2A") chỉ cho phương án A, không lắp ở B. Chưa kiểm chứng B tắt hẳn khi ACT_EN thấp.'),
+  'Theo board deviation 8: pin kín → F_PACK → PCB-Li-1S15A → XT60 → hai U3V70F5 (đầu vào song song, đầu ra KHÔNG nối nhau). A → J_PWR; B → cầu chì 5 A → chập dây đỏ servo CH3–5 (rút chân V+ khỏi J_S3…J_S5); ACT_EN (J_CTRL.6) → ENABLE của B kèm 4,7 kΩ xuống GND. Dây ≥14 AWG. Kích thước linh kiện công suất là GIẢ ĐỊNH, in coupon nguồn trước. Bộ 5 V logic U3V16F5 (logic_holder, trái cửa sổ trước): cấp DevKit chạy pin qua XT60→VIN và VOUT→USB DevKit; không cắm đồng thời cáp host (không Y-cable); tuyến theo case/layout_b.json, kích thước GIẢ ĐỊNH, in coupon logic trước. Khay sạc A/B (module "5V 2A") chỉ cho phương án A, không lắp ở B. Chưa kiểm chứng B tắt hẳn khi ACT_EN thấp.'),
  ('Bàn đỡ stack + 4 chân (bỏ lid)', BASE + PWR + STK, ['stack_bridge_plate', 'stack_leg_*'], 'iso',
   [{'ids': ['keo-502'], 'what': 'dán 4 chân lên sàn chassis cạnh cell, rồi bàn lên chân', 'count': 5, 'entry': 'từ trên'}],
   'Phương án B là phương án lắp được (carrier 62×60 không lọt phương án A). Bàn cách đỉnh cell 0,6 mm; muốn tháo cell phải tách bàn. Chưa in: in 3 coupon TEST ONLY trước.'),

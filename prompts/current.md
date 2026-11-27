@@ -13,3 +13,6 @@ Còn lại cho team: board/đấu dây + firmware khớp với case đã in (đi
 
 Lịch sử: [original](original.md) · [history/](history/) — các note case trước (mũi >, bỏ ống bánh, hạ thân, bánh rộng,
 treo đòn bẩy, gu xe bọc thép) đã được thay bằng case robot-tank đã in.
+
+## Đang chờ (27/11)
+- Firmware: thêm UI điều khiển trên điện thoại giống con cua crab-robot-v17g (WiFi AP, lái 8 hướng, đèn, tốc độ). Xem history/2026-11-27T-11-phone-ui-like-crab.md.

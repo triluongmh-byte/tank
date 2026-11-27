@@ -2,8 +2,9 @@
 
 State: notes 8+9 + 2 lead reviews. **Layout B buildable** (carrier deck, DEVIATIONS 8; power chain, DEVIATIONS 9); A = record only.
 Case = the person's **printed robot-tank v1** (frozen). Only stage **simple** applies (v1 moving parts already printed).
-Local checks: `fit_checks.py` pass (151), `v5_compare.py` pass, `turret_limits.py` pass (±70), check-print pass. Not hardware-tested; sizes GIẢ ĐỊNH.
-Integration 2: layout B now holds the board's DECIDED two-island power chain (`case/power_b.py`, DEVIATIONS 9).
+Local checks: `fit_checks.py` pass (161), `v5_compare.py` pass, `turret_limits.py` pass (±70), check-print pass. Not hardware-tested; sizes GIẢ ĐỊNH.
+Integration 2: layout B holds the DECIDED two-island power chain (`case/power_b.py`, DEVIATIONS 9). Integration 3: `case/logic_b.py`
+`logic_holder` for M_LOGIC U3V16F5 (DevKit 5 V on battery) + XT60→VIN and VOUT→DevKit-USB routes (DEVIATIONS 10).
 
 ## Files
 - `case/ref/v1/*.step`, `SHA256SUMS` — hash-checked copies of v1 build (printed + bought parts). Read-only input.
@@ -26,17 +27,16 @@ Integration 2: layout B now holds the board's DECIDED two-island power chain (`c
   columns), `coupon_deck`, `carrier_ref_contract` (board STEP case/ref/board/main-contract.step at (-31,12.5,77.9)+display).
 - `case/power_b.py` (v1 frame, on car, drawn +130 X): `_edge_holder` (on-edge floor tray) → `conv_holder_a/b`, `fuse_holder_pack`;
   `protector_holder` (wall+lips before the cells); `fuse_clip_b` on the 45° right wall (`_on_slope`, W0, U0); REFS/SEATS; `coupon_power`.
+- `case/logic_b.py` (v1 frame, on car, +130 X): `logic_holder` (X0,Y0 = 47,17 floor left of front window), `logic_ref`, `coupon_logic`.
 - `case/ref/v5/`, `case/ref/board/` — hash-checked inputs. `case/layout_b.json` — B wire routes to carrier connectors
   (on-car, generated); interfaces.json carries them shifted +130 X. Layout A wires withdrawn.
 - `tools/case/turret_limits.py` → `case/reports/turret_yaw.json` + `case/firmware-limits.json` (deterministic, ±70 both options).
 - `tools/case/v5_compare.py` → `case/reports/v5_compare.json` (v5 chassis/hull/lid == v1, cached).
 - `case/INSPECTION.md` — "soi" report incl. note-9 section (options a/b, fan/charger tiers). `case/DEVIATIONS.md` 1–7.
 ## Fastest commands (from worktree root, `$KICAD_CASE_PYTHON`)
-- build changed parts: `case/build.py` (≈10 s; `--only fan_plate`)
-- mechanical: `tools/case/fit_checks.py` (≈6 s, cached)
+- build changed parts: `case/build.py` (≈10 s; `--only fan_plate`); mechanical `tools/case/fit_checks.py` (≈100 s when parts change, cached)
 - interfaces: `python3 tools/case/make_interfaces.py`; modules: `python3 tools/case/publish_modules.py`
 - harness gate: `-m kicadpy.case check-print .` (slow-ish: joint sweeps)
-- any change to holders.py rebuilds all new parts (it is their declared input) → rerun fit_checks.
 
 ## Placement (v1 frame; contract = (−y, −x, z))
 B power bay (v1): protector x −10.4…−3.1 |y|≤23.7; FH x 4.5…19.3; conv A 21.8…29.2, B 29.6…37.0 (|y|≤21.3); fuse clip

@@ -66,3 +66,11 @@ Sau ARM, DRIVE/CUE cần hai echo hợp lệ liên tiếp của hướng chạy.
 Host cũ hard-code MAC và GPIO của pet cũ nên không được dùng receipt cũ. [tank_transport.py](host/tank_transport.py) cung cấp adapter cho API `send/lines` và `MotionForwarder` của bridge tham chiếu; xác minh receipt riêng và MAC tank trước khi cho phép motion. Nó không mở serial hay thay daemon. Các message mặt pet có thể dùng lại theo [PROTOCOL.md](PROTOCOL.md).
 
 Các giả định phần cứng, reset-state, neutral, chiều quay, xung/tần số thật, độ tin cậy sonar, khoảng dừng, nguồn tải, nhiệt và fit đều chưa thử thực. [SOURCES.md](SOURCES.md) ghi nguồn đối chiếu, [HANDOFF.md](HANDOFF.md) ghi điểm vào cho người sửa tiếp.
+
+## Điều khiển bằng điện thoại (release note 10)
+1. Cấp nguồn xe. Màn 240×240 hiện tên mạng `XeTang-XXXX` (mạng mở), địa chỉ `192.168.4.1` và QR (luân phiên: QR vào Wi-Fi, QR mở trang). Màn này hiện khi chưa có điện thoại nào nối vào AP.
+2. Trên điện thoại vào Wi-Fi `XeTang-XXXX`; nếu máy báo "không có internet" hãy chọn giữ kết nối. Trang mở tự động (captive portal) hoặc vào http://192.168.4.1/ .
+3. Trang **Lái**: pad 8 hướng, giữ để chạy, thả là dừng; 3 mức tốc độ 0.4/0.65/1; nút đèn hiện "chưa nối" (chưa có chân). Tới/lui bị chặn khi sonar hướng đó chưa có, cũ (>250 ms) hoặc <350 mm; trang hiện lý do.
+4. Trang **Ráp**: mở là khóa lái. Chỉnh tâm/biên/chiều từng bánh CH0–5, nhích thử ~0,1 s, đưa turret về giữa/biên (giới hạn case ±70°), chỉnh tâm turret, rồi Lưu. Chưa hiệu chuẩn xong thì lái bị từ chối (calibration).
+5. Trang **Wi-Fi** (tùy chọn): quét, chọn mạng nhà, nhập mật khẩu; lưu vào NVS khi nối thành công; mật khẩu không được trả lại hay ghi log. Không có Wi-Fi nhà thì AP vẫn chạy.
+Mọi nguồn dừng thắng: thả nút, lease 500 ms, đổi/mất session, mất client AP, nút dừng cục bộ, lỗi I2C, watchdog. Điện thoại không giành quyền khi host CUE hoặc AUTO đang chạy; bấm DỪNG trước. Tất cả hằng số (lease 500 ms, idle 5 s, 60 % xung ở tốc độ 1) là mục tiêu CHƯA THỬ trên phần cứng; chưa thử trên điện thoại thật. Kiểm tra: `python3 firmware/check.py phone host`.
