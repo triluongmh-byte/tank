@@ -38,6 +38,8 @@ stage_board() {
   need_env KICAD_CASE_PYTHON "CadQuery Python (set by Harness)"
   [ -x "$KICAD_CLI" ] || die "kicad-cli not found; install KiCad 9 or set KICAD_CLI"
   mkdir -p build/board
+  # Publish first: tools/board/review.py (run by check.py) reads boards/main.board.json.
+  "$KICAD_HARNESS_PYTHON" -m kicadpy.publish --manufacturing design/main.kicad_pro
   "$KICAD_HARNESS_PYTHON" tools/board/check.py
   "$KICAD_CLI" pcb export step --force --include-tracks --include-pads --include-zones \
     --include-silkscreen --include-soldermask -o build/board/main-native.step design/main.kicad_pcb
