@@ -17,6 +17,14 @@ for s in "${STAGES[@]}"; do
   case "$s" in board|case|firmware) ;; *) die "unknown stage '$s' (use board, case, firmware)";; esac
 done
 want() { local s; for s in "${STAGES[@]}"; do [ "$s" = "$1" ] && return 0; done; return 1; }
+# Pull in earlier stages whose outputs a requested stage reads:
+# firmware reads case/reports/turret_yaw.json (turret limits); case reads the board STEP.
+if want firmware && ! want case && [ ! -f case/reports/turret_yaw.json ]; then
+  echo "build.sh: firmware needs case/reports/turret_yaw.json -> adding stage case"; STAGES=(case "${STAGES[@]}")
+fi
+if want case && ! want board && [ ! -f case/ref/board/main-contract.step ]; then
+  echo "build.sh: case needs case/ref/board/main-contract.step -> adding stage board"; STAGES=(board "${STAGES[@]}")
+fi
 
 # The sealed team contract lives in contract/; the case tools read it at the root.
 [ -f contract/PILOT_CONTRACT.json ] || die "contract/PILOT_CONTRACT.json missing"
@@ -43,7 +51,6 @@ stage_board() {
 stage_case() {
   echo "== case: CAD, checks, plates, slicing, overview"
   need_env KICAD_CASE_PYTHON "CadQuery Python (set by Harness)"
-  [ -f case/ref/board/main-contract.step ] || die "case/ref/board/main-contract.step missing: run ./build.sh board first"
   "$KICAD_CASE_PYTHON" case/build.py
   "$KICAD_CASE_PYTHON" tools/case/fit_checks.py
   "$KICAD_CASE_PYTHON" tools/case/v5_compare.py

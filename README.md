@@ -45,7 +45,7 @@ Từng stage sinh ra:
 - **case:** chạy `case/build.py` xuất STEP/STL vào `case/out/`. Chạy 3 bài kiểm của case: in được và va chạm, v5 so với v1, góc xoay turret. Sau đó sinh plate in `case/print/production.3mf` + `test-only.3mf`, file `case/overview.html`, và chạy `kicadpy.case check`.
 - **firmware:** chạy test host, gồm mock và ASan/UBSan, rồi compile ESP32 ra `build/firmware/esp32/tank.ino.bin`. **Không flash.**
 
-Stage `case` cần `case/ref/board/main-contract.step`. File này do stage `board` sinh ra, nên chạy `./build.sh board` trước.
+Stage nào đọc output của stage trước thì `build.sh` tự chạy luôn stage đó nếu output còn thiếu. Case cần STEP của board. Firmware cần `case/reports/turret_yaw.json` để biết góc xoay turret.
 
 ## Firmware làm được gì
 
