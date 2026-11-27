@@ -65,7 +65,8 @@ stage_case() {
     die "Bambu Studio not found at /Applications/BambuStudio.app (needed to slice case/print/*.3mf)"
   fi
   "$KICAD_CASE_PYTHON" -m kicadpy.case_overview .
-  "$KICAD_CASE_PYTHON" -m kicadpy.case check .
+  # Handwired layout (case/out/parts.json: nativePCBCheckerApplies false): print check, not the PCB-fit check.
+  "$KICAD_CASE_PYTHON" -m kicadpy.case check-print .
 }
 
 stage_firmware() {

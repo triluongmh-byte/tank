@@ -42,7 +42,7 @@ Yêu cầu, không tự cài gì qua mạng:
 Từng stage sinh ra:
 
 - **board:** chạy kiểm tra chính thức của board (ERC/DRC, netlist, gate) và sinh gói gia công vào `boards/`. Xuất STEP mạch có linh kiện ra `build/board/main-contract.step`, rồi giao cho case (`case/ref/board/`, hash được tính lại).
-- **case:** chạy `case/build.py` xuất STEP/STL vào `case/out/`. Chạy 3 bài kiểm của case: in được và va chạm, v5 so với v1, góc xoay turret. Sau đó sinh plate in `case/print/production.3mf` + `test-only.3mf`, file `case/overview.html`, và chạy `kicadpy.case check`.
+- **case:** chạy `case/build.py` xuất STEP/STL vào `case/out/`. Chạy 3 bài kiểm của case: in được và va chạm, v5 so với v1, góc xoay turret. Sau đó sinh plate in `case/print/production.3mf` + `test-only.3mf`, file `case/overview.html`, và chạy `kicadpy.case check-print` (kiểm in: bề mặt in được, vừa bàn in).
 - **firmware:** chạy test host, gồm mock và ASan/UBSan, rồi compile ESP32 ra `build/firmware/esp32/tank.ino.bin`. **Không flash.**
 
 Stage nào đọc output của stage trước thì `build.sh` tự chạy luôn stage đó nếu output còn thiếu. Case cần STEP của board. Firmware cần `case/reports/turret_yaw.json` để biết góc xoay turret.
